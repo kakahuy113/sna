@@ -1,0 +1,223 @@
+header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+
+.block-logo {
+	-ms-flex: 0 0 100px;
+	flex: 0 0 100px;
+	max-width: 100px;
+
+	.logo {
+		img {
+			max-width: 100px;
+		}
+	}
+}
+
+.top-header {
+	display: flex;
+	align-items: center;
+	-ms-flex-preferred-size: 0;
+	flex-basis: 0;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	max-width: 100%;
+
+	.icon {
+		cursor: pointer;
+		position: relative;
+		width: 20px;
+		height: 20px;
+
+		svg,
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		svg {
+			path {
+				transition: .3s all ease-in-out;
+			}
+		}
+
+		@media (min-width: 1025px) {
+			&:hover {
+				svg {
+					path {
+						fill: map-get($mau, main-2);
+					}
+				}
+			}
+		}
+	}
+
+	.text {
+		color: map-get($mau, main);
+		transition: .3s all ease-in-out;
+	}
+
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+
+		li {
+			@media (min-width: 1025px) {
+				&:hover {
+					svg {
+						path {
+							fill: map-get($mau, main-2);
+						}
+					}
+
+					.text {
+						color: map-get($mau, main-2);
+					}
+				}
+			}
+		}
+	}
+}
+
+.t_header--list-contact {
+	line-height: 50px;
+
+	ul {
+		display: flex;
+
+		li+li {
+			margin-left: 15px;
+		}
+
+		li {
+			color: map-get($mau, main);
+
+			>a {
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+}
+
+.t_header--list-social {
+	position: relative;
+	padding-left: 15px;
+	margin-left: 15px;
+	height: 50px;
+
+	ul {
+		display: flex;
+		height: 100%;
+		align-items: center;
+
+		li+li {
+			margin-left: 10px;
+		}
+	}
+
+	&:after {
+		content: '';
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		position: absolute;
+		height: 50%;
+		width: 1px;
+		background: map-get($mau, main);
+	}
+}
+
+.t_header--list-link {
+	margin-left: auto;
+	line-height: 50px;
+
+	>ul {
+		display: flex;
+
+		li {
+			position: relative;
+
+			&.hasSub {
+				padding-right: 25px;
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 50%;
+					right: 0;
+					transform: translateY(-50%);
+					border-top: 8px solid map-get($mau, main);
+					border-right: 8px solid transparent;
+					border-left: 8px solid transparent;
+					transition: .3s all ease-in-out;
+				}
+			}
+
+			@media (min-width: 1025px) {
+				&:hover {
+					>a {
+						color: map-get($mau, main-2);
+					}
+
+					&.hasSub {
+						&:after {
+							border-top: 8px solid map-get($mau, main-2);
+						}
+					}
+				}
+			}
+		}
+
+		>li+li {
+			margin-left: 15px;
+		}
+
+		>li {
+			>ul {
+				position: absolute;
+				transition: all 0.3s ease-in-out;
+				opacity: 0;
+				visibility: hidden;
+				box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+				background-color: #fff;
+				left: 0;
+				width: 220px;
+				padding: 10px 0;
+
+				>li {
+					>a {
+						display: block;
+						line-height: normal;
+						padding: 10px 20px;
+					}
+				}
+			}
+
+			@media (min-width: 1025px) {
+				&:hover {
+					>ul {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+
+	a {
+		color: map-get($mau, main);
+		transition: .3s all ease-in-out;
+	}
+}
+
+.t_header--search {
+	margin-left: 15px;
+}
