@@ -1,11 +1,11 @@
 header
 	.container
+		.block-logo
+			a(href="index.html")
+				.logo
+					img.lazyload.blur-up(data-src="./assets/logo.png", alt="logo")
 		.row.no-gutters.ai-c
-			.block-logo
-				a(href="index.html")
-					.logo
-						img.lazyload.blur-up(data-src="./assets/logo.png", alt="logo")
-			.top-header
+			.top-header.col-12
 				.t_header--list-contact
 					ul
 						li
@@ -53,3 +53,33 @@ header
 				.t_header--search
 					.icon
 						img.svg(src="./assets/icons/search.svg", alt="SEARCH")
+				.t_header--login
+					.icon
+						img.svg(data-src="./assets/icons/login.svg", alt="LOGIN")
+				.t_header--language
+					ul
+						li.active
+							a(href="#") VN
+						li
+							a(href="#") ENG
+			.bottom-header.col-12
+				nav.b_header--list-menu
+					ul
+						li
+							a(href="#") Who are we
+						li
+							a(href="#") Admissions
+						li
+							a(href="#") Facilities
+						li
+							a(href="#") IB Program
+						li
+							a(href="#") Student Life
+						li
+							a(href="#") SNA Stories
+						li
+							a(href="#") Parent Guide
+						li
+							a(href="#") News & Media
+						li
+							a(href="#") Contact
