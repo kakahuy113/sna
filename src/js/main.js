@@ -39,7 +39,15 @@ const customScrollBar = () => {
 
 const mainBanner = () => {
 	const mainBanner = new Swiper('.main-banner__slider .swiper-container', {
-
+		speed: 700,
+		effect: 'fade',
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+		},
+		autoplay: {
+			delay: 3000,
+		},
 	})
 }
 

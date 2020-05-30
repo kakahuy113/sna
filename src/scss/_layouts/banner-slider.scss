@@ -1,0 +1,57 @@
+.main-banner__slider {
+	.img {
+		max-height: 485px;
+	}
+
+	.btb-read-more {
+		z-index: 5;
+		position: absolute;
+		bottom: 50px;
+		left: 0;
+		right: 0;
+		text-align: right;
+
+		.btn {
+			position: relative;
+			vertical-align: middle;
+			display: inline-block;
+			text-align: center;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			color: #fff;
+			background-color: map-get($mau, main-2);
+			line-height: 50px;
+			height: 50px;
+			padding: 0 25px;
+			text-transform: uppercase;
+
+			@media (min-width: 1025px) {
+				&:hover {
+					background: map-get($mau, main);
+				}
+			}
+		}
+	}
+
+	.swiper-pagination {
+		.swiper-pagination-bullet {
+			width: 15px;
+			height: 15px;
+			opacity: 1;
+			border-radius: 50%;
+			background-color: #D3D3D3;
+			transition: all .2s ease-in-out;
+			margin: 0 6px;
+
+			&.swiper-pagination-bullet-active {
+				background-color: map-get($mau, main-2);
+			}
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		.swiper-pagination {
+			display: none;
+		}
+	}
+}
