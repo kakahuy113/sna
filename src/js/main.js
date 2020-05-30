@@ -3,14 +3,43 @@ import {
 	Loading
 } from './util/utilities';
 import Cookie from './lib/Cookie';
+import Swiper from 'swiper';
 
 const checkSubMenu = () => {
-	const items = document.querySelectorAll('.t_header--list-link>ul>li');
-	items.forEach((item) => {
+	const itemsTopHeader = document.querySelectorAll('.t_header--list-link ul li');
+	itemsTopHeader.forEach((item) => {
 		const sub = item.querySelector('ul');
 		if (sub) {
 			item.classList.add('hasSub')
 		}
+	})
+
+	const itemsBottomHeader = document.querySelectorAll('.b_header--list-menu ul li');
+	itemsBottomHeader.forEach((item) => {
+		const sub = item.querySelector('ul');
+		if (sub) {
+			item.classList.add('hasSub')
+		}
+	})
+}
+
+const customScrollBar = () => {
+	var myCustomScrollbar = document.querySelector('.my-custom-scrollbar');
+
+	if (myCustomScrollbar) {
+		var ps = new PerfectScrollbar(myCustomScrollbar);
+		var scrollbarY = myCustomScrollbar.querySelector('.ps__rail-y');
+
+		myCustomScrollbar.onscroll = function () {
+			scrollbarY.style.cssText = `top: ${this.scrollTop}px!important; height: 400px; right: ${-this.scrollLeft}px`;
+		}
+		ps.update();
+	}
+}
+
+const mainBanner = () => {
+	const mainBanner = new Swiper('.main-banner__slider .swiper-container', {
+
 	})
 }
 
@@ -20,6 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	Loading();
 	// Check Sub Menu
 	checkSubMenu();
+	// Cumstom Scroll Bar
+	customScrollBar();
+	// SLIDER
+	mainBanner();
 });
 
 document.addEventListener('DOMContentLoaded', () => {});
