@@ -94,11 +94,13 @@ const subMenuMobile = () => {
 			// TẠO RA NÚT BACK
 			if (window.innerWidth < 1200) {
 				item.querySelector('ul>li').insertAdjacentHTML('beforebegin', '<li><div class="btn-back">Trở về</div></li>');
+				// remove attr href
+				item.querySelector('a').removeAttribute('href')
 			}
 			resolve();
 			if (window.innerWidth < 1200) {
 				item.addEventListener('click', function (e) {
-					e.preventDefault();
+					e.stopPropagation();
 					item.querySelector('ul').classList.add('active');
 				})
 			}

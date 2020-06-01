@@ -156,3 +156,27 @@ footer {
 		}
 	}
 }
+
+@media (max-width: 1024.98px) {
+	footer {
+		padding: 50px 0;
+	}
+
+	.logo-footer {
+		margin-bottom: 30px;
+
+		img {
+			display: block;
+			max-width: 250px;
+			margin: 0 auto;
+		}
+	}
+
+	.list-contact-footer {
+		margin-bottom: 30px;
+
+		.info-footer {
+			display: none;
+		}
+	}
+}
