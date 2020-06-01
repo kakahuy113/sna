@@ -1,0 +1,58 @@
+section.contact-home.container
+    .row
+        .col-lg-5.col-first
+            .text-home-first
+                h2 Contact us
+                .text
+                    a.item(href="#")
+                        .icon.location
+                            img.svg(src="./assets/icons/address-white.svg",alt="location-icon")
+                        p.text-icon Street 20, Him Lam Residential Area, Binh Chanh District, Ho Chi Minh City
+                    a.item(href="#3")  
+                        .icon
+                            img.svg(src="./assets/icons/phone-white.svg",alt="phone-icon")
+                        p.text-icon +84 28 730 197 99
+                    a.item(href="#2")  
+                        .icon
+                            img.svg(src="./assets/icons/mobile-phone-white.svg",alt="phone-icon")
+                        p.text-icon 0964 466 014
+                    a.item(href="#1")  
+                        .icon
+                            img.svg(src="./assets/icons/mail-white.svg",alt="phone-icon")
+                        p.text-icon info@sna.edu.vn
+        .col-lg-7.col-second
+            .form-box
+                form(action="#", method="post")
+                    input(type="text",placeholder="Your name",name="name")
+                    .form-group
+                        .input-phone
+                            .city-phone
+                                select(name="city-phone")
+                                    option(value="0") VietNam
+                                        img.svg(src="./assets/icons/city-option/vietname.svg",alt="phone-icon")
+                            input(type="text",placeholder="Phone Number",name="phone")
+                        .input-age
+                           select(name="age")
+                                option(value="0") - Select -
+                                option(value="0") Under 6 years old
+                                option(value="0") Form 6 to 10 years old
+                                option(value="0") Form 10 to 14 years old
+
+                    input(type="text",placeholder="Email",name="email")
+                    label I would like to enquire about
+                    .option-login
+                        .login-sna
+                            input(type="radio", name="login")
+                            label(for="login") Sign up for SNA information
+                        .login-school
+                            input(type="radio", name="login")
+                            label(for="login") Sign up for school tour
+                    input(type="button", value="Submit",name="submit")
+    .row.map
+        .col-12
+            .contact-map
+                iframe(id="map" ,src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.0539248779046!2d106.68555191480036!3d10.730324392352847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fa500747bdd%3A0xd27018f1aaf26a4f!2sInternational+Schools+of+North+America!5e0!3m2!1svi!2s!4v1557307665581!5m2!1svi!2s", frameborder="0" ,style="border:0", allowfullscreen="")
+
+
+
+
