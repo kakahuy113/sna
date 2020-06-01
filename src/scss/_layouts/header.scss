@@ -500,6 +500,8 @@ header {
 		max-width: 100%;
 
 		ul {
+			justify-content: flex-end;
+
 			li {
 				&:last-child {
 					display: none;
