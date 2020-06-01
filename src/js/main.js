@@ -3,6 +3,9 @@ import {
 	Loading
 } from './util/utilities';
 import Cookie from './lib/Cookie';
+import {
+	Promise
+} from 'core-js';
 
 const checkSubMenu = () => {
 	const itemsTopHeader = document.querySelectorAll('.t_header--list-link ul li');
@@ -63,6 +66,61 @@ const checkLayout = () => {
 	}
 }
 
+const subMenuMobile = () => {
+	const toggleMenu = document.querySelector('.toggle-menu-moblie');
+	const mainMenus = document.querySelector('.bottom-header');
+	const subMenus = document.querySelector('.b_header--list-menu').querySelectorAll('.hasSub');
+
+	const overlay = document.querySelectorAll('#overlay');
+	// MainMenu
+	if (toggleMenu) {
+		toggleMenu.addEventListener('click', function () {
+			toggleMenu.classList.toggle('active');
+			document.querySelector('body').classList.toggle('disabled');
+			document.querySelector('#overlay').classList.toggle('active');
+			subMenus.forEach((item) => {
+				item.querySelector('ul').classList.remove('active');
+			})
+			if (mainMenus) {
+				mainMenus.classList.toggle('active');
+			}
+		})
+	}
+	// SubMenu
+	return new Promise((resolve, reject) => {
+		subMenus.forEach((item) => {
+			// TẠO RA NÚT BACK
+			item.querySelector('ul>li').innerHTML = `<div class="btn-back">Trở về</div>`;
+			resolve();
+			item.addEventListener('click', function (e) {
+				e.preventDefault();
+				item.querySelector('ul').classList.add('active');
+			})
+		})
+	}).then(() => {
+		const btnBack = document.querySelectorAll('.btn-back');
+		// Button Back
+		btnBack.forEach((item) => {
+			item.addEventListener('click', function (e) {
+				e.stopPropagation();
+				item.parentElement.parentElement.classList.remove('active');
+			})
+		})
+		// Overlay
+		overlay.forEach((item) => {
+			item.addEventListener('click', function () {
+				item.classList.toggle('active');
+				document.querySelector('body').classList.remove('disabled');
+				mainMenus.classList.remove('active');
+				toggleMenu.classList.remove('active');
+				subMenus.forEach((item) => {
+					item.querySelector('ul').classList.remove('active');
+				})
+			})
+		})
+	})
+}
+
 const fancyboxBookingFixed = () => {
 	$(".iframeBooking").fancybox({
 		'overlayShow': true,
@@ -93,6 +151,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	mainBanner();
 	// FancyboxBooking
 	fancyboxBookingFixed();
+	// Toggle Menu
+	subMenuMobile();
 });
 
 document.addEventListener('DOMContentLoaded', () => {});

@@ -100,6 +100,7 @@ header {
 
 .top-header {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	padding-left: 120px;
 	border-bottom: 1px solid map-get($mau, main);
@@ -125,7 +126,7 @@ header {
 			}
 		}
 
-		@media (min-width: 1025px) {
+		@media (min-width: 1200px) {
 			&:hover {
 				svg {
 					path {
@@ -146,7 +147,7 @@ header {
 		padding-left: 0;
 
 		li {
-			@media (min-width: 1025px) {
+			@media (min-width: 1200px) {
 				&:hover {
 					svg {
 						path {
@@ -246,7 +247,7 @@ header {
 				}
 			}
 
-			@media (min-width: 1025px) {
+			@media (min-width: 1200px) {
 				&:hover {
 					>a {
 						color: map-get($mau, main-2);
@@ -286,7 +287,7 @@ header {
 				}
 			}
 
-			@media (min-width: 1025px) {
+			@media (min-width: 1200px) {
 				&:hover {
 					>ul {
 						opacity: 1;
@@ -362,8 +363,6 @@ header {
 		>li {
 			position: relative;
 
-
-
 			>a {
 				position: relative;
 				font-size: 15px;
@@ -438,17 +437,19 @@ header {
 				}
 			}
 
-			&:hover {
-				>ul {
-					opacity: 1;
-					visibility: visible;
-				}
+			@media (min-width: 1200px) {
+				&:hover {
+					>ul {
+						opacity: 1;
+						visibility: visible;
+					}
 
-				>a {
-					color: map-get($mau, main-2);
+					>a {
+						color: map-get($mau, main-2);
 
-					&:after {
-						width: 100%;
+						&:after {
+							width: 100%;
+						}
 					}
 				}
 			}
@@ -481,6 +482,38 @@ header {
 	// TOP HEADER
 
 	.top-header {
+		position: fixed;
+		height: 20vh;
+		max-width: 400px;
+		bottom: 0;
+		left: 0;
+		background: #ffffff;
+		padding: 10px 15px !important;
+		border-top: 1px solid #f1f1f1;
+	}
+
+	.t_header--list-contact {
+		line-height: unset;
+		margin-left: auto;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
+
+		ul {
+			li {
+				&:last-child {
+					display: none;
+				}
+			}
+
+		}
+	}
+
+	.t_header--list-link {
+		display: none;
+	}
+
+	.t_header--login {
 		display: none;
 	}
 
@@ -489,13 +522,28 @@ header {
 	.bottom-header {
 		position: fixed;
 		top: 70px;
-		left: 0;
+		left: -100%;
 		max-width: 400px;
+		height: calc(80vh - 70px);
 		align-items: unset;
+		background: #ffffff;
+		transition: .5s all ease-in-out;
+
+		&.active {
+			left: 0;
+		}
 	}
 
 	.b_header--list-menu {
-		height: 100vh;
+		height: 100%;
+
+		.btn-back {
+			text-align: right;
+			padding-right: 20px;
+			color: map-get($mau, main-2);
+			user-select: none;
+			cursor: pointer;
+		}
 
 		ul {
 			display: block;
@@ -505,6 +553,65 @@ header {
 			left: unset;
 			transform: unset;
 			height: 100%;
+
+			>li+li {
+				border-top: 1px solid #dedede;
+			}
+
+			>li {
+				&:last-child {
+					border-bottom: 1px solid #dedede;
+				}
+			}
+
+			>li {
+				position: relative;
+				line-height: 50px;
+
+				&.hasSub {
+					&:after {
+						content: '';
+						position: absolute;
+						top: 50%;
+						right: 10px;
+						transform: translateY(-50%) rotate(-90deg);
+						border-top: 5px solid #0a1f44;
+						border-right: 5px solid transparent;
+						border-left: 5px solid transparent;
+						transition: .3s all ease-in-out;
+					}
+				}
+
+				>a {
+					display: block;
+					padding-left: 20px;
+					padding-right: 5px;
+					padding-bottom: 0;
+				}
+
+				>ul {
+					position: fixed;
+					top: 70px;
+					left: -100%;
+					width: 100%;
+					max-width: 400px;
+					z-index: 10;
+					visibility: visible;
+					opacity: 1;
+					transition: .5s all ease-in-out;
+
+					>li {
+						>ul {
+							left: -100%;
+							top: 70px;
+						}
+					}
+
+					&.active {
+						left: 0;
+					}
+				}
+			}
 		}
 	}
 }
