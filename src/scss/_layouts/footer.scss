@@ -75,6 +75,14 @@ footer {
 				font-size: 15px;
 				display: block;
 				padding: 5px 0;
+				transition: .3s all ease-in-out;
+
+				@media (min-width: 1025px) {
+					&:hover {
+						color: map-get($mau, main-2);
+					}
+				}
+
 			}
 		}
 	}
@@ -92,6 +100,13 @@ footer {
 	h5>a {
 		display: block;
 		margin-top: 30px;
+		transition: .3s all ease-in-out;
+
+		@media (min-width: 1025px) {
+			&:hover {
+				color: map-get($mau, main-2);
+			}
+		}
 	}
 }
 

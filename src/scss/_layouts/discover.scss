@@ -1,0 +1,108 @@
+.discover {
+	position: relative;
+	padding: 100px 0;
+	background-color: #f3f4f5;
+
+	.wrap-rotate-text {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+		h2 {
+			transform: rotate(-90deg);
+			font-size: 80px;
+			color: #0A1F44;
+			font-weight: 700;
+			opacity: 0.2;
+			white-space: nowrap;
+			font-family: "lora", sans-serif;
+		}
+	}
+
+	.title-discover {
+		position: relative;
+		font-size: 30px;
+		font-weight: 700;
+		font-family: "lora", sans-serif;
+		color: map-get($mau, main);
+		padding-left: 50px;
+		transition: .3s all ease-in-out;
+
+		&.top {
+			margin-bottom: 20px;
+		}
+
+		&.bottom {
+			margin-top: 20px;
+		}
+
+		&:after {
+			content: '';
+			width: 35px;
+			height: 35px;
+			background: map-get($mau, main);
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			transition: .5s all ease-in-out;
+		}
+
+		&:before {
+			content: '\e87a';
+			font-family: 'Linearicons-Free';
+			color: #ffffff;
+			font-size: 18px;
+			position: absolute;
+			top: 50%;
+			left: 7px;
+			transform: translateY(-50%);
+			transition: .5s all ease-in-out;
+			z-index: 1;
+		}
+	}
+
+	.img {
+		height: 295px;
+		background: #dfdfdf;
+
+		img {
+			transition: .3s all ease-in-out;
+			transform: scale(1);
+		}
+	}
+
+	.item {
+		@media (min-width: 1025px) {
+			&:hover {
+				.img {
+					img {
+						transform: scale(1.1);
+					}
+				}
+
+				.title-discover {
+					color: map-get($mau, main-2);
+
+					&:after {
+						background: map-get($mau, main-2);
+					}
+				}
+			}
+		}
+	}
+
+	@media (min-width: 1200px) {
+		.row {
+			margin-right: -100px;
+			margin-left: -100px;
+		}
+
+		.col-md-6 {
+			padding-right: 100px;
+			padding-left: 100px;
+		}
+	}
+}

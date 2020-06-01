@@ -16,7 +16,7 @@ const copyFonts = () => {
 	let fonts = vendors.fonts
 	return src(fonts, {
 		allowEmpty: true,
-	}).pipe(dest('_dist/fonts'))
+	}).pipe(dest('_dist/css/fonts'))
 }
 
 module.exports = {
