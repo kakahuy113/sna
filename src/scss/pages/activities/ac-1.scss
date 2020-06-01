@@ -1,33 +1,33 @@
 .activities {
-    // Chỉ margin top 200px tạm thời để không bị thanh menu che
-    margin-top: 200px;
-    // end
-    padding: 100px 0px;
+	// // Chỉ margin top 200px tạm thời để không bị thanh menu che
+	// margin-top: 200px;
+	// // end
+	padding: 100px 0px;
 
-    .container {
-        padding: 0px 15px;
+	.container {
+		padding: 0px 15px;
 
-        .content-top {
-            max-width: 950px;
+		.content-top {
+			max-width: 950px;
 
-            p {
-                text-align: justify;
-                margin: 0 0 20px;
-                font-style: 16px;
-            }
+			p {
+				text-align: justify;
+				margin: 0 0 20px;
+				font-style: 16px;
+			}
 
-            hr {
-                margin: 20px 0;
-                display: block;
-            }
+			hr {
+				margin: 20px 0;
+				display: block;
+			}
 
-            h2 {
-                font-weight: 700;
-                font-family: "lora", sans-serif;
-                margin-bottom: 20px;
-                font-size: 30px;
-                color: #0A1F44;
-            }
-        }
-    }
+			h2 {
+				font-weight: 700;
+				font-family: "lora", sans-serif;
+				margin-bottom: 20px;
+				font-size: 30px;
+				color: #0A1F44;
+			}
+		}
+	}
 }
