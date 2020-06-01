@@ -69,6 +69,7 @@ const checkLayout = () => {
 const subMenuMobile = () => {
 	const toggleMenu = document.querySelector('.toggle-menu-moblie');
 	const mainMenus = document.querySelector('.bottom-header');
+	const topHeader = document.querySelector('.top-header');
 	const subMenus = document.querySelector('.b_header--list-menu').querySelectorAll('.hasSub');
 
 	const overlay = document.querySelectorAll('#overlay');
@@ -81,8 +82,9 @@ const subMenuMobile = () => {
 			subMenus.forEach((item) => {
 				item.querySelector('ul').classList.remove('active');
 			})
-			if (mainMenus) {
+			if (mainMenus && topHeader) {
 				mainMenus.classList.toggle('active');
+				topHeader.classList.toggle('active');
 			}
 		})
 	}
@@ -116,6 +118,7 @@ const subMenuMobile = () => {
 				item.classList.toggle('active');
 				document.querySelector('body').classList.remove('disabled');
 				mainMenus.classList.remove('active');
+				topHeader.classList.remove('active');
 				toggleMenu.classList.remove('active');
 				subMenus.forEach((item) => {
 					item.querySelector('ul').classList.remove('active');
