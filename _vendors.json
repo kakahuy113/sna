@@ -8,12 +8,14 @@
 		"node_modules/swiper/js/swiper.js",
 		"node_modules/lazysizes/lazysizes.js",
 		"node_modules/perfect-scrollbar/dist/perfect-scrollbar.js",
-		"node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js"
+		"node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
+		"node_modules/wowjs/dist/wow.js"
 	],
 	"css": [
 		"node_modules/swiper/css/swiper.css",
 		"node_modules/linearicons/dist/web-font/style.css",
 		"node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
-		"node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css"
+		"node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css",
+		"node_modules/wowjs/css/libs/animate.css"
 	]
 }

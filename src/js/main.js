@@ -3,7 +3,6 @@ import {
 	Loading
 } from './util/utilities';
 import Cookie from './lib/Cookie';
-import Swiper from 'swiper';
 
 const checkSubMenu = () => {
 	const itemsTopHeader = document.querySelectorAll('.t_header--list-link ul li');
@@ -54,8 +53,11 @@ const mainBanner = () => {
 const checkLayout = () => {
 	const heightHeader = document.querySelector('header').offsetHeight;
 	const sliderBanner = document.querySelector('.main-banner__slider');
+	const mainBanner = document.querySelector('.main-banner');
 	if (sliderBanner) {
 		sliderBanner.style.cssText = `padding-top: ${heightHeader}px`;
+	} else if (mainBanner) {
+		mainBanner.style.cssText = `padding-top: ${heightHeader}px`;
 	} else {
 		document.querySelector('main').style.cssText = `padding-top: ${heightHeader}px`;
 	}
@@ -80,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
 	getSVGs();
 	Loading();
+	new WOW().init();
 	// Check Layout
 	checkLayout();
 	// Check Sub Menu

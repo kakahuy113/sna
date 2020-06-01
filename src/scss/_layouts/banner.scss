@@ -1,0 +1,21 @@
+.main-banner {
+	position: relative;
+
+	.block-img {
+		max-height: 485px;
+	}
+
+	.title-page {
+		z-index: 5;
+		position: absolute;
+		bottom: 50px;
+		left: 0;
+		right: 0;
+
+		h1 {
+			font-size: 55px;
+			color: #ffffff;
+			font-family: "lora", sans-serif;
+		}
+	}
+}
