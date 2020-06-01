@@ -90,7 +90,9 @@ const subMenuMobile = () => {
 	return new Promise((resolve, reject) => {
 		subMenus.forEach((item) => {
 			// TẠO RA NÚT BACK
-			item.querySelector('ul>li').innerHTML = `<div class="btn-back">Trở về</div>`;
+			if (window.innerWidth < 1200) {
+				item.querySelector('ul>li').insertAdjacentHTML('beforebegin', '<li><div class="btn-back">Trở về</div></li>');
+			}
 			resolve();
 			if (window.innerWidth < 1200) {
 				item.addEventListener('click', function (e) {
