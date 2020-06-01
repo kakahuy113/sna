@@ -51,16 +51,45 @@ const mainBanner = () => {
 	})
 }
 
+const checkLayout = () => {
+	const heightHeader = document.querySelector('header').offsetHeight;
+	const sliderBanner = document.querySelector('.main-banner__slider');
+	if (sliderBanner) {
+		sliderBanner.style.cssText = `padding-top: ${heightHeader}px`;
+	} else {
+		document.querySelector('main').style.cssText = `padding-top: ${heightHeader}px`;
+	}
+}
+
+const fancyboxBookingFixed = () => {
+	$(".iframeBooking").fancybox({
+		'overlayShow': true,
+		'autoScale': true,
+		'autoDimensions': false,
+		'modal': true,
+		'type': 'iframe',
+		'autoSize': false,
+		'showCloseButton': true,
+		afterShow: function () {
+			$('.fancybox-content').append('<a title="Close" class="fancybox-item fancybox-close custom-close-fancybox-booking" href="javascript:jQuery.fancybox.close();">CLOSE</a>');
+		}
+	});
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
 	getSVGs();
 	Loading();
+	// Check Layout
+	checkLayout();
 	// Check Sub Menu
 	checkSubMenu();
 	// Cumstom Scroll Bar
 	customScrollBar();
 	// SLIDER
 	mainBanner();
+	// FancyboxBooking
+	fancyboxBookingFixed();
 });
 
 document.addEventListener('DOMContentLoaded', () => {});
