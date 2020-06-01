@@ -92,10 +92,12 @@ const subMenuMobile = () => {
 			// TẠO RA NÚT BACK
 			item.querySelector('ul>li').innerHTML = `<div class="btn-back">Trở về</div>`;
 			resolve();
-			item.addEventListener('click', function (e) {
-				e.preventDefault();
-				item.querySelector('ul').classList.add('active');
-			})
+			if (window.innerWidth < 1200) {
+				item.addEventListener('click', function (e) {
+					e.preventDefault();
+					item.querySelector('ul').classList.add('active');
+				})
+			}
 		})
 	}).then(() => {
 		const btnBack = document.querySelectorAll('.btn-back');
