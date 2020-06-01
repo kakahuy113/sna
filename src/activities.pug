@@ -3,10 +3,12 @@ extends _templates/_layout/_layout.pug
 block var
 	- let title = 'Activities';
 	- let bodyClass = 'activities-page';
-
+	- let linkBanner = '/assets/images/banner/activities.png';
+	- let titleBanner = 'Extracurricular Activities';
+block banner,breadcrumb
+	include _templates/_layout/_banner
 block loading
 	include _templates/_layout/_loading
-block banner,breadcrumb
 block main
 	include _templates/activities/a-1
 	include _templates/activities/a-2
