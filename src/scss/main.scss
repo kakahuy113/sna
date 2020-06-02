@@ -1,9 +1,13 @@
 @import '_abstracts/main';
 @import '_globals/main';
 @import '_layouts/main';
-
 @import 'pages/index/main';
 @import 'pages/activities/main';
 @import 'pages/library-photo/main';
+<<<<<<< HEAD
 @import 'pages/news/main';
+=======
+@import 'pages/library-photo/main';
+@import 'pages/news-detail/main';
+>>>>>>> 5ccc11746bd9c672a27e0eec430a1df1040888a1
 @import 'pages/contact/main';
