@@ -1,0 +1,125 @@
+.news {
+    padding-top: 100px;
+
+    h2 {
+        font-size: 45px;
+        line-height: 1.22857143;
+        color: #AD132A;
+        margin-bottom: 20px;
+    }
+
+    .features {
+        .list-items {
+            padding: 0px 15px;
+            margin-bottom: 30px;
+        }
+
+        .img {
+            width: 100%;
+            height: 329.29px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content {
+            height: 148px;
+        }
+
+        .read-more {
+            position: relative;
+            padding-right: 10px;
+            padding-top: 10px;
+            float: right;
+            font-size: 13px;
+            color: #0A1F44;
+
+
+            .icon-arrow {
+                position: absolute;
+                top: 9px;
+                left: -40%;
+            }
+
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #AD132A;
+        }
+
+        p {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.news-all {
+    .related-news {
+        padding-bottom: 100px;
+
+        h3 {
+            font-size: 45px;
+            line-height: 1.22857143;
+            color: #AD132A;
+            margin-bottom: 20px;
+        }
+
+        .related-item {
+            max-width: 500px;
+            padding-right: 15px;
+
+            .related-img {
+                width: 100%;
+                height: 214px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    transition: all .5s;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .related-content {
+            .related-title {
+                font-weight: bold;
+                position: relative;
+                text-transform: uppercase;
+                color: #AD132A;
+                margin: 10px 0;
+                font-size: 18px;
+            }
+
+            .related-text {
+                font-size: 15px;
+            }
+
+            span {
+                display: flex;
+                position: relative;
+                color: #0A1F44;
+                padding-top: 10px;
+                float: right;
+                font-size: 13px;
+                height: 100%;
+                padding-right: 10px;
+
+                .icon-arrow {
+                    position: absolute;
+                    top: 9px;
+                    left: -40%;
+                }
+            }
+        }
+    }
+}
