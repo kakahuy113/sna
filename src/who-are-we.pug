@@ -3,8 +3,10 @@ extends _templates/_layout/_layout.pug
 block var
 	- let title = 'Welcome To SNA | SNA';
 	- let bodyClass = 'who-are-we-page';
-	- let linkBanner = '/assets/images/banner/who-are-you.jpg';
+	- let linkBanner = '/assets/images/banner/who-are-we.jpg';
 	- let titleBanner = 'Welcome to SNA';
 
 block banner,breadcrumb
 	include _templates/_layout/_banner
+block main
+	include _templates/who-are-we/w-1
