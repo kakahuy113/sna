@@ -6,6 +6,7 @@ import Cookie from './lib/Cookie';
 import {
 	Promise
 } from 'core-js';
+import Swiper from 'swiper';
 
 const checkSubMenu = () => {
 	const itemsTopHeader = document.querySelectorAll('.t_header--list-link ul li');
@@ -155,6 +156,20 @@ const fancyboxBookingFixed = () => {
 	});
 }
 
+const quoteSlider = () => {
+	const quoteSlider = new Swiper('.quote__slider .swiper-container', {
+		speed: 700,
+		effect: 'fade',
+		autoplay: {
+			delay: 10000,
+		},
+		autoHeight: true,
+		navigation: {
+			nextEl: '.quote__slider .swiper-button-next',
+			prevEl: '.quote__slider .swiper-button-prev',
+		},
+	})
+}
 
 document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
@@ -171,6 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	customScrollBar();
 	// SLIDER
 	mainBanner();
+	quoteSlider();
 	// FancyboxBooking
 	fancyboxBookingFixed();
 	// Toggle Menu
