@@ -148,18 +148,16 @@ textarea {
 		font-size: 45px;
 		text-align: center;
 		font-family: "lora", sans-serif;
+		line-height: 60px;
 	}
 
 	&:after {
 		content: attr(data-title);
 		display: block;
+		margin-top: -60px;
 		font-size: 120px;
 		opacity: 0.05;
-		position: absolute;
-		left: 0;
-		right: 0;
 		text-align: center;
-		top: 0;
 		line-height: normal;
 	}
 

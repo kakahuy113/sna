@@ -155,6 +155,7 @@ const fancyboxBookingFixed = () => {
 	});
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
 	getSVGs();
