@@ -155,7 +155,7 @@ textarea {
 		content: attr(data-title);
 		display: block;
 		margin-top: -60px;
-		font-size: 120px;
+		font-size: 7rem;
 		opacity: 0.05;
 		text-align: center;
 		line-height: normal;
@@ -167,11 +167,15 @@ textarea {
 		}
 
 		&:after {
-			font-size: 80px;
+			font-size: 5rem;
 		}
 	}
 
 	@media (max-width: 575.98px) {
+		h2 {
+			-webkit-line-clamp: unset;
+		}
+
 		&:after {
 			content: none;
 		}

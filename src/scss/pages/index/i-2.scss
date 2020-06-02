@@ -12,4 +12,27 @@
 			max-width: 350px;
 		}
 	}
+
+	@media (max-width: 767.98px) {
+		.block-title--main {
+			padding-bottom: 350px;
+		}
+
+		.img-sticker {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		.block-title--main {
+			padding-bottom: 250px;
+		}
+
+		.img-sticker {
+			img {
+				max-width: 250px;
+			}
+		}
+	}
 }
