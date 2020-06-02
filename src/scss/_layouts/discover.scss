@@ -75,7 +75,7 @@
 	}
 
 	.item {
-		@media (min-width: 1025px) {
+		@media (min-width: 1200px) {
 			&:hover {
 				.img {
 					img {
@@ -100,9 +100,83 @@
 			margin-left: -100px;
 		}
 
-		.col-md-6 {
+		.col-sm-6 {
 			padding-right: 100px;
 			padding-left: 100px;
+		}
+	}
+
+	@media (max-width: 1199.98px) {
+		padding: 50px 0;
+
+		.row {
+			margin-right: -50px;
+			margin-left: -50px;
+		}
+
+		.col-sm-6 {
+			padding-right: 50px;
+			padding-left: 50px;
+		}
+
+		.wrap-rotate-text {
+			h2 {
+				font-size: 42px;
+			}
+		}
+
+		.img {
+			height: 190px;
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		.title-discover {
+			font-size: 18px;
+			padding-left: 35px;
+
+			&:after {
+				width: 25px;
+				height: 25px;
+			}
+
+			&:before {
+				font-size: 12px;
+				left: 6px;
+			}
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		padding: 25px 0;
+
+		.row {
+			margin-right: -10px;
+			margin-left: -10px;
+		}
+
+		.col-sm-6 {
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+
+		.img {
+			height: 200px;
+		}
+
+		.wrap-rotate-text {
+			position: static;
+			transform: unset;
+			margin-bottom: 30px;
+
+			h2 {
+				transform: unset;
+				font-size: 32px;
+			}
+		}
+
+		.col-sm-6+.col-sm-6 {
+			margin-top: 10px;
 		}
 	}
 }
