@@ -94,11 +94,13 @@ const subMenuMobile = () => {
 			// TẠO RA NÚT BACK
 			if (window.innerWidth < 1200) {
 				item.querySelector('ul>li').insertAdjacentHTML('beforebegin', '<li><div class="btn-back">Trở về</div></li>');
+				// remove attr href
+				item.querySelector('a').removeAttribute('href')
 			}
 			resolve();
 			if (window.innerWidth < 1200) {
 				item.addEventListener('click', function (e) {
-					e.preventDefault();
+					e.stopPropagation();
 					item.querySelector('ul').classList.add('active');
 				})
 			}
@@ -128,6 +130,16 @@ const subMenuMobile = () => {
 	})
 }
 
+const subMenuFooter = () => {
+	$('.item-link-footer h5').click(function (e) {
+		e.preventDefault();
+		$(this).toggleClass('active');
+		$(this).siblings('ul').slideToggle();
+		$('.item-link-footer h5').not(this).siblings('ul').slideUp();
+		$('.item-link-footer h5').not(this).removeClass('active');
+	});
+}
+
 const fancyboxBookingFixed = () => {
 	$(".iframeBooking").fancybox({
 		'overlayShow': true,
@@ -152,6 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	checkLayout();
 	// Check Sub Menu
 	checkSubMenu();
+	// Sub Menu Footer
+	subMenuFooter();
 	// Cumstom Scroll Bar
 	customScrollBar();
 	// SLIDER

@@ -33,19 +33,19 @@ section.contact-home.container
                         .input-age
                            select(name="age")
                                 option(value="0") - Select -
-                                option(value="0") Under 6 years old
-                                option(value="0") Form 6 to 10 years old
-                                option(value="0") Form 10 to 14 years old
+                                option(value="1") Under 6 years old
+                                option(value="2") Form 6 to 10 years old
+                                option(value="3") Form 10 to 14 years old
 
                     input(type="text",placeholder="Email",name="email")
                     label I would like to enquire about
                     .option-login
                         .login-sna
-                            input(type="radio", name="login")
-                            label(for="login") Sign up for SNA information
+                            input(type="radio", name="login",id="sna")
+                            label(for="sna") Sign up for SNA information
                         .login-school
-                            input(type="radio", name="login")
-                            label(for="login") Sign up for school tour
+                            input(type="radio", name="login",id="school")
+                            label(for="school") Sign up for school tour
                     input(type="button", value="Submit",name="submit")
     .row.map
         .col-12

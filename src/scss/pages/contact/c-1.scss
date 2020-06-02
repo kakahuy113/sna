@@ -4,7 +4,7 @@ section.contact-home {
         padding-right: 0;
         padding-left: 0;
     }
-    margin-top: 10rem;
+    margin-top: 100px;
     .text-home-first {
         color: white;
         h2 {
@@ -70,7 +70,6 @@ section.contact-home {
                         width: 100%;
                         padding: 10px;
                         border-bottom: 1px solid #0A1F44;
-                        // option {}
                     }
                 }
                 input[name='phone'] {
@@ -98,7 +97,7 @@ section.contact-home {
             }
         }
         .option-login {
-            padding: 15px 0;
+            padding-bottom: 15px;
             .login-sna,
             .login-school {
                 display: block;
@@ -108,13 +107,15 @@ section.contact-home {
             position: relative;
             display: inline-block;
             outline: none;
-            width: 120px;
+            width: 100%;
             height: 50px;
             color: #fff;
             background-color: #AD132A;
             border: none;
             font-weight: 700;
             text-transform: uppercase;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
         }
     }
     .col-12 {
@@ -132,5 +133,16 @@ section.contact-home {
 @media(max-width:1199px) {
     .col-first {
         flex: 0 0 100%;
+    }
+}
+
+@media(max-width:1024px) {
+    section.contact-home {
+        .text-home-first {
+            padding: 100px !important;
+        }
+        .text-icon {
+            font-size: 14px;
+        }
     }
 }

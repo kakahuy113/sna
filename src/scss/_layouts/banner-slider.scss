@@ -4,7 +4,7 @@
 		background: #dfdfdf;
 	}
 
-	.btb-read-more {
+	.btn-read-more {
 		z-index: 5;
 		position: absolute;
 		bottom: 50px;
@@ -51,6 +51,17 @@
 	}
 
 	@media (max-width: 767.98px) {
+		.btn-read-more {
+			bottom: 15px;
+
+			.btn {
+				font-size: 10px;
+				line-height: 25px;
+				height: 25px;
+				padding: 0 15px;
+			}
+		}
+
 		.swiper-pagination {
 			display: none;
 		}

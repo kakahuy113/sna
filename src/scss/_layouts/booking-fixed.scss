@@ -5,13 +5,13 @@
 	top: 50%;
 	margin-top: -90px;
 	float: none;
-	z-index: 999;
+	z-index: 200;
 }
 
 .fancybox-slide--iframe {
 	.fancybox-content {
 		width: 480px;
-		height: 835px;
+		height: 85%;
 		padding-top: 32px;
 	}
 }
@@ -41,5 +41,11 @@
 			background-position: top left;
 			color: #000000;
 		}
+	}
+}
+
+@media (max-width: 575.98px) {
+	.fancybox-slide {
+		padding: 20px;
 	}
 }
