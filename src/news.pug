@@ -1,0 +1,14 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'News | SNA';
+	- let bodyClass = 'news-event-page';
+	- let linkBanner = '/assets/images/banner/news-event.jpg';
+	- let titleBanner = 'News';
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/news/n-1
+block discover
+	include _templates/_layout/_discover
+block scripts
