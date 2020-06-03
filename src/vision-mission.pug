@@ -1,0 +1,14 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Vision & Mission | SNA';
+	- let bodyClass = 'news-event-page';
+	- let linkBanner = '/assets/images/banner/vision-mission.png';
+	- let titleBanner = 'Vision & Mission';
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/vision-mission/vm-1
+block discover
+	include _templates/_layout/_discover
+block scripts

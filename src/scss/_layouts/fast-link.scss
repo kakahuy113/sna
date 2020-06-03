@@ -90,7 +90,11 @@
 	}
 
 	@media (max-width: 1199.98px) {
-		padding: 50px 0
+		padding: 50px 0;
+
+		.box-link {
+			background: none;
+		}
 	}
 
 	@media (max-width: 575.98px) {

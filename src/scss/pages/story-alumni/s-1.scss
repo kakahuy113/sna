@@ -1,0 +1,11 @@
+.story-alumni {
+    padding-top: 100px;
+
+    p {
+        font-size: 22px;
+
+        @media (max-width: 575.98px) {
+            font-size: 18px;
+        }
+    }
+}
