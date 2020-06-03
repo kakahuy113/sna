@@ -305,9 +305,6 @@ header {
     position: relative;
     width: 100%;
     height: 80px;
-    .activeMenu {
-        border-bottom: 2px solid map-get($mau, main);
-    }
     ul {
         position: absolute;
         top: 50%;
@@ -318,6 +315,16 @@ header {
         padding-left: 0;
         list-style-type: none;
         >li {
+            &.active {
+                >li {
+                    >a {
+                        color: map-get($mau, main-2);
+                    }
+                }
+                >a {
+                    color: map-get($mau, main-2);
+                }
+            }
             position: relative;
             >a {
                 position: relative;

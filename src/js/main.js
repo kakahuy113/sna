@@ -183,9 +183,10 @@ const quoteSlider = () => {
 const activeMenu = () => {
     var url = window.location.pathname.split('/')[1];
     $('.b_header--list-menu ul li').each(function() {
-        var href = $(this).find('a').attr('href');
+        var href = $(this).children('a').eq(0).attr('href');
         if (href === url) {
-            $(this).addClass('activeMenu');
+            $(this).addClass('active');
+            $(this).parent('ul').parent('li').addClass('active');
         }
     });
 };
