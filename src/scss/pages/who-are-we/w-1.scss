@@ -1,9 +1,78 @@
 .who-are-we {
-	padding: 100px 0;
+	padding-top: 100px;
 
-	h2 {
-		font-size: 42px;
-		font-family: "lora", sans-serif;
+	.row {
+		margin-right: -40px;
+		margin-left: -40px;
+
+		.col-md-6 {
+			padding-right: 40px;
+			padding-left: 40px;
+		}
+	}
+
+	.block-title--main {
 		margin-bottom: 20px;
+	}
+
+	.desc {
+		p+p {
+			margin-top: 20px;
+		}
+	}
+
+	.name {
+		position: relative;
+		padding-top: 10px;
+		margin-top: 10px;
+		font-size: 20px;
+		font-weight: 700;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 70%;
+			height: 2px;
+			background: map-get($mau, main-2);
+			opacity: .3;
+		}
+	}
+
+	@media (max-width: 1024.98px) {
+		padding-top: 50px;
+
+		.row {
+			margin-right: -10px;
+			margin-left: -10px;
+
+			.col-md-6 {
+				padding-right: 10px;
+				padding-left: 10px;
+			}
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		padding-top: 25px;
+
+		.img {
+			margin-bottom: 20px;
+		}
+
+		.block-title--main {
+			margin-bottom: 10px;
+		}
+
+		.desc {
+			p {
+				font-size: 14px;
+			}
+
+			p+p {
+				margin-top: 10px;
+			}
+		}
 	}
 }
