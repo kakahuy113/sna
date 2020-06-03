@@ -19,7 +19,7 @@
         }
 
         h3 {
-            color: #AD132A;
+            color: map-get($mau, main-2);
             font-size: 30px;
             font-weight: 700;
             font-family: "lora", sans-serif;

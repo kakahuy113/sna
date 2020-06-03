@@ -1,0 +1,17 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'SNA Alumni | SNA';
+	- let bodyClass = 'sna-alumni-page';
+	- let linkBanner = '/assets/images/banner/alumni.jpg';
+	- let titleBanner = 'SNA Alumni';
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main	
+	include _templates/story-alumni/s-1
+	include _templates/story-alumni/s-2
+	include _templates/_layout/_quote-slider
+	include _templates/story-alumni/s-3
+block discover
+	include _templates/_layout/_discover
+block scripts

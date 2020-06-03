@@ -1,0 +1,19 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'SNA Student | SNA';
+	- let bodyClass = 'sna-student-page';
+	- let linkBanner = '/assets/images/banner/story.jpg';
+	- let titleBanner = 'SNA Student';
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/story/s-1	
+	include _templates/_layout/_quote-slider	
+	include _templates/story/s-2	
+	include _templates/story/s-3	
+	include _templates/story/s-4
+	include _templates/story/s-5
+block discover
+	include _templates/_layout/_discover
+block scripts
