@@ -4,7 +4,7 @@
     h2 {
         font-size: 45px;
         line-height: 1.22857143;
-        color: #AD132A;
+        color: map-get($mau, main-2);
         margin-bottom: 20px;
     }
 
@@ -37,7 +37,7 @@
             padding-top: 10px;
             float: right;
             font-size: 13px;
-            color: #0A1F44;
+            color: map-get($mau, main);
 
 
             .icon-arrow {
@@ -51,7 +51,7 @@
         h3 {
             font-size: 18px;
             margin-bottom: 10px;
-            color: #AD132A;
+            color: map-get($mau, main-2);
         }
 
         p {
@@ -68,7 +68,7 @@
         h3 {
             font-size: 45px;
             line-height: 1.22857143;
-            color: #AD132A;
+            color: map-get($mau, main-2);
             margin-bottom: 20px;
         }
 
@@ -95,7 +95,7 @@
                 font-weight: bold;
                 position: relative;
                 text-transform: uppercase;
-                color: #AD132A;
+                color: map-get($mau, main-2);
                 margin: 10px 0;
                 font-size: 18px;
             }
@@ -107,7 +107,7 @@
             span {
                 display: flex;
                 position: relative;
-                color: #0A1F44;
+                color: map-get($mau, main);
                 padding-top: 10px;
                 float: right;
                 font-size: 13px;
