@@ -191,20 +191,21 @@ const activeMenu = () => {
 };
 
 const coreSliderStyle_1 = () => {
-	const coreSliderStyle_1 = new Swiper('.core_slider-style--1 .swiper-container', {
-		centeredSlides: true,
-		slidesPerView: 1,
-		loopAdditionalSlides: 1,
-		loop: true,
-		navigation: {
-			nextEl: '.core_slider-style--1 .swiper-button-next',
-			prevEl: '.core_slider-style--1 .swiper-button-prev',
-		},
-	})
-}
+    const coreSliderStyle_1 = new Swiper(
+        '.core_slider-style--1 .swiper-container', {
+            centeredSlides: true,
+            slidesPerView: 1,
+            loopAdditionalSlides: 1,
+            loop: true,
+            navigation: {
+                nextEl: '.core_slider-style--1 .swiper-button-next',
+                prevEl: '.core_slider-style--1 .swiper-button-prev',
+            },
+        }
+    );
+};
 
 document.addEventListener('DOMContentLoaded', () => {
-<<<<<<< HEAD
     Cookie();
     getSVGs();
     Loading();
@@ -220,34 +221,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // SLIDER
     mainBanner();
     quoteSlider();
+    coreSliderStyle_1();
     // FancyboxBooking
     fancyboxBookingFixed();
     // Toggle Menu
     subMenuMobile();
-    //active Menu
+    //activeMenu
     activeMenu();
-=======
-	Cookie();
-	getSVGs();
-	Loading();
-	new WOW().init();
-	// Check Layout
-	checkLayout();
-	// Check Sub Menu
-	checkSubMenu();
-	// Sub Menu Footer
-	subMenuFooter();
-	// Cumstom Scroll Bar
-	customScrollBar();
-	// SLIDER
-	mainBanner();
-	quoteSlider();
-	coreSliderStyle_1();
-	// FancyboxBooking
-	fancyboxBookingFixed();
-	// Toggle Menu
-	subMenuMobile();
->>>>>>> 2dddd4694ea8f4f8713b5cde69a36e4e9cea5b02
 });
 
 document.addEventListener('DOMContentLoaded', () => {});
