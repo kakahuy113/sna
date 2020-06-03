@@ -333,6 +333,54 @@ textarea {
 	}
 }
 
+.block-content--style_4 {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+
+	.img,
+	.block-text {
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+
+	.img {
+		height: 811px;
+		background: #dfdfdf;
+	}
+
+	.content {
+		background: #f3f4f5;
+		margin-top: 70px;
+		padding: 50px 30px;
+	}
+
+	.desc {
+		p+p {
+			margin-top: 20px;
+		}
+	}
+
+	.name {
+		font-size: 18px;
+		font-weight: 500;
+		color: #0A1F44;
+		margin-top: 20px;
+	}
+
+	&:after {
+		position: absolute;
+		top: 70px;
+		bottom: 0;
+		right: 0;
+		width: 50%;
+		background-color: #f3f4f5;
+		content: "";
+		z-index: -1;
+	}
+}
+
 .page-desc {
 	padding-bottom: 50px;
 
@@ -457,7 +505,8 @@ textarea {
 	}
 }
 
-.community {
+.community,
+.school-leadership-team {
 	padding: 100px 0;
 
 	@media (max-width: 767.98px) {

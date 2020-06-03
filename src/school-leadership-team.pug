@@ -1,0 +1,15 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'School Leadership Team | SNA';
+	- let bodyClass = 'school-leadership-team-page';
+	- let linkBanner = '/assets/images/banner/school-leader-team.jpg';
+	- let titleBanner = 'School Leadership Team';
+
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block discover
+	include _templates/_layout/_discover
+block main
+	include _templates/school-leadership-team/s-1
+block scripts
