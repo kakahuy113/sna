@@ -193,6 +193,12 @@ const activeMenu = () => {
 		if (href === url) {
 			$(this).addClass('active');
 			$(this).parent('ul').parent('li').addClass('active');
+			$(this)
+				.parent('ul')
+				.parent('li')
+				.parent('ul')
+				.parent('li')
+				.addClass('active');
 		}
 	});
 };
