@@ -143,6 +143,16 @@ textarea {
 .block-title--main {
 	position: relative;
 
+	&.text-left {
+		h2 {
+			text-align: left;
+		}
+
+		&:after {
+			text-align: left;
+		}
+	}
+
 	h2 {
 		color: #0A1F44;
 		font-size: 45px;
