@@ -25,39 +25,39 @@
         font-size: 22px;
     }
 
-    .check-list {
-        margin-bottom: 40px;
-    }
+    // .check-list {
+    //     margin-bottom: 40px;
+    // }
 
-    .list---items {
-        padding: 0;
+    // .list---items {
+    //     padding: 0;
 
-        .li---item {
-            position: relative;
-            list-style: none;
-            margin: 25px 0px 5px;
-            padding-left: 50px;
+    //     .li---item {
+    //         position: relative;
+    //         list-style: none;
+    //         margin: 25px 0px 5px;
+    //         padding-left: 50px;
 
-            &:first-child {
-                margin-top: 0px;
-            }
+    //         &:first-child {
+    //             margin-top: 0px;
+    //         }
 
-            &::before {
-                position: absolute;
-                text-align: center;
-                font-family: linearicons-Free;
-                content: '\e806';
-                width: 30px;
-                height: 30px;
-                line-height: 30px;
-                font-size: 16px;
-                color: #fff;
-                background-color: map-get($mau, main-2);
-                border-radius: 100%;
-                left: 0;
-            }
-        }
-    }
+    //         &::before {
+    //             position: absolute;
+    //             text-align: center;
+    //             font-family: linearicons-Free;
+    //             content: '\e806';
+    //             width: 30px;
+    //             height: 30px;
+    //             line-height: 30px;
+    //             font-size: 16px;
+    //             color: #fff;
+    //             background-color: map-get($mau, main-2);
+    //             border-radius: 100%;
+    //             left: 0;
+    //         }
+    //     }
+    // }
 }
 
 .curriculum-ss2 {
