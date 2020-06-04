@@ -65,12 +65,12 @@ var en, vi, kr;
 
 function onYouTubeIframeAPIReady() {
     en = new YT.Player('login-en', {
-        height: '300',
-        width: '300',
+        height: '100%',
+        width: '100%',
         videoId: link_en,
         playerVars: {
             autoplay: 0,
-            controls: 0,
+            controls: 1,
         },
         events: {
             onReady: onPlayerReady,
@@ -78,12 +78,12 @@ function onYouTubeIframeAPIReady() {
         },
     });
     vi = new YT.Player('login-vi', {
-        height: '300',
-        width: '300',
+        height: '100%',
+        width: '100%',
         videoId: link_vi,
         playerVars: {
             autoplay: 0,
-            controls: 0,
+            controls: 1,
         },
         events: {
             onReady: onPlayerReady,
@@ -91,12 +91,12 @@ function onYouTubeIframeAPIReady() {
         },
     });
     kr = new YT.Player('login-kr', {
-        height: '300',
-        width: '300',
+        height: '100%',
+        width: '100%',
         videoId: link_kr,
         playerVars: {
             autoplay: 0,
-            controls: 0,
+            controls: 1,
         },
         events: {
             onReady: onPlayerReady,
