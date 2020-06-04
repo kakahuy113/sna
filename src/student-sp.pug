@@ -1,0 +1,14 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Student Support Services | SNA';
+	- let bodyClass = 'sna-student-sp-page';
+	- let linkBanner = '/assets/images/banner/student-sp.png';
+	- let titleBanner = 'Student Support Services';
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/student-sp/s-1
+block discover
+	include _templates/_layout/_discover
+block scripts
