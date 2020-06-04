@@ -1,0 +1,12 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Working at SNA | SNA';
+	- let bodyClass = 'working-page';
+	- let linkBanner = '/assets/images/banner/working.jpg';
+	- let titleBanner = 'Work at SNA';
+
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/working/w-1
