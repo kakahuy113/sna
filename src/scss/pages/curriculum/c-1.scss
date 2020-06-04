@@ -25,6 +25,21 @@
         font-size: 22px;
     }
 
+    .check {
+        margin-bottom: 40px;
+
+        li {
+            &::after {
+                width: 30px;
+                height: 30px;
+            }
+
+            &::before {
+                left: 5px;
+            }
+        }
+    }
+
     // .check-list {
     //     margin-bottom: 40px;
     // }
