@@ -1,0 +1,73 @@
+.learning-space {
+	padding-top: 100px;
+
+	p+p {
+		margin-top: 10px;
+	}
+
+	.list-info-location {
+		padding-left: 0;
+		list-style-type: none;
+		margin-top: 30px;
+		margin-bottom: 30px;
+
+		li {
+			text-align: center;
+			border-right: 1px solid #000000;
+		}
+
+		.title {
+			font-size: 42px;
+			font-weight: 700;
+			color: #0A1F44;
+		}
+
+		.desc {
+			font-size: 18px;
+		}
+	}
+
+	@media (max-width: 1024.98px) {
+		padding-top: 50px;
+
+		.list-info-location {
+			.title {
+				font-size: 36px;
+			}
+
+			.desc {
+				font-size: 16px;
+			}
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		padding-top: 25px;
+
+		.list-info-location {
+			.title {
+				font-size: 24px;
+			}
+
+			.desc {
+				font-size: 14px;
+			}
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		p {
+			font-size: 14px;
+		}
+
+		.list-info-location {
+			li {
+				border-right: 0;
+			}
+
+			li+li {
+				margin-top: 10px;
+			}
+		}
+	}
+}

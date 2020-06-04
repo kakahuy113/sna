@@ -3,10 +3,6 @@ import {
 	Loading
 } from './util/utilities';
 import Cookie from './lib/Cookie';
-import {
-	Promise
-} from 'core-js';
-import Swiper from 'swiper';
 
 const checkSubMenu = () => {
 	const itemsTopHeader = document.querySelectorAll(

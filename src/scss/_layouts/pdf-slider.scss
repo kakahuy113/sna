@@ -16,6 +16,7 @@
 		border-top: 2px solid #ffffff;
 
 		a {
+			display: block;
 			font-size: 20px;
 			color: map-get($mau, main);
 			font-family: "lora", sans-serif;

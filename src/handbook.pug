@@ -1,0 +1,14 @@
+extends _templates/_layout/_layout
+
+block var
+	- let title = 'E-Handbook | SNA';
+	- let bodyClass = 'e-handbook-page';
+	- let linkBanner = '/assets/images/banner/e-handbook.jpg';
+	- let titleBanner = 'E-Handbook';
+
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/_layout/_pdf-slider
+block discover
+	include _templates/_layout/_discover

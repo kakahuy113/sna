@@ -214,6 +214,15 @@ textarea {
 		}
 	}
 
+	&.after-absolute {
+		&:after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin-top: 0;
+		}
+	}
+
 	h2 {
 		color: #0A1F44;
 		font-size: 45px;
@@ -1025,5 +1034,24 @@ textarea {
 				}
 			}
 		}
+	}
+}
+
+.virtual-tour {
+	background: map-get($mau, main);
+}
+
+.copy-right-full-screen {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #0A1F44;
+
+	p {
+		font-size: 14px;
+		color: #ffffff;
+		text-align: right;
+		line-height: 40px;
 	}
 }

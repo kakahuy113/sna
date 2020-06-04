@@ -16,6 +16,15 @@
 	}
 }
 
+.full-screen {
+	overflow: hidden;
+	height: calc(100vh - 70px);
+
+	@media (min-width: 1200px) {
+		height: calc(100vh - 132px);
+	}
+}
+
 .max-750px {
 	max-width: 750px;
 	margin: 0 auto;
@@ -24,6 +33,10 @@
 .max-850px {
 	max-width: 850px;
 	margin: 0 auto;
+}
+
+.mb-25px {
+	margin-bottom: 25px;
 }
 
 .cl-main {
