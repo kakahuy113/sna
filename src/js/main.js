@@ -218,6 +218,20 @@ const coreSliderStyle_1 = () => {
 	);
 };
 
+const pdfSlider = () => {
+	const pdfSlider = new Swiper('.pdf__slider .swiper-container', {
+		centeredSlides: true,
+		slidesPerView: 1,
+		loopAdditionalSlides: 1,
+		loop: true,
+		autoHeight: true,
+		navigation: {
+			nextEl: '.pdf__slider .swiper-button-next',
+			prevEl: '.pdf__slider .swiper-button-prev',
+		},
+	})
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
 	getSVGs();
@@ -235,6 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	mainBanner();
 	quoteSlider();
 	coreSliderStyle_1();
+	pdfSlider();
 	// FancyboxBooking
 	fancyboxBookingFixed();
 	// Toggle Menu
