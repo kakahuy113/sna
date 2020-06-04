@@ -1,0 +1,15 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Summer Program | SNA';
+	- let bodyClass = 'sna-summerprogram-page';
+	- let linkBanner = '/assets/images/banner/summer.jpg';
+	- let titleBanner = 'Summer Program';
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/summerprogram/s-1
+	include _templates/_layout/_core-slider-style-1
+block discover
+	include _templates/_layout/_discover
+block scripts

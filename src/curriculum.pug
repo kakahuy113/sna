@@ -1,0 +1,15 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Outreach Curriculum | SNA';
+	- let bodyClass = 'sna-curriculum-page';
+	- let linkBanner = '/assets/images/banner/curriculum.jpg';
+	- let titleBanner = 'Outreach Curriculum';
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/curriculum/c-1
+	include _templates/_layout/_core-slider-style-1
+block discover
+	include _templates/_layout/_discover
+block scripts

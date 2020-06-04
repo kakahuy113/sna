@@ -660,3 +660,39 @@ textarea {
 		}
 	}
 }
+
+.bg-section {
+	position: relative;
+
+	&[position-top-left] {
+		&:after {
+			top: 0;
+			left: 0;
+			background-image: url(../assets/bg-left.svg);
+		}
+	}
+
+	&[position-top-right] {
+		&:after {
+			top: 0;
+			right: 0;
+			background-image: url(../assets/bg-right.svg);
+		}
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		background-size: cover;
+		width: 350px;
+		height: 250px;
+		background-repeat: no-repeat;
+		z-index: -1;
+	}
+
+	@media (max-width: 575.98px) {
+		&:after {
+			content: none;
+		}
+	}
+}
