@@ -1,0 +1,80 @@
+.pdf__slider {
+	padding: 100px 0;
+
+	.block__pdf-slider {
+		position: relative;
+		padding: 50px;
+		background: #f3f4f5;
+		max-width: 850px;
+		margin: 0 auto;
+	}
+
+	.link-download {
+		user-select: none;
+		max-width: 850px;
+		margin: 0 auto 30px;
+		background-color: #f3f4f5;
+		padding: 15px;
+		text-align: center;
+		border-top: 2px solid #ffffff;
+
+		a {
+			font-size: 20px;
+			color: map-get($mau, main);
+			font-family: "lora", sans-serif;
+			font-weight: 700;
+			transition: .3s all ease-in-out;
+			text-decoration: underline;
+
+			&:hover {
+				color: map-get($mau, main-2);
+			}
+		}
+	}
+
+	.swiper-container {
+		max-width: 750px;
+		margin: 0 auto;
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		color: map-get($mau, main);
+
+		&:after {
+			font-size: 32px;
+			font-weight: 700;
+		}
+	}
+
+	.swiper-button-prev {
+		left: 10px;
+	}
+
+	.swiper-button-next {
+		right: 10px;
+	}
+
+	@media (max-width: 1024.98px) {
+		padding: 50px 0;
+	}
+
+	@media (max-width: 767.98px) {
+		padding: 25px 0;
+	}
+
+	@media (max-width: 575.98px) {
+		.block__pdf-slider {
+			padding: 0;
+		}
+
+		.link-download {
+			padding: 10px;
+			margin-bottom: 10px;
+
+			a {
+				font-size: 16px;
+			}
+		}
+	}
+}
