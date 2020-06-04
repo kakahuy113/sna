@@ -1,0 +1,89 @@
+.admission-procedures {
+	padding: 100px 0;
+
+	.info {
+		margin-bottom: 50px;
+
+		h3 {
+			color: map-get($mau, main-2);
+			font-size: 30px;
+			font-weight: 700;
+			font-family: "lora", sans-serif;
+			margin-bottom: 20px;
+		}
+
+		a {
+			display: inline-block;
+			color: map-get($mau, main-2);
+			text-decoration: underline;
+			margin-bottom: 15px;
+		}
+	}
+
+	.desc {
+		margin-top: 30px;
+
+		h4 {
+			font-size: 22px;
+			color: map-get($mau, main);
+			margin-bottom: 20px;
+		}
+
+		p+p {
+			margin-top: 20px;
+		}
+
+		p {
+			>a {
+				color: map-get($mau, main-2);
+			}
+		}
+	}
+
+	@media (max-width: 1024.98px) {
+		padding: 50px 0;
+	}
+
+	@media (max-width: 767.98px) {
+		padding: 25px 0;
+
+		.info {
+			h3 {
+				font-size: 24px;
+			}
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		.info {
+			margin-bottom: 25px;
+
+			h3 {
+				font-size: 18px;
+				margin-bottom: 10px;
+			}
+
+			a {
+				font-size: 14px;
+				margin-bottom: 5px;
+			}
+		}
+
+		.desc {
+			margin-top: 25px;
+
+			h4 {
+				font-size: 18px;
+				margin-bottom: 10px;
+			}
+
+			p {
+				font-size: 14px;
+			}
+
+			p+p {
+				margin-top: 10px;
+			}
+		}
+	}
+}

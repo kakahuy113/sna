@@ -16,6 +16,20 @@
 	}
 }
 
+.max-750px {
+	max-width: 750px;
+	margin: 0 auto;
+}
+
+.max-850px {
+	max-width: 850px;
+	margin: 0 auto;
+}
+
+.cl-main {
+	color: map-get($mau, main);
+}
+
 .pb-0 {
 	padding-bottom: 0 !important;
 }

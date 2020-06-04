@@ -1,0 +1,14 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Admissions Procedure - MYP | SNA';
+	- let bodyClass = 'MYP-page';
+	- let linkBanner = '/assets/images/banner/myp.jpg';
+	- let titleBanner = 'Admissions Procedure - MYP';
+
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/myp/m-1
+block discover
+	include _templates/_layout/_discover

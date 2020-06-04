@@ -5,14 +5,11 @@
 		position: relative;
 		padding: 50px;
 		background: #f3f4f5;
-		max-width: 850px;
-		margin: 0 auto;
 	}
 
 	.link-download {
 		user-select: none;
-		max-width: 850px;
-		margin: 0 auto 30px;
+		margin-bottom: 30px;
 		background-color: #f3f4f5;
 		padding: 15px;
 		text-align: center;
@@ -25,9 +22,12 @@
 			font-weight: 700;
 			transition: .3s all ease-in-out;
 			text-decoration: underline;
+			transition: .3s all ease-in-out;
 
-			&:hover {
-				color: map-get($mau, main-2);
+			@media (min-width: 1025px) {
+				&:hover {
+					color: map-get($mau, main-2);
+				}
 			}
 		}
 	}

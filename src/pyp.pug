@@ -1,0 +1,14 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Admissions Procedure - PYP | SNA';
+	- let bodyClass = 'PYP-page';
+	- let linkBanner = '/assets/images/banner/pyp.jpg';
+	- let titleBanner = 'Admissions Procedure - PYP';
+
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/pyp/p-1
+block discover
+	include _templates/_layout/_discover

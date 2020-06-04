@@ -1,0 +1,14 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Admissions Procedure - DP | SNA';
+	- let bodyClass = 'DP-page';
+	- let linkBanner = '/assets/images/banner/dp.jpg';
+	- let titleBanner = 'Admissions Procedure - DP';
+
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/dp/d-1
+block discover
+	include _templates/_layout/_discover
