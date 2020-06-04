@@ -1,0 +1,16 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Dormitory | SNA';
+	- let bodyClass = 'sna-dormitory-page';
+	- let linkBanner = '/assets/images/banner/dormitory.jpg';
+	- let titleBanner = 'Dormitory';
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/dormitory/d-1
+	include _templates/dormitory/d-2
+	include _templates/_layout/_core-slider-style-1
+block discover
+	include _templates/_layout/_discover
+block scripts

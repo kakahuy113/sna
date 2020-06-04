@@ -52,6 +52,7 @@ if (!YT.loading) {
         b.parentNode.insertBefore(a, b);
     })();
 }
+
 const href = document.querySelector('#login-en');
 var link_en = href.getAttribute('data-url').split('=')[1];
 
@@ -61,16 +62,19 @@ var link_vi = href_vi.getAttribute('data-url').split('=')[1];
 const href_kr = document.querySelector('#login-kr');
 var link_kr = href_kr.getAttribute('data-url').split('=')[1];
 
-var en, vi, kr;
+const href_summer = document.querySelector('#summer-pro');
+var link_summer = href_summer.getAttribute('data-url').split('=')[1];
+
+var en, vi, kr, summer;
 
 function onYouTubeIframeAPIReady() {
     en = new YT.Player('login-en', {
-        height: '300',
-        width: '300',
+        height: '100%',
+        width: '100%',
         videoId: link_en,
         playerVars: {
             autoplay: 0,
-            controls: 0,
+            controls: 1,
         },
         events: {
             onReady: onPlayerReady,
@@ -78,12 +82,12 @@ function onYouTubeIframeAPIReady() {
         },
     });
     vi = new YT.Player('login-vi', {
-        height: '300',
-        width: '300',
+        height: '100%',
+        width: '100%',
         videoId: link_vi,
         playerVars: {
             autoplay: 0,
-            controls: 0,
+            controls: 1,
         },
         events: {
             onReady: onPlayerReady,
@@ -91,12 +95,25 @@ function onYouTubeIframeAPIReady() {
         },
     });
     kr = new YT.Player('login-kr', {
-        height: '300',
-        width: '300',
+        height: '100%',
+        width: '100%',
         videoId: link_kr,
         playerVars: {
             autoplay: 0,
-            controls: 0,
+            controls: 1,
+        },
+        events: {
+            onReady: onPlayerReady,
+            onStateChange: onPlayerStateChange,
+        },
+    });
+    summer = new YT.Player('summer-pro', {
+        height: '100%',
+        width: '100%',
+        videoId: link_summer,
+        playerVars: {
+            autoplay: 0,
+            controls: 1,
         },
         events: {
             onReady: onPlayerReady,

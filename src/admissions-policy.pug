@@ -1,0 +1,14 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Admissions Policy | SNA';
+	- let bodyClass = 'sna-admisstion-page';
+	- let linkBanner = '/assets/images/banner/admissions-policy.jpg';
+	- let titleBanner = 'Admissions Policy';
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/admissions-policy/a-1
+block discover
+	include _templates/_layout/_discover
+block scripts
