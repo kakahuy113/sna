@@ -1,0 +1,13 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'E-Brochure | SNA';
+	- let bodyClass = 'brochure-page';
+	- let linkBanner = '/assets/images/banner/brochure.jpg';
+	- let titleBanner = 'E-Brochure';
+
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/_layout/_pdf-slider
+	include _templates/brochure/b-1

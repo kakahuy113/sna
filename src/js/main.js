@@ -213,29 +213,44 @@ const coreSliderStyle_1 = () => {
     );
 };
 
+const pdfSlider = () => {
+	const pdfSlider = new Swiper('.pdf__slider .swiper-container', {
+		centeredSlides: true,
+		slidesPerView: 1,
+		loopAdditionalSlides: 1,
+		loop: true,
+		autoHeight: true,
+		navigation: {
+			nextEl: '.pdf__slider .swiper-button-next',
+			prevEl: '.pdf__slider .swiper-button-prev',
+		},
+	})
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    Cookie();
-    getSVGs();
-    Loading();
-    new WOW().init();
-    // Check Layout
-    checkLayout();
-    // Check Sub Menu
-    checkSubMenu();
-    // Sub Menu Footer
-    subMenuFooter();
-    // Cumstom Scroll Bar
-    customScrollBar();
-    // SLIDER
-    mainBanner();
-    quoteSlider();
-    coreSliderStyle_1();
-    // FancyboxBooking
-    fancyboxBookingFixed();
-    // Toggle Menu
-    subMenuMobile();
-    //activeMenu
-    activeMenu();
+	Cookie();
+	getSVGs();
+	Loading();
+	new WOW().init();
+	// Check Layout
+	checkLayout();
+	// Check Sub Menu
+	checkSubMenu();
+	// Sub Menu Footer
+	subMenuFooter();
+	// Cumstom Scroll Bar
+	customScrollBar();
+	// SLIDER
+	mainBanner();
+	quoteSlider();
+	coreSliderStyle_1();
+	pdfSlider();
+	// FancyboxBooking
+	fancyboxBookingFixed();
+	// Toggle Menu
+	subMenuMobile();
+	//activeMenu
+	activeMenu();
 });
 
 document.addEventListener('DOMContentLoaded', () => {});

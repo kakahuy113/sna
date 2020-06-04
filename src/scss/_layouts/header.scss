@@ -220,6 +220,7 @@ header {
 
 	>ul {
 		display: flex;
+		user-select: none;
 
 		li+li {
 			border-top: 1px solid #dedede;
@@ -311,6 +312,7 @@ header {
 .t_header--language {
 	ul {
 		display: flex;
+		user-select: none;
 
 		li {
 			&.active {
@@ -358,6 +360,7 @@ header {
 		justify-content: space-between;
 		padding-left: 0;
 		list-style-type: none;
+		user-select: none;
 
 		>li {
 			position: relative;
