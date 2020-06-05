@@ -47,10 +47,17 @@
 	.swiper-button-prev {
 		color: map-get($mau, main);
 		top: calc(550px / 2);
+		transition: .3s all ease-in-out;
 
 		&:after {
 			font-size: 32px;
 			font-weight: 700;
+		}
+
+		@media (min-width: 1025px) {
+			&:hover {
+				color: map-get($mau, main-2);
+			}
 		}
 	}
 
