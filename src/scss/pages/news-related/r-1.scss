@@ -125,3 +125,26 @@ section.related {
         }
     }
 }
+
+@media (max-width: 767.98px) {
+    .related-news {
+        .block-title--main {
+            &::after {
+                font-size: 3rem !important;
+            }
+        }
+        h2 {
+            span {
+                font-size: 15px !important;
+                top: 80% !important;
+                &::after {
+                    font-size: 14px !important;
+                }
+                &::before {
+                    width: 25px !important;
+                    height: 25px !important;
+                }
+            }
+        }
+    }
+}
