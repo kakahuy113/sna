@@ -6,7 +6,9 @@
 		padding: 50px;
 		background: #f3f4f5;
 	}
-
+	.max-950px{
+		max-width: 950px;
+	}
 	.link-download {
 		user-select: none;
 		margin-bottom: 30px;
@@ -49,11 +51,11 @@
 	}
 
 	.swiper-button-prev {
-		left: 10px;
+		left: 50px;
 	}
 
 	.swiper-button-next {
-		right: 10px;
+		right: 50px;
 	}
 
 	@media (max-width: 1024.98px) {

@@ -18,9 +18,12 @@
     }
 
     .features {
-        .list-items {
+        .item {
             padding: 0px 15px;
-            margin-bottom: 30px;
+			margin-bottom: 30px;
+			@media (max-width: 767.98px) {
+				padding: 0px 10px;
+			}
         }
 
         .img {
