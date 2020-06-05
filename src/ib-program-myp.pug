@@ -1,0 +1,14 @@
+extends _templates/_layout/_layout
+
+block var
+	- let title = 'IB Program MYP | SNA';
+	- let bodyClass = 'ib-program-myp-page';
+	- let linkBanner = '/assets/images/banner/ib-program-myp.jpg';
+	- let titleBanner = 'IB Program MYP';
+
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/ib-program-myp/i-1
+block discover
+	include _templates/_layout/_discover

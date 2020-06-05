@@ -1,0 +1,14 @@
+extends _templates/_layout/_layout
+
+block var
+	- let title = 'IB Program DP | SNA';
+	- let bodyClass = 'ib-program-dp-page';
+	- let linkBanner = '/assets/images/banner/ib-program-dp.png';
+	- let titleBanner = 'IB Program DP';
+
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/ib-program-dp/i-1
+block discover
+	include _templates/_layout/_discover
