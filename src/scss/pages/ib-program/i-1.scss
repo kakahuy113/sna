@@ -1,33 +1,29 @@
 .ib-program {
-	padding: 100px 0;
-
-	h4 {
-		font-size: 22px;
-	}
-
-	.about-content {
-		padding: 50px 0;
-	}
-
-	.block-video {
-		margin-bottom: 50px;
-	}
-
-	@media (max-width: 1024.98px) {
-		padding: 50px 0;
-	}
-
-	@media (max-width: 767.98px) {
-		padding: 25px 0;
-
-		.about-content {
-			padding: 25px 0;
-		}
-	}
-
-	@media (max-width: 575.98px) {
-		h4 {
-			font-size: 18px;
-		}
-	}
+    padding: 100px 0;
+    h4 {
+        font-size: 22px;
+    }
+    .about-content {
+        padding: 50px 0;
+    }
+    .block-video {
+        margin-bottom: 50px;
+        .video-ib {
+            height: 500px;
+        }
+    }
+    @media (max-width: 1024.98px) {
+        padding: 50px 0;
+    }
+    @media (max-width: 767.98px) {
+        padding: 25px 0;
+        .about-content {
+            padding: 25px 0;
+        }
+    }
+    @media (max-width: 575.98px) {
+        h4 {
+            font-size: 18px;
+        }
+    }
 }

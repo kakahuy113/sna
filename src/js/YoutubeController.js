@@ -1,142 +1,75 @@
-if (!window['YT']) {
-	var YT = {
-		loading: 0,
-		loaded: 0,
-	};
-}
-if (!window['YTConfig']) {
-	var YTConfig = {
-		host: 'http://www.youtube.com',
-	};
-}
-
-if (!YT.loading) {
-	YT.loading = 1;
-	(function () {
-		var l = [];
-		YT.ready = function (f) {
-			if (YT.loaded) {
-				f();
-			} else {
-				l.push(f);
-			}
-		};
-		window.onYTReady = function () {
-			YT.loaded = 1;
-			for (var i = 0; i < l.length; i++) {
-				try {
-					l[i]();
-				} catch (e) {}
-			}
-		};
-		YT.setConfig = function (c) {
-			for (var k in c) {
-				if (c.hasOwnProperty(k)) {
-					YTConfig[k] = c[k];
-				}
-			}
-		};
-		var a = document.createElement('script');
-		a.type = 'text/javascript';
-		a.id = 'www-widgetapi-script';
-		a.src =
-			'https://s.ytimg.com/yts/jsbin/www-widgetapi-vfljTd96t/www-widgetapi.js';
-		a.async = true;
-		var c = document.currentScript;
-		if (c) {
-			var n = c.nonce || c.getAttribute('nonce');
-			if (n) {
-				a.setAttribute('nonce', n);
-			}
-		}
-		var b = document.getElementsByTagName('script')[0];
-		b.parentNode.insertBefore(a, b);
-	})();
+// Get youtube ID from URL
+const getYoutubeID = (url) => {
+    if (url !== undefined) {
+        var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+        var match = url.match(regExp);
+        if (match && match[7].length == 11) {
+            return match[7];
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
 }
 
-const href = document.querySelector('#login-en');
-var link_en = href.getAttribute('data-url').split('=')[1];
+// This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
 
-const href_vi = document.querySelector('#login-vi');
-var link_vi = href_vi.getAttribute('data-url').split('=')[1];
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[3];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-const href_kr = document.querySelector('#login-kr');
-var link_kr = href_kr.getAttribute('data-url').split('=')[1];
-
-const href_summer = document.querySelector('#summer-pro');
-var link_summer = href_summer.getAttribute('data-url').split('=')[1];
-
-var en, vi, kr, summer;
+// This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player;
 
 function onYouTubeIframeAPIReady() {
-	en = new YT.Player('login-en', {
-		height: '100%',
-		width: '100%',
-		videoId: link_en,
-		playerVars: {
-			autoplay: 1,
-			controls: 1,
-		},
-		events: {
-			onReady: onPlayerReady,
-			onStateChange: onPlayerStateChange,
-		},
-	});
-	vi = new YT.Player('login-vi', {
-		height: '100%',
-		width: '100%',
-		videoId: link_vi,
-		playerVars: {
-			autoplay: 0,
-			controls: 1,
-		},
-		events: {
-			onReady: onPlayerReady,
-			onStateChange: onPlayerStateChange,
-		},
-	});
-	kr = new YT.Player('login-kr', {
-		height: '100%',
-		width: '100%',
-		videoId: link_kr,
-		playerVars: {
-			autoplay: 0,
-			controls: 1,
-		},
-		events: {
-			onReady: onPlayerReady,
-			onStateChange: onPlayerStateChange,
-		},
-	});
-	summer = new YT.Player('summer-pro', {
-		height: '100%',
-		width: '100%',
-		videoId: link_summer,
-		playerVars: {
-			autoplay: 0,
-			controls: 1,
-		},
-		events: {
-			onReady: onPlayerReady,
-			onStateChange: onPlayerStateChange,
-		},
-	});
+    const youtubeItems = Array.from(document.querySelectorAll(".youtube-api"));
+    for (let i = 0; i < youtubeItems.length; i++) {
+
+        const idRandom = (new Date().getTime()).toString(32).substring(4);
+        youtubeItems[i].setAttribute('id', idRandom)
+        const elementId = youtubeItems[i].getAttribute('id');
+        const videoId = getYoutubeID(youtubeItems[i].getAttribute('data-url'))
+        ';'
+
+        player = new YT.Player(elementId, {
+            height: '100%',
+            width: '100%',
+            videoId: videoId,
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            },
+            playerVars: {
+                'autoplay': 0,
+                'rel': 0,
+                'showinfo': 0,
+                'controls': 0
+            },
+        });
+    }
 }
 
+// OFF AUTOUPLAY
+// 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
-	event.target.playVideo();
+    // event.target.playVideo();
 }
+
+// 5. The API calls this function when the player's state changes.
+//    The function indicates that when playing a video (state=1),
+//    the player should play for six seconds and then stop.
 var done = false;
 
 function onPlayerStateChange(event) {
-	if (event.data == YT.PlayerState.PLAYING && !done) {
-		setTimeout(stopVideo, 6000);
-		done = true;
-	}
+    if (event.data == YT.PlayerState.PLAYING && !done) {
+        setTimeout(stopVideo, 6000);
+        done = true;
+    }
 }
 
 function stopVideo() {
-	player.stopVideo();
+    player.stopVideo();
 }
-
-onYouTubeIframeAPIReady();
