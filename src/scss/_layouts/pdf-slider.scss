@@ -6,9 +6,11 @@
 		padding: 50px;
 		background: #f3f4f5;
 	}
-	.max-950px{
+
+	.max-950px {
 		max-width: 950px;
 	}
+
 	.link-download {
 		user-select: none;
 		margin-bottom: 30px;
@@ -43,10 +45,17 @@
 	.swiper-button-next,
 	.swiper-button-prev {
 		color: map-get($mau, main);
+		transition: .3s all ease-in-out;
 
 		&:after {
 			font-size: 32px;
 			font-weight: 700;
+		}
+
+		@media (min-width: 1025px) {
+			&:hover {
+				color: map-get($mau, main-2);
+			}
 		}
 	}
 
