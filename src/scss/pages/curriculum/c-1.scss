@@ -53,4 +53,7 @@
 .curriculum-ss2 {
 	margin-bottom: -70px;
 	padding: 0;
+	@media (max-width: 1024.98px) {
+		margin-bottom: -30px;
+	}
 }

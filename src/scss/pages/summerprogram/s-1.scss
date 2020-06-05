@@ -4,16 +4,31 @@
         line-height: 1.42857143;
         margin-bottom: 20px;
 	}
+	@media (max-width: 1024.98px) {
+		padding: 50px 0px;
+	}
+	@media (max-width: 767.98px) {
+		padding-top: 25px ;
+		padding-bottom: 0px;
+		p{
+			font-size: 14px;
+		}
+		br {
+			display: none;
+		}
+	}
 }
 
 .summer-name {
 	padding-top: 0;
-    margin-bottom: -70px;
+	margin-bottom: -70px;
+	@media (max-width: 767.98px) {
+		margin-bottom: -60px;
+	}
 }
 
 .summer-name-2 {
 	padding-top: 0;
-    margin-bottom: 30px;
 }
 
 .summer-2 {
