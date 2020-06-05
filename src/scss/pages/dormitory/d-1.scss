@@ -1,37 +1,42 @@
 .dormitory {
 	padding-top: 100px;
+
 	@media (max-width: 1024.98px) {
 		padding-top: 50px
 	}
+
 	@media (max-width: 767.98px) {
-		padding-top: 25px
-		p{
+		padding-top: 25px;
+
+		p {
 			font-size: 14px;
 		}
 	}
 
-    .content-top {
-        p {
-            font-size: 22px;
-            color: map-get($mau, main);
-            margin-bottom: 50px;
+	.content-top {
+		p {
+			font-size: 22px;
+			color: map-get($mau, main);
+			margin-bottom: 50px;
 		}
-    }
-	.list-items{
+	}
+
+	.list-items {
 		margin: 0px -30px;
 	}
-    .item {
-        padding: 0px 30px;
-        margin-bottom: 30px;
-    }
 
-    .img {
-        margin-bottom: 15px;
-    }
+	.item {
+		padding: 0px 30px;
+		margin-bottom: 30px;
+	}
 
-    .content {
-        p {
-            margin-bottom: 20px;
-        }
-    }
+	.img {
+		margin-bottom: 15px;
+	}
+
+	.content {
+		p {
+			margin-bottom: 20px;
+		}
+	}
 }
