@@ -1,0 +1,14 @@
+extends _templates/_layout/_layout
+
+block var
+	- let title = 'Transportation | SNA';
+	- let bodyClass = 'transportation-page';
+	- let linkBanner = '/assets/images/banner/transportation.jpg';
+	- let titleBanner = 'Transportation';
+
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/transportation/t-1
+block discover
+	include _templates/_layout/_discover
