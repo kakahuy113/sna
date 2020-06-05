@@ -1,11 +1,14 @@
 .dormitory {
 	padding-top: 100px;
+
 	@media (max-width: 1024.98px) {
 		padding-top: 50px
 	}
+
 	@media (max-width: 767.98px) {
-		padding-top: 25px
-		p{
+		padding-top: 25px;
+
+		p {
 			font-size: 14px;
 		}
 	}
