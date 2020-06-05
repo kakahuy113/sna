@@ -12,7 +12,10 @@
 
     .item {
         padding: 0 15px;
-        margin-bottom: 30px;
+		margin-bottom: 30px;
+		@media (max-width: 767.98px) {
+			padding: 0px 10px;
+		}
     }
 
     .img {
