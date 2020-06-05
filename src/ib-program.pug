@@ -1,0 +1,14 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'IB Program PYP | SNA';
+	- let bodyClass = 'PYP-page';
+	- let linkBanner = './assets/images/banner/pyp.jpg';
+	- let titleBanner = 'IB Program PYP - PYP';
+
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/ib-program/i-1
+block discover
+	include _templates/_layout/_discover
