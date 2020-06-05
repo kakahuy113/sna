@@ -1,5 +1,5 @@
 body {
-	overflow-x: hidden;
+	// overflow-x: hidden;
 
 	&.disabled {
 		overflow: hidden;
@@ -598,6 +598,84 @@ textarea {
 	}
 }
 
+.block-content--style_5 {
+	background-color: map-get($mau, main);
+	padding: 50px;
+
+	h2 {
+		color: #ffffff;
+		font-size: 45px;
+	}
+
+	.item {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		background: #ffffff;
+		padding: 15px 25px;
+	}
+
+	.item+.item {
+		margin-top: 15px;
+	}
+
+	.img {
+		-ms-flex: 0 0 70px;
+		flex: 0 0 70px;
+		max-width: 70px;
+	}
+
+	.content {
+		-ms-flex-preferred-size: 0;
+		flex-basis: 0;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		max-width: 100%;
+		padding-left: 15px;
+
+		p+p {
+			margin-top: 10px;
+		}
+	}
+
+	@media (max-width: 1024.98px) {
+		h2 {
+			font-size: 36px;
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		padding: 25px;
+
+		h2 {
+			margin-bottom: 25px;
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		padding: 10px;
+
+		h2 {
+			font-size: 24px;
+			margin-bottom: 15px;
+		}
+
+		.item {
+			padding: 10px;
+		}
+
+		.item+.item {
+			margin-top: 10px;
+		}
+
+		.content {
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
 .page-desc {
 	padding-bottom: 50px;
 
@@ -723,7 +801,8 @@ textarea {
 }
 
 .community,
-.school-leadership-team {
+.school-leadership-team,
+.dormitory-2 {
 	padding: 100px 0;
 
 	.item-school-leadership-team+.item-school-leadership-team {
@@ -731,13 +810,15 @@ textarea {
 	}
 
 	@media (max-width: 1024.98px) {
+		padding: 50px 0;
+
 		.item-school-leadership-team+.item-school-leadership-team {
 			margin-top: 50px;
 		}
 	}
 
 	@media (max-width: 767.98px) {
-		padding: 50px 0;
+		padding: 25px 0;
 
 		.item-school-leadership-team+.item-school-leadership-team {
 			margin-top: 25px;
@@ -749,8 +830,6 @@ textarea {
 	}
 
 	@media (max-width: 575.98px) {
-		padding: 25px 0;
-
 		.item-school-leadership-team+.item-school-leadership-team {
 			margin-top: 10px;
 		}
