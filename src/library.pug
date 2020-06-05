@@ -1,0 +1,15 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Library | SNA';
+	- let bodyClass = 'library-page';
+	- let linkBanner = '/assets/images/banner/library.jpg';
+	- let titleBanner = 'Library';
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block main
+	include _templates/library/l-1
+	include _templates/library/l-2
+block discover
+	include _templates/_layout/_discover
+block scripts

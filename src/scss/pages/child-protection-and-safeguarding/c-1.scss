@@ -1,3 +1,15 @@
 section.children-protect {
-    padding: 100px 0;
+    .box-content {
+        .title-protect {
+            position: relative;
+            color: map-get($mau, main-2);
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .desc-title {
+            color: map-get($mau, main);
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+    }
 }
