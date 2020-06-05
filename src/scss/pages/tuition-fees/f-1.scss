@@ -1,0 +1,89 @@
+section.tuition-fees {
+    .table-fees {
+        position: relative;
+        margin-bottom: 20px;
+        td {
+            text-align: center;
+        }
+    }
+    .text-fees-p {
+        position: relative;
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: map-get($mau, main);
+        &-i {
+            position: relative;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        &-none {
+            margin: 0px;
+        }
+    }
+    .title-content-fees {
+        position: relative;
+        text-transform: uppercase;
+        font-size: 18px;
+        color: map-get($mau, main-2);
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    .text-fees-h6 {
+        position: relative;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: map-get($mau, main);
+        margin-bottom: 20px;
+    }
+    .home-fees {
+        padding: 100px 0 0 0;
+        h3.title-home {
+            position: relative;
+            margin-bottom: 20px;
+            font-size: 30px;
+            color: map-get($mau, main);
+        }
+    }
+    .main-fees {
+        padding-bottom: 100px;
+        h5.title-content-fees {
+            position: relative;
+            text-transform: uppercase;
+            font-size: 18px;
+            color: map-get($mau, main-2);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .content-fees-1 {
+            td:first-child {
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+        .content-fees-9 {
+            td {
+                text-align: center;
+                &:first-child {
+                    font-weight: bold;
+                    color: map-get($mau, main);
+                }
+            }
+        }
+        .content-fees-10 {
+            a {
+                display: block;
+                position: relative;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+        .content-fees-11 {
+            a {
+                display: block;
+                position: relative;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
