@@ -1,9 +1,13 @@
 .activities-ss2 {
-    position: relative;
-
-    .list-item {
+	position: relative;
+	margin-bottom: 50px;
+	.list-items{
+		margin-left: -30px;
+		margin-right: -30px;
+	}
+    .item {
         margin-bottom: 30px;
-        padding: 0px 15px;
+        padding: 0px 30px;
 
         .img {
             margin-bottom: 15px;
