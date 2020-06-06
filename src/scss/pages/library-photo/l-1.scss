@@ -16,19 +16,33 @@
 		@media (max-width: 767.98px) {
 			padding: 0px 10px;
 		}
+		@media (min-width: 1025px) {
+			&:hover{
+				.content{
+					h3{
+						color: map-get($mau, main-2);
+					}
+				}
+			}
+		}
     }
 
     .img {
         width: 100%;
         height: 214px;
-        overflow: hidden;
+		overflow: hidden;
+		
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: all 0.3s ease-in-out;
-            transform: scale(1);
+            @media (min-width: 1025px) {
+				&:hover{
+					transform: scale(1.05);
+				}
+			}
         }
     }
 
@@ -37,7 +51,28 @@
         width: 100%;
         height: 100px;
         background-color: #f3f4f5;
-        padding: 20px;
+		padding: 20px;
+		h3{
+			transition: .2s ease-in-out;
+		}
     }
 }
 
+@media all and (min-width: 800px) {
+	.fancybox-thumbs {
+	  top: auto;
+	  width: auto;
+	  bottom: 0;
+	  left: 0;
+	  right : 0;
+	  height: 95px;
+	  padding: 10px 10px 5px 10px;
+	  box-sizing: border-box;
+	  background: rgba(0, 0, 0, 0.3);
+	}
+	
+	.fancybox-show-thumbs .fancybox-inner {
+	  right: 0;
+	  bottom: 95px;
+	}
+  }
