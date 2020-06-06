@@ -141,15 +141,15 @@ const subMenuMobile = () => {
 };
 
 const subMenuFooter = () => {
-	if ($(window).width() <= 1024) {
-		$('.item-link-footer h5').click(function (e) {
-			e.preventDefault();
-			$(this).toggleClass('active');
-			$(this).siblings('ul').slideToggle();
-			$('.item-link-footer h5').not(this).siblings('ul').slideUp();
-			$('.item-link-footer h5').not(this).removeClass('active');
-		});
-	}
+    if ($(window).width() <= 1024) {
+        $('.item-link-footer h5').click(function(e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            $(this).siblings('ul').slideToggle();
+            $('.item-link-footer h5').not(this).siblings('ul').slideUp();
+            $('.item-link-footer h5').not(this).removeClass('active');
+        });
+    }
 };
 
 const fancyboxBookingFixed = () => {
@@ -289,5 +289,3 @@ document.addEventListener('DOMContentLoaded', () => {
 	// THỊNH
 	libraryFancyApp();
 });
-
-document.addEventListener('DOMContentLoaded', () => {});
