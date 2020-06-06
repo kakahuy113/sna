@@ -270,8 +270,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {});
-
-// CHECK FORM VALID
-
-// if ($("form").valid() === true) {}
-// console.log('Kết quả kiểm tra điều kiện là:' + ' ' + $(".block-send-mail form").valid());
+$('[data-fancybox="images"]').fancybox({
+	buttons : [ 
+	  'slideShow',
+	  'share',
+	  'zoom',
+	  'fullScreen',
+	  'close',
+	  'thumbs'
+	  
+	],
+	thumbs : {
+	  autoStart : true
+	}
+  });
