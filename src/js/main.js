@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {});
   $(document).ready(function() {
 	var $ = jQuery.noConflict();
-	$('.img').click(function () {
+	$('.popup').click(function () {
 		$.fancybox.open([
 			{
 				src  : './assets/images/library-photo/news1.jpg',
