@@ -272,6 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {});
   $(document).ready(function() {
 	var $ = jQuery.noConflict();
+	$.fancybox.defaults.buttons = ["zoom",,"share","download","fullScreen", "thumbs", "close"];
 	$('.popup').click(function () {
 		$.fancybox.open([
 			{
