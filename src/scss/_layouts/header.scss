@@ -323,6 +323,10 @@ header {
 
 			a {
 				color: map-get($mau, main);
+
+				&:hover {
+					color: map-get($mau, main-2);
+				}
 			}
 
 			&:first-child {
