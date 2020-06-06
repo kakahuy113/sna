@@ -141,15 +141,15 @@ const subMenuMobile = () => {
 };
 
 const subMenuFooter = () => {
-	if ($(window).width() <= 1024) {
-		$('.item-link-footer h5').click(function (e) {
-			e.preventDefault();
-			$(this).toggleClass('active');
-			$(this).siblings('ul').slideToggle();
-			$('.item-link-footer h5').not(this).siblings('ul').slideUp();
-			$('.item-link-footer h5').not(this).removeClass('active');
-		});
-	}
+    if ($(window).width() <= 1024) {
+        $('.item-link-footer h5').click(function(e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            $(this).siblings('ul').slideToggle();
+            $('.item-link-footer h5').not(this).siblings('ul').slideUp();
+            $('.item-link-footer h5').not(this).removeClass('active');
+        });
+    }
 };
 
 const fancyboxBookingFixed = () => {
@@ -242,6 +242,8 @@ const coreTabStyle_1 = () => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {});
     Cookie();
     getSVGs();
     Loading();
@@ -270,68 +272,66 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {});
-  $(document).ready(function() {
-	var $ = jQuery.noConflict();
-	$.fancybox.defaults.buttons = ["zoom",,"share","download","fullScreen", "thumbs", "close"];
-	$('.popup').click(function () {
-		$.fancybox.open([
-			{
-				src  : './assets/images/library-photo/news1.jpg',
-				opts : {
-					thumb   : './assets/images/library-photo/news1.jpg'
-				}
-			},
-			{
-				src  : './assets/images/library-photo/news2.jpg',
-				opts : {
-					thumb   : './assets/images/library-photo/news2.jpg'
-				}
-			},
-			{
-				src  : './assets/images/library-photo/news3.jpg',
-				opts : {
-					thumb   : './assets/images/library-photo/news3.jpg'
-				}
-			},
-			{
-				src  : './assets/images/library-photo/news4.jpg',
-				opts : {
-					thumb   : './assets/images/library-photo/news4.jpg'
-				}
-			},
-			{
-				src  : './assets/images/library-photo/news5.jpg',
-				opts : {
-					thumb   : './assets/images/library-photo/news5.jpg'
-				}
-			},
-			{
-				src  : './assets/images/library-photo/news6.jpg',
-				opts : {
-					thumb   : './assets/images/library-photo/news6.jpg'
-				}
-			},
-			{
-				src  : './assets/images/library-photo/news7.jpg',
-				opts : {
-					thumb   : './assets/images/library-photo/news7.jpg'
-				}
-			},
-			{
-				src  : './assets/images/library-photo/news8.jpg',
-				opts : {
-					thumb   : './assets/images/library-photo/news8.jpg'
-				}
-			},
-			{
-				src  : './assets/images/library-photo/news9.jpg',
-				opts : {
-					thumb   : './assets/images/library-photo/news9.jpg'
-				}
-			},
-		], {
-			loop : false
-		});
-	});
+$(document).ready(function() {
+    var $ = jQuery.noConflict();
+    $.fancybox.defaults.buttons = ["zoom", , "share", "download", "fullScreen", "thumbs", "close"];
+    $('.popup').click(function() {
+        $.fancybox.open([{
+                src: './assets/images/library-photo/news1.jpg',
+                opts: {
+                    thumb: './assets/images/library-photo/news1.jpg'
+                }
+            },
+            {
+                src: './assets/images/library-photo/news2.jpg',
+                opts: {
+                    thumb: './assets/images/library-photo/news2.jpg'
+                }
+            },
+            {
+                src: './assets/images/library-photo/news3.jpg',
+                opts: {
+                    thumb: './assets/images/library-photo/news3.jpg'
+                }
+            },
+            {
+                src: './assets/images/library-photo/news4.jpg',
+                opts: {
+                    thumb: './assets/images/library-photo/news4.jpg'
+                }
+            },
+            {
+                src: './assets/images/library-photo/news5.jpg',
+                opts: {
+                    thumb: './assets/images/library-photo/news5.jpg'
+                }
+            },
+            {
+                src: './assets/images/library-photo/news6.jpg',
+                opts: {
+                    thumb: './assets/images/library-photo/news6.jpg'
+                }
+            },
+            {
+                src: './assets/images/library-photo/news7.jpg',
+                opts: {
+                    thumb: './assets/images/library-photo/news7.jpg'
+                }
+            },
+            {
+                src: './assets/images/library-photo/news8.jpg',
+                opts: {
+                    thumb: './assets/images/library-photo/news8.jpg'
+                }
+            },
+            {
+                src: './assets/images/library-photo/news9.jpg',
+                opts: {
+                    thumb: './assets/images/library-photo/news9.jpg'
+                }
+            },
+        ], {
+            loop: false
+        });
+    });
 });
-

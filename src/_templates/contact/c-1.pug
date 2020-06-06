@@ -26,17 +26,13 @@ section.contact-home.container
                     input(type="text",placeholder="Your name",name="name")
                     .form-group
                         .input-phone
-                            .city-phone
-                                select(name="city-phone")
-                                    option(value="0") VietNam
-                            input(type="text",placeholder="Phone Number",name="phone")
+                            input#phone(type="tel", value="+84",name="phone")
                         .input-age
                            select(name="age")
                                 option(value="0") - Select -
                                 option(value="1") Under 6 years old
                                 option(value="2") Form 6 to 10 years old
                                 option(value="3") Form 10 to 14 years old
-
                     input(type="text",placeholder="Email",name="email")
                     label I would like to enquire about
                     .option-login
