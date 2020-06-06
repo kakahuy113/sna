@@ -138,11 +138,21 @@ section.contact-home {
 
 @media(max-width:1024px) {
     section.contact-home {
+        margin-top: 50px;
         .text-home-first {
             padding: 100px !important;
         }
         .text-icon {
             font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    section.contact-home {
+        margin-top: 0;
+        .text-home-first {
+            padding: 50px !important;
         }
     }
 }

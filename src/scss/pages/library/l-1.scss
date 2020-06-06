@@ -4,3 +4,21 @@ section.library-home {
         padding-bottom: 0px;
     }
 }
+
+@media (max-width: 1024.98px) {
+    section.library-home {
+        section.admission-procedures {
+            padding-top: 50px !important;
+            padding-bottom: 0px;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    section.library-home {
+        section.admission-procedures {
+            padding-top: 25px !important;
+            padding-bottom: 0px;
+        }
+    }
+}
