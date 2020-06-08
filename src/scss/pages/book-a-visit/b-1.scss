@@ -121,3 +121,30 @@
         }
     }
 }
+
+@media (max-width: 767.98px) {
+    section.book-a-visit {
+        .content-book-visit {
+            top: 35% !important;
+            .col-7,
+            .col-5 {
+                max-width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    section.book-a-visit {
+        .content-book-visit {
+            top: 35% !important;
+            width: 100% !important;
+            .col-7,
+            .col-5 {
+                max-width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+        }
+    }
+}
