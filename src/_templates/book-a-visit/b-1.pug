@@ -1,4 +1,50 @@
 section.book-a-visit.full-screen
+	.content-book-visit.container
+		.row
+			.col-7.col-BAV-form
+				.box-BAV-form
+					form(action="#",method="post")
+						.form-BAV-group
+							.left
+								input(type="text",name="first-name",placeholder="First Name")
+							.right
+								input(type="text",name="last-name",placeholder="Last Name")
+						.form-BAV-group
+							.left
+								input#phone(type="tel",name="phone",value="+84")
+							.right
+								input(type="text",name="email",placeholder="Email")
+						.form-BAV-group
+							.left
+								select(name="age")
+									option(value="0") - Select -
+									option(value="1") Under 6 years old
+									option(value="2") Form 6 to 10 years old
+									option(value="3") Form 10 to 14 years old
+							.right
+								input(type="date",placeholder="Date of school")
+						textarea.col-12(name="message", cols="30", rows="4",placeholder="Message")
+						input(type="button", value="Submit")
+			.col-5.col-BAV-contact
+				img.logo-squad(src="./assets/images/book-a-visit/logo-38.png", alt="")
+				.box-BAV-contact
+					h4 CONTACT US
+					.text-contact
+						.item-BAV
+							.icon
+								img.svg(src="./assets/icons/mobile-phone-white.svg", alt="phone")
+							span 0964 466 014
+						.item-BAV
+							.icon
+								img.svg(src="./assets/icons/mail-white.svg", alt="phone")
+							span info@sna.edu.vn
+					.social-contact
+						.item-social
+							img.svg(src="./assets/icons/facebook-white.svg", alt="facbook-sna")
+						.item-social
+							img.svg(src="./assets/icons/youtube-white.svg", alt="youtube-sna")
+						.item-social
+							img.svg(src="./assets/icons/likedin-white.svg", alt="linkedin-sna")
 	.copy-right-full-screen
 		.container
 			p © 2019 SNA. All rights reserved
