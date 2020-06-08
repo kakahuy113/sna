@@ -53,6 +53,19 @@ section.related {
         .related-item {
             max-width: 500px;
             padding-right: 15px;
+            &:hover {
+                .related-img {
+                    img {
+                        transition: all .3s ease-in-out;
+                        transform: scale(1.2);
+                    }
+                }
+                .related-content {
+                    .related-title {
+                        color: map-get($mau, main);
+                    }
+                }
+            }
             .related-img {
                 height: 214px;
                 img {
@@ -69,7 +82,7 @@ section.related {
                 display: block;
                 position: relative;
                 text-transform: uppercase;
-                color: #AD132A;
+                color: map-get($mau, main-2);
                 margin: 10px 0;
                 font-size: 18px;
             }
@@ -84,6 +97,13 @@ section.related {
                 float: right;
                 font-size: 13px;
                 height: 100%;
+                &:hover {
+                    transition: all .5s ease-in-out;
+                    color: map-get($mau, main-2);
+                    &::before {
+                        background: map-get($mau, main-2);
+                    }
+                }
                 &::after {
                     z-index: 1;
                     position: absolute;
@@ -131,9 +151,11 @@ section.related {
         .block-title--main {
             &::after {
                 font-size: 3rem !important;
+                display: none !important;
             }
         }
         h2 {
+            font-size: 32px !important;
             span {
                 font-size: 15px !important;
                 top: 80% !important;
@@ -144,6 +166,21 @@ section.related {
                     width: 25px !important;
                     height: 25px !important;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .related-news {
+        .related-item {
+            .related-img {
+                height: 154px !important;
+            }
+        }
+        .related-content {
+            .related-title {
+                font-size: 18px;
             }
         }
     }
