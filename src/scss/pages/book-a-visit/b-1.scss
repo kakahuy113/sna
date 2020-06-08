@@ -15,6 +15,7 @@
             padding-left: 0 !important;
         }
         width: 800px;
+        height: 460px;
         .col-BAV-form {
             background: white;
             .box-BAV-form {
@@ -76,9 +77,8 @@
                 bottom: 0;
                 right: 0;
             }
-            // background: map-get($mau, main);
             width: 100%;
-            height: 458.99px;
+            height: 460px;
             &::before {
                 position: absolute;
                 content: "";
