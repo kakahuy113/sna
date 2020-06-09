@@ -240,29 +240,29 @@ const coreTabStyle_1 = () => {
 		$('.core--tab-container__style-1 .item').not(this).find('.tab-content').slideUp();
 	});
 }
-
-const libraryFancyApp = () => {
-	$('[data-fancybox="images"]').fancybox({
-		thumbs: {
-			autoStart: true,
-			axis: 'x'
-		},
-		buttons: [
-			'zoom',
-			'close',
-			'download',
-			'fullScreen',
-			'share',
-			'thumbs',
-			'close'
-		]
-	})
-}
-
 const initIntlTelInput = () => {
 	var input = document.querySelector("#phone");
 	window.intlTelInput(input, {});
 }
+
+const libraryFancyApp = () => {
+	$('[data-fancybox="images"]').fancybox({
+		buttons: [
+			'zoom',
+			'download',
+			'fullScreen',
+			'share',
+			'thumbs',
+			'close',
+		],
+		thumbs: {
+			autoStart: true,
+			axis: 'x'
+		}
+	})
+}
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
