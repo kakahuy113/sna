@@ -1,9 +1,15 @@
-section.login-SNA
+section.login-SNA.full-screen
 	.container
-		.row
-			.col-5
+		.row.bg-form-login
+			.col-8
 				.box-login-SNA
 					form(name="login-SNA", method="post")
-						input(type="text",placeholder="Username . . .",name="user")
-						input(type="password",placeholder="Password . . .")
+						.inner-box
+							.login-SNA-logo
+								img(src="./assets/logo.png", alt="logo-sna")
+								img(src="./assets/log-ib.png", alt="logo-ib")
+							input(type="text",placeholder="Username . . .",name="user")
+							input(type="password",placeholder="Password . . .",name="pass")
+							input#remember-pass(type="checkbox", name="remember-pass")
+							label(for="remember-pass") Remember password
 						input(type="submit", value="Login",name="login")

@@ -1,30 +1,81 @@
 section.login-SNA {
-    padding: 100px 0;
+    position: relative;
+    background: url(../assets/bg-book-a-visit.jpg);
+    background-size: cover;
+    background-position: center;
+    &::before {
+        position: absolute;
+        ;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background: map-get($mau, main);
+        top: 0;
+        right: 0;
+        opacity: .8;
+    }
     .row {
         justify-content: center;
-        .col-4 {
-            background: map-get($mau, main);
-            padding: 50px;
-        }
+        position: relative;
+        height: calc(100vh - 132px);
+        align-content: center;
     }
     .box-login-SNA {
+        position: relative;
+        background: white;
+        .inner-box {
+            padding: 50px;
+            border: 5px solid map-get($mau, main-2);
+            .login-SNA-logo {
+                width: 100%;
+                text-align: center;
+                img {
+                    width: 100px;
+                }
+            }
+        }
         width: 100%;
+        label {
+            color: map-get($mau, main);
+        }
         input[name="login"] {
+            display: block;
             border: none;
             background: map-get($mau, main-2);
             color: white;
             text-transform: uppercase;
+            margin: 0 auto;
+            width: 100%;
+            height: 50px;
         }
-        input[name='user'] {
+        input[name="remember-pass"] {
+            margin-bottom: 20px;
+        }
+        input[name='user'],
+        input[name='pass'] {
             height: 35px;
             width: 100%;
             margin-bottom: 20px;
             padding: 0 10px;
             border: none;
+            color: map-get($mau, main);
             border-bottom: 1px solid map-get($mau, main);
             &:last-child {
                 margin-bottom: 0px;
             }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    section.login-SNA {
+        .login-SNA-logo {
+            img {
+                width: 50px !important;
+            }
+        }
+        label {
+            font-size: 10px;
         }
     }
 }

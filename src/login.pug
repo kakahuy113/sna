@@ -1,13 +1,8 @@
-extends _templates/_layout/_layout.pug
+extends _templates/_layout/_layout-no-footer
 
 block var
 	- let title = 'Login | SNA';
 	- let bodyClass = 'login-page';
-	- let linkBanner = './assets/images/banner/dp.jpg';
-	- let titleBanner = 'LOGIN SNA';
 
-block banner,breadcrumb
-	include _templates/_layout/_banner
 block main
 	include _templates/login/l-1
-block discover
