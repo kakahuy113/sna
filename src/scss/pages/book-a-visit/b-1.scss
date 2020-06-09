@@ -121,3 +121,42 @@
         }
     }
 }
+
+@media (max-width: 767.98px) {
+    section.book-a-visit {
+        .content-book-visit {
+            top: 35% !important;
+            .col-7,
+            .col-5 {
+                max-width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    section.book-a-visit {
+        .content-book-visit {
+            top: 35% !important;
+            width: 100% !important;
+            height: 428px !important;
+            .col-7,
+            .col-5 {
+                max-width: 100% !important;
+                flex: 0 0 100% !important;
+            }
+            .col-BAV-form {
+                .col-BAV-form {
+                    padding: 25px !important;
+                }
+            }
+            .col-BAV-contact {
+                height: 240px !important;
+                .box-BAV-contact {
+                    padding: 20px 50px !important;
+                }
+            }
+        }
+    }
+}

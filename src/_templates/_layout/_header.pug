@@ -54,7 +54,7 @@ header
 								li
 									a(href="#") Destiny Library
 				.t_header--search
-					.icon
+					.icon#search-sna
 						img.svg(src="./assets/icons/search.svg", alt="SEARCH")
 				.t_header--login
 					a(href="#")
@@ -66,6 +66,14 @@ header
 							a(href="#") VN
 						li
 							a(href="#") ENG
+						li
+							a(href="#") KR
+			.b_header-input-search.col-12
+				.input-search
+					input(type="text",name="search",placeholder="Search . . .")
+					.button-search
+						input(type="submit", value="Search",name="btn-search")
+				span.close-search
 			.bottom-header.col-12
 				nav.b_header--list-menu
 					ul
