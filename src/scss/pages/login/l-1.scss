@@ -1,0 +1,23 @@
+section.login-SNA {
+    padding: 100px 0;
+    .row {
+        justify-content: center;
+        .col-4 {
+            background: map-get($mau, main);
+            padding: 50px;
+        }
+    }
+    .box-login-SNA {
+        width: 100%;
+        input {
+            font-size: 18px;
+            height: 35px;
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 0 10px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}

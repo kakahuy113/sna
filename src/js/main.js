@@ -259,14 +259,7 @@ const libraryFancyApp = () => {
     })
 }
 
-const initIntlTelInput = () => {
-    var input = document.querySelector("#phone");
-    if (input) {
-        window.intlTelInput(input, {
-            //code ???
-        });
-    }
-}
+
 
 const toggleSearch = () => {
     $(".t_header--search #search-sna").click(function(e) {
@@ -277,6 +270,14 @@ const toggleSearch = () => {
         e.preventDefault();
         $(".b_header-input-search").removeClass("active-search");
     });
+}
+const initIntlTelInput = () => {
+    var input = document.querySelector("#phone");
+    if (input) {
+        window.intlTelInput(input, {
+            //code ???
+        });
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -302,6 +303,8 @@ document.addEventListener('DOMContentLoaded', () => {
     fancyboxBookingFixed();
     // Toggle Menu
     subMenuMobile();
+    //search
+    toggleSearch();
     //activeMenu
     activeMenu();
     // TabStyle_1
@@ -310,6 +313,4 @@ document.addEventListener('DOMContentLoaded', () => {
     libraryFancyApp();
     // TOÀN IntlTelInput
     initIntlTelInput();
-    //search
-    toggleSearch();
 });
