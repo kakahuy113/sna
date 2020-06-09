@@ -1,14 +1,18 @@
 .news {
-	padding: 100px;
+	padding: 100px 0;
+
 	@media (max-width: 1024.98px) {
 		padding: 50px 0px;
 	}
+
 	@media (max-width: 767.98px) {
 		padding: 25px 0px;
-		p{
+
+		p {
 			font-size: 14px;
 		}
 	}
+
 	h2 {
 		font-size: 45px;
 		line-height: 1.22857143;
@@ -16,155 +20,174 @@
 		margin-bottom: 20px;
 		width: 100%;
 	}
-    .features {
-        .item {
-            padding: 0px 15px;
+
+	.features {
+		.item {
+			padding: 0px 15px;
 			margin-bottom: 30px;
+
 			@media (max-width: 767.98px) {
 				padding: 0px 10px;
 			}
+
 			@media (min-width: 1025px) {
-				&:hover{
-					.img{
-						img{
+				&:hover {
+					.img {
+						img {
 							transform: scale(1.05);
 						}
 					}
-					.related-content{
-						h3{
+
+					.related-content {
+						h3 {
 							color: map-get($mau, main);
 						}
 					}
 				}
 			}
 
-        }
+		}
 
-        .img {
-            width: 100%;
-            height: 329.29px;
-            margin-bottom: 15px;
-        }
+		.img {
+			width: 100%;
+			height: 329.29px;
+			margin-bottom: 15px;
+		}
 
-        img {
-            width: 100%;
+		img {
+			width: 100%;
 			height: 100%;
 			transition: all .3s ease-in-out;
-        }
-        h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: map-get($mau, main-2);
-        }
+		}
 
-        p {
-            font-size: 15px;
-            margin-bottom: 20px;
-        }
+		h3 {
+			font-size: 18px;
+			margin-bottom: 10px;
+			color: map-get($mau, main-2);
+		}
 
-        .related-item {
-            max-width: 500px;
-            padding-right: 15px;
-            .related-img {
-                height: 214px;
-                img {
-                    width: 100%;
-                    transition: all .3s;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-        }
-        .related-content {
-            .related-title {
-                font-weight: bold;
-                display: block;
-                position: relative;
-                text-transform: uppercase;
-                color: #AD132A;
-                margin: 10px 0;
-                font-size: 18px;
-            }
-            .related-text {
-                font-size: 15px;
-            }
-            span.icon-more {
-                display: flex;
-                position: relative;
-                color: map-get($mau, main);
-                padding-top: 10px;
-                float: right;
-                font-size: 13px;
+		p {
+			font-size: 15px;
+			margin-bottom: 20px;
+		}
+
+		.related-item {
+			max-width: 500px;
+			padding-right: 15px;
+
+			.related-img {
+				height: 214px;
+
+				img {
+					width: 100%;
+					transition: all .3s;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+
+		.related-content {
+			.related-title {
+				font-weight: bold;
+				display: block;
+				position: relative;
+				text-transform: uppercase;
+				color: #AD132A;
+				margin: 10px 0;
+				font-size: 18px;
+			}
+
+			.related-text {
+				font-size: 15px;
+			}
+
+			span.icon-more {
+				display: flex;
+				position: relative;
+				color: map-get($mau, main);
+				padding-top: 10px;
+				float: right;
+				font-size: 13px;
 				height: 100%;
 				transition: .3s all ease-in-out;
-                &::after {
-                    z-index: 1;
-                    position: absolute;
-                    top: 72%;
-                    left: -34%;
-                    transform: translateY(-50%);
-                    color: #fff;
-                    font-family: Linearicons-Free;
-                    font-size: 12px;
-                    content: '\e87a';
-                    transition: .3s all ease-in-out;
-                }
-                &::before {
-                    position: absolute;
-                    top: 70%;
-                    left: -40%;
-                    width: 20px;
-                    height: 20px;
-                    transform: translateY(-50%);
-                    border-radius: 50%;
-                    background: map-get($mau, main);
-                    content: '';
-                    transition: .3s all ease-in-out;
+
+				&::after {
+					z-index: 1;
+					position: absolute;
+					top: 72%;
+					left: -34%;
+					transform: translateY(-50%);
+					color: #fff;
+					font-family: Linearicons-Free;
+					font-size: 12px;
+					content: '\e87a';
+					transition: .3s all ease-in-out;
 				}
+
+				&::before {
+					position: absolute;
+					top: 70%;
+					left: -40%;
+					width: 20px;
+					height: 20px;
+					transform: translateY(-50%);
+					border-radius: 50%;
+					background: map-get($mau, main);
+					content: '';
+					transition: .3s all ease-in-out;
+				}
+
 				@media (min-width: 1025px) {
-					&:hover{
-						&::before{
+					&:hover {
+						&::before {
 							background: map-get($mau, main-2);
 						}
+
 						color: map-get($mau, main-2);
 					}
 				}
-            }
-        }
-    }
+			}
+		}
+	}
 }
+
 @media(max-width:1024px) {
-    .related-news {
-        .col-lg-4 {
-            margin-top: 3rem !important;
-        }
-        .related-item {
-            .related-img {
-                height: 500px !important;
-            }
-        }
-    }
+	.related-news {
+		.col-lg-4 {
+			margin-top: 3rem !important;
+		}
+
+		.related-item {
+			.related-img {
+				height: 500px !important;
+			}
+		}
+	}
 }
 
 @media (max-width: 767.98px) {
-    .related-news {
-        .block-title--main {
-            &::after {
-                font-size: 3rem !important;
-            }
-        }
-        h2 {
-            span {
-                font-size: 15px !important;
-                top: 80% !important;
-                &::after {
-                    font-size: 14px !important;
-                }
-                &::before {
-                    width: 25px !important;
-                    height: 25px !important;
-                }
-            }
-        }
-    }
+	.related-news {
+		.block-title--main {
+			&::after {
+				font-size: 3rem !important;
+			}
+		}
+
+		h2 {
+			span {
+				font-size: 15px !important;
+				top: 80% !important;
+
+				&::after {
+					font-size: 14px !important;
+				}
+
+				&::before {
+					width: 25px !important;
+					height: 25px !important;
+				}
+			}
+		}
+	}
 }
