@@ -112,6 +112,13 @@
                     display: flex;
                     .item-social {
                         padding-right: 10px;
+                        svg {
+                            &:hover {
+                                path {
+                                    fill: map-get($mau, main-2);
+                                }
+                            }
+                        }
                         &:last-child {
                             padding-right: 0;
                         }
