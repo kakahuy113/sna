@@ -244,12 +244,13 @@ const coreTabStyle_1 = () => {
 const libraryFancyApp = () => {
     $('[data-fancybox]').fancybox({
         buttons: [
-            'zoom',
+			'zoom',
+			'slideShow',
             'download',
             'fullScreen',
             'share',
             'thumbs',
-            'close',
+			'close'
         ],
         thumbs: {
             autoStart: true,
