@@ -9,12 +9,17 @@ section.login-SNA {
     }
     .box-login-SNA {
         width: 100%;
+        input[name="login"] {
+            border: none;
+            background: map-get($mau, main);
+        }
         input {
-            font-size: 18px;
             height: 35px;
             width: 100%;
             margin-bottom: 20px;
             padding: 0 10px;
+            border: none;
+            border-bottom: 1px solid map-get($mau, main);
             &:last-child {
                 margin-bottom: 0px;
             }
