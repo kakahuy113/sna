@@ -289,10 +289,13 @@ header {
                     color: map-get($mau, main-2);
                 }
             }
-            &:first-child {
-                &:after {
-                    content: '/';
-                    padding: 0 5px;
+            &:after {
+                content: '/';
+                padding: 0 5px;
+            }
+            &:last-child {
+                &::after {
+                    content: '';
                 }
             }
         }
@@ -343,8 +346,8 @@ header {
     span.close-search {
         position: absolute;
         top: 10px;
-		right: 60px;
-		cursor: pointer;
+        right: 5%;
+        cursor: pointer;
         &::before {
             content: '\e870';
             font-family: Linearicons-Free;
@@ -550,6 +553,15 @@ header {
         align-self: center;
         order: -1;
         margin-left: 0;
+    }
+    .active-search {
+        top: 0 !important;
+    }
+    .b_header-input-search {
+        height: 60px;
+        input[name="btn-search"] {
+            font-size: 9px;
+        }
     }
     // BOTTOM HEADER
     .bottom-header {

@@ -261,14 +261,20 @@ const libraryFancyApp = () => {
 
 const initIntlTelInput = () => {
     var input = document.querySelector("#phone");
-    window.intlTelInput(input, {});
+    if (input) {
+        window.intlTelInput(input, {
+            //code ???
+        });
+    }
 }
 
 const toggleSearch = () => {
-    $(".t_header--search #search-sna").click(function() {
+    $(".t_header--search #search-sna").click(function(e) {
+        e.preventDefault();
         $(".b_header-input-search").toggleClass("active-search");
     })
-    $(".b_header-input-search span.close-search").click(function() {
+    $(".b_header-input-search span.close-search").click(function(e) {
+        e.preventDefault();
         $(".b_header-input-search").removeClass("active-search");
     });
 }
