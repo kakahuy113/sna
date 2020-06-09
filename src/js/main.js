@@ -242,24 +242,30 @@ const coreTabStyle_1 = () => {
 }
 
 const libraryFancyApp = () => {
-    $('[data-fancybox="images"]').fancybox({
-        thumbs: {
-            autoStart: true,
-            axis: 'x'
-        },
+    $('[data-fancybox]').fancybox({
         buttons: [
             'zoom',
-            'close',
             'download',
             'fullScreen',
             'share',
             'thumbs',
-            'close'
-        ]
+            'close',
+        ],
+        thumbs: {
+            autoStart: true,
+            axis: 'x'
+        }
     })
 }
 
-
+const initIntlTelInput = () => {
+    var input = document.querySelector("#phone");
+    if (input) {
+        window.intlTelInput(input, {
+            //code ???
+        });
+    }
+}
 
 const toggleSearch = () => {
     $(".t_header--search #search-sna").click(function(e) {
@@ -270,14 +276,6 @@ const toggleSearch = () => {
         e.preventDefault();
         $(".b_header-input-search").removeClass("active-search");
     });
-}
-const initIntlTelInput = () => {
-    var input = document.querySelector("#phone");
-    if (input) {
-        window.intlTelInput(input, {
-            //code ???
-        });
-    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -301,10 +299,10 @@ document.addEventListener('DOMContentLoaded', () => {
     pdfSlider();
     // FancyboxBooking
     fancyboxBookingFixed();
-    // Toggle Menu
-    subMenuMobile();
     //search
     toggleSearch();
+    // Toggle Menu
+    subMenuMobile();
     //activeMenu
     activeMenu();
     // TabStyle_1
@@ -313,4 +311,5 @@ document.addEventListener('DOMContentLoaded', () => {
     libraryFancyApp();
     // TOÀN IntlTelInput
     initIntlTelInput();
+
 });
