@@ -11,9 +11,11 @@ section.login-SNA {
         width: 100%;
         input[name="login"] {
             border: none;
-            background: map-get($mau, main);
+            background: map-get($mau, main-2);
+            color: white;
+            text-transform: uppercase;
         }
-        input {
+        input[name='user'] {
             height: 35px;
             width: 100%;
             margin-bottom: 20px;

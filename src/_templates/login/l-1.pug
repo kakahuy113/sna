@@ -3,7 +3,7 @@ section.login-SNA
 		.row
 			.col-5
 				.box-login-SNA
-					form(action="", method="post")
-						input(type="text",placeholder="Username . . .")
-						input(type="text",placeholder="Password . . .")
+					form(name="login-SNA", method="post")
+						input(type="text",placeholder="Username . . .",name="user")
+						input(type="password",placeholder="Password . . .")
 						input(type="submit", value="Login",name="login")

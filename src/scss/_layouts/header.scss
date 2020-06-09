@@ -17,12 +17,24 @@ header {
 // LOGO
 .block-logo {
     position: absolute;
-    left: 10px;
+    left: -80px;
     top: 50%;
     transform: translateY(-50%);
+
     .logo {
         img {
             max-width: 100px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 29%;
+            width: 42%;
+            height: 1px;
+            transform: rotate(90deg);
+            background: map-get($mau, main);
         }
     }
 }
@@ -33,14 +45,17 @@ header {
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
+
     &.active {
         .menu-btn {
             &::before {
                 transform: translateY(12px) rotate(-45deg);
             }
+
             span {
                 background: none !important;
             }
+
             &::after {
                 transform: translateY(-12px) rotate(45deg);
             }
@@ -59,6 +74,7 @@ header {
     font-size: 32px;
     cursor: pointer;
     color: #5F4B5B;
+
     span {
         position: absolute;
         height: 2px;
@@ -68,6 +84,7 @@ header {
         top: calc(50% - 1px);
         transition: all 0.2s ease-in-out;
     }
+
     &::before,
     &::after {
         content: "";
@@ -78,9 +95,11 @@ header {
         right: 5px;
         transition: all 0.2s ease-in-out;
     }
+
     &::before {
         top: 8px;
     }
+
     &::after {
         top: calc(100% - 10px);
     }
@@ -93,11 +112,13 @@ header {
     align-items: center;
     padding-left: 120px;
     border-bottom: 1px solid map-get($mau, main);
+
     .icon {
         cursor: pointer;
         position: relative;
         width: 20px;
         height: 20px;
+
         svg,
         img {
             position: absolute;
@@ -106,11 +127,13 @@ header {
             width: 100%;
             height: 100%;
         }
+
         svg {
             path {
                 transition: .3s all ease-in-out;
             }
         }
+
         @media (min-width: 1200px) {
             &:hover {
                 svg {
@@ -121,13 +144,16 @@ header {
             }
         }
     }
+
     .text {
         color: map-get($mau, main);
         transition: .3s all ease-in-out;
     }
+
     ul {
         list-style-type: none;
         padding-left: 0;
+
         li {
             @media (min-width: 1200px) {
                 &:hover {
@@ -136,6 +162,7 @@ header {
                             fill: map-get($mau, main-2);
                         }
                     }
+
                     .text {
                         color: map-get($mau, main-2);
                     }
@@ -147,16 +174,21 @@ header {
 
 .t_header--list-contact {
     line-height: 50px;
+
     ul {
         display: flex;
+
         li+li {
             margin-left: 15px;
         }
+
         li {
             color: map-get($mau, main);
+
             >a {
                 display: flex;
                 align-items: center;
+
                 .text {
                     margin-left: 5px;
                 }
@@ -170,14 +202,17 @@ header {
     padding-left: 15px;
     margin-left: 15px;
     height: 50px;
+
     ul {
         display: flex;
         height: 100%;
         align-items: center;
+
         li+li {
             margin-left: 10px;
         }
     }
+
     &:after {
         content: '';
         top: 50%;
@@ -193,16 +228,21 @@ header {
 .t_header--list-link {
     margin-left: auto;
     line-height: 50px;
+
     >ul {
         display: flex;
         user-select: none;
+
         li+li {
             border-top: 1px solid #dedede;
         }
+
         li {
             position: relative;
+
             &.hasSub {
                 padding-right: 20px;
+
                 &:after {
                     content: '';
                     position: absolute;
@@ -215,11 +255,13 @@ header {
                     transition: .3s all ease-in-out;
                 }
             }
+
             @media (min-width: 1200px) {
                 &:hover {
                     >a {
                         color: map-get($mau, main-2);
                     }
+
                     &.hasSub {
                         &:after {
                             border-top: 5px solid map-get($mau, main-2);
@@ -228,9 +270,11 @@ header {
                 }
             }
         }
+
         >li+li {
             margin-left: 15px;
         }
+
         >li {
             >ul {
                 position: absolute;
@@ -241,6 +285,7 @@ header {
                 left: 0;
                 width: 220px;
                 z-index: 10;
+
                 >li {
                     >a {
                         display: block;
@@ -249,6 +294,7 @@ header {
                     }
                 }
             }
+
             @media (min-width: 1200px) {
                 &:hover {
                     >ul {
@@ -259,6 +305,7 @@ header {
             }
         }
     }
+
     a {
         color: map-get($mau, main);
         transition: .3s all ease-in-out;
@@ -277,22 +324,27 @@ header {
     ul {
         display: flex;
         user-select: none;
+
         li {
             &.active {
                 a {
                     color: map-get($mau, main-2);
                 }
             }
+
             a {
                 color: map-get($mau, main);
+
                 &:hover {
                     color: map-get($mau, main-2);
                 }
             }
+
             &:after {
                 content: '/';
                 padding: 0 5px;
             }
+
             &:last-child {
                 &::after {
                     content: '';
@@ -322,15 +374,18 @@ header {
     top: -100%;
     background: white;
     z-index: 111;
+
     .input-search {
         position: relative;
         width: 85%;
+
         input[name="search"] {
             width: 100%;
             height: 50px;
             padding-left: 30px;
             padding-right: 150px;
         }
+
         input[name="btn-search"] {
             position: absolute;
             top: 0;
@@ -343,11 +398,13 @@ header {
             border: none;
         }
     }
+
     span.close-search {
         position: absolute;
         top: 10px;
         right: 5%;
         cursor: pointer;
+
         &::before {
             content: '\e870';
             font-family: Linearicons-Free;
@@ -361,6 +418,7 @@ header {
     position: relative;
     width: 100%;
     height: 80px;
+
     ul {
         position: absolute;
         top: 50%;
@@ -371,8 +429,10 @@ header {
         padding-left: 0;
         list-style-type: none;
         user-select: none;
+
         >li {
             position: relative;
+
             &.hasSub {
                 &:before {
                     content: '';
@@ -383,6 +443,7 @@ header {
                     height: 28px;
                 }
             }
+
             &.active {
                 >li {
                     &.active {
@@ -391,16 +452,19 @@ header {
                         }
                     }
                 }
+
                 >a {
                     color: map-get($mau, main-2);
                 }
             }
+
             >a {
                 position: relative;
                 font-size: 15px;
                 color: map-get($mau, main);
                 text-transform: uppercase;
                 padding-bottom: 5px;
+
                 &:after {
                     content: '';
                     position: absolute;
@@ -412,6 +476,7 @@ header {
                     transition: .3s all ease-in-out;
                 }
             }
+
             // SUBMENU
             >ul {
                 top: 52px;
@@ -423,19 +488,25 @@ header {
                 opacity: 0;
                 visibility: hidden;
                 transition: .3s all ease-in-out;
+
                 @media (min-width: 1200px) {
                     box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
                 }
+
                 >li+li {
                     border-top: 1px solid #dedede;
                 }
+
                 >li {
                     padding: 10px 5px 10px 20px;
+
                     &.hasSub {
                         padding-right: 20px;
+
                         &:before {
                             content: none;
                         }
+
                         &:after {
                             content: '';
                             position: absolute;
@@ -448,29 +519,35 @@ header {
                             transition: .3s all ease-in-out;
                         }
                     }
+
                     >ul {
                         left: 100%;
                         top: 0;
                     }
+
                     >a {
                         display: block;
                         text-transform: unset;
                         width: 100%;
                         line-height: 30px;
+
                         &::after {
                             content: none;
                         }
                     }
                 }
             }
+
             @media (min-width: 1200px) {
                 &:hover {
                     >ul {
                         opacity: 1;
                         visibility: visible;
                     }
+
                     >a {
                         color: map-get($mau, main-2);
+
                         &:after {
                             width: 100%;
                         }
@@ -484,20 +561,24 @@ header {
 @media (max-width: 1199.98px) {
     header {
         height: 70px;
+
         .container {
             height: 100%;
         }
     }
+
     // LOGO
     .block-logo {
         left: 50%;
         transform: translate(-50%, -50%);
+
         .logo {
             img {
                 max-width: 70px;
             }
         }
     }
+
     // TOP HEADER
     .top-header {
         position: fixed;
@@ -510,18 +591,22 @@ header {
         padding: 10px 15px !important;
         border-top: 1px solid #f1f1f1;
         transition: .5s all ease-in-out;
+
         &.active {
             left: 0;
         }
     }
+
     .t_header--list-contact {
         line-height: unset;
         margin-left: auto;
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
         max-width: 50%;
+
         ul {
             justify-content: flex-end;
+
             li {
                 &:last-child {
                     display: none;
@@ -529,23 +614,29 @@ header {
             }
         }
     }
+
     .t_header--list-link {
         display: none;
     }
+
     .t_header--login {
         display: none;
     }
+
     .t_header--list-social {
         height: auto;
         margin-left: 0;
         padding-left: 0;
+
         &:after {
             content: none;
         }
     }
+
     .t_header--language {
         margin-left: auto
     }
+
     .t_header--search {
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
@@ -554,15 +645,19 @@ header {
         order: -1;
         margin-left: 0;
     }
+
     .active-search {
         top: 0 !important;
     }
+
     .b_header-input-search {
         height: 60px;
+
         input[name="btn-search"] {
             font-size: 9px;
         }
     }
+
     // BOTTOM HEADER
     .bottom-header {
         position: fixed;
@@ -577,12 +672,15 @@ header {
         box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
         z-index: 1000;
         overflow-y: auto;
+
         &.active {
             left: 0;
         }
     }
+
     .b_header--list-menu {
         height: 100%;
+
         .btn-back {
             text-align: right;
             padding-right: 20px;
@@ -590,6 +688,7 @@ header {
             user-select: none;
             cursor: pointer;
         }
+
         ul {
             display: block;
             flex-direction: column;
@@ -598,18 +697,23 @@ header {
             left: unset;
             transform: unset;
             height: 100%;
+
             >li+li {
                 border-top: 1px solid #dedede;
             }
+
             >li {
                 line-height: 50px;
+
                 &:last-child {
                     border-bottom: 1px solid #dedede;
                 }
+
                 &.hasSub {
                     &:before {
                         content: none;
                     }
+
                     &:after {
                         content: '';
                         position: absolute;
@@ -622,12 +726,14 @@ header {
                         transition: .3s all ease-in-out;
                     }
                 }
+
                 >a {
                     display: block;
                     padding-left: 20px;
                     padding-right: 5px;
                     padding-bottom: 0;
                 }
+
                 >ul {
                     position: fixed;
                     top: 70px;
@@ -639,12 +745,14 @@ header {
                     visibility: visible;
                     opacity: 1;
                     transition: .5s all ease-in-out;
+
                     >li {
                         >ul {
                             left: -100%;
                             top: 70px;
                         }
                     }
+
                     &.active {
                         left: 0;
                     }
@@ -661,16 +769,19 @@ header {
                 &::before {
                     transform: translateY(8.5px) rotate(-45deg);
                 }
+
                 &::after {
                     transform: translateY(-8.5px) rotate(45deg);
                 }
             }
         }
     }
+
     .menu-btn {
         width: 35px;
         height: 35px;
     }
+
     .b_header--list-menu {
         ul {
             >li {
@@ -681,6 +792,7 @@ header {
                         }
                     }
                 }
+
                 >a {
                     font-size: 13px;
                 }
