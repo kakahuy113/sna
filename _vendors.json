@@ -10,13 +10,17 @@
         "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
         "node_modules/wowjs/dist/wow.js",
         "node_modules/intl-tel-input/build/js/utils.js",
-        "node_modules/intl-tel-input/build/js/intlTelInput.js"
+        "node_modules/intl-tel-input/build/js/intlTelInput.js",
+        "node_modules/moment/moment.js",
+        "node_modules/clndr/src/clndr.js",
+        "node_modules/underscore/underscore.js"
     ],
     "css": [
         "node_modules/swiper/css/swiper.css",
         "node_modules/linearicons/dist/web-font/style.css",
         "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css",
         "node_modules/wowjs/css/libs/animate.css",
-        "node_modules/intl-tel-input/build/css/intlTelInput.css"
+        "node_modules/intl-tel-input/build/css/intlTelInput.css",
+        "node_modules/clndr/demo/css/clndr.css"
     ]
 }
