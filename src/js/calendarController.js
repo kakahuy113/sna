@@ -42,9 +42,10 @@ $(document).ready(function() {
                     +'</tr>';
             });
             //
-            var monthNow = $('.month').html();
-            $('#monthNow').text(monthNow);
-
+            var monthNow = $('.month').html().split(' ')[0];
+            var yearNow = $('.month').html().split(' ')[1];
+            $('#monthNow').html('<h5 class="title-calendar" id="monthNow">' + monthNow +
+                '<span id="yearNow">' + yearNow + '</span>' + '</h5>');
             $(".data-calendar").html('<tbody>' + text +
                 '</tbody>');
         },
@@ -65,9 +66,10 @@ $(document).ready(function() {
                         +'</tr>';
                 });
                 //
-                var monthNow = $('.month').html();
-                $('#monthNow').text(monthNow);
-
+                var monthNow = $('.month').html().split(' ')[0];
+                var yearNow = $('.month').html().split(' ')[1];
+                $('#monthNow').html('<h5 class="title-calendar" id="monthNow">' + monthNow +
+                    '<span id="yearNow">' + yearNow + '</span>' + '</h5>');
                 $(".data-calendar").html('<tbody>' + text +
                     '</tbody>');
             },
