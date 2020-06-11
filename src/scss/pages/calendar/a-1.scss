@@ -131,6 +131,12 @@
                         font-size: 15px;
                     }
                 }
+                // .day.last-month {
+                //     .day-contents {
+                //         background: white !important;
+                //         // color: gray !important;
+                //     }
+                // }
                 .day.today {
                     .day-contents {
                         color: white !important;
@@ -239,9 +245,46 @@
     width: 700px;
     padding-right: 0;
     padding-left: 0;
+    padding-bottom: 100px;
     .link-data-calendar {
         .images {
             text-align: center;
+        }
+    }
+    .list-event {
+        tbody {
+            display: block;
+            width: 100%;
+            tr {
+                &:last-child {
+                    td {
+                        border-bottom: 1px solid map-get($mau, main);
+                    }
+                }
+            }
+            td {
+                position: relative;
+                span {
+                    position: absolute;
+                    font-size: 14px;
+                    bottom: 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    color: map-get($mau, main);
+                }
+                border-top: 1px solid map-get($mau, main);
+            }
+            .day--event {
+                font-size: 40px;
+                color: map-get($mau, main-2);
+                font-weight: 700;
+                padding: 10px 30px;
+                padding-bottom: 20px;
+            }
+            .title--event {
+                font-size: 17px;
+                width: 700px;
+            }
         }
     }
 }

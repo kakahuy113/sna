@@ -1,28 +1,27 @@
 var calendars = {};
-
 $(document).ready(function() {
     // var thisMonth = moment().format('YYYY-MM-DD');
     var eventArray = [{
         date: '2020-06-22',
         title: 'Start of Summer School (6 Weeks)'
     }, {
-        title: "School Holiday",
-        date: '2020-06-12'
+        title: "First Day of School for G12 VN Program ONLY",
+        date: '2020-07-27'
     }, {
-        title: "Tet Holidays",
-        date: '2020-06-25'
+        title: "End of Summer School (6 Weeks)",
+        date: '2020-07-31'
     }, {
-        title: "G.12 - First Day of School (G.12 full-day school for VN Program)",
-        date: 1563796800000
+        title: "Teachers Arrive: Induction and curriculum mapping",
+        date: '2020-08-10'
     }, {
-        title: "Parents&#039; and Students&#039; Orientation",
-        date: 1565352000000
+        title: "Teachers Arrive: Induction and curriculum mapping",
+        date: '2020-08-11'
     }, {
-        title: "First Day of School (K-G.12) \/ Term 1 begins<br><p>Opening Ceremony<\/p>",
-        date: 1565611200000
+        title: "Teachers Arrive: Induction and curriculum mapping",
+        date: '2020-08-12'
     }, {
-        title: "SNA Day (Minimum Schedule Day)",
-        date: 1566561600000
+        title: "Teachers Arrive: Induction and curriculum mapping",
+        date: '2020-08-13'
     }];
 
     calendars.clndr1 = $('.cal1').clndr({
@@ -32,24 +31,45 @@ $(document).ready(function() {
             //
             this.eventsThisInterval.forEach(e => {
                 var title = e.title;
-                var date = e.date;
-                text += "<p>" + title + "</p>" +
-                    "<p>" + date + "</p>";
+                var dayOfWeek = e._clndrEndDateObject._d.toString().split(' ')[0];
+                var day = e.date.substr(8, 2);
+                text += '<tr>' +
+                    '<td class="day--event">' +
+                    day +
+                    '<span>' + dayOfWeek + '</span>' +
+                    '</td>' +
+                    '<td class="title--event">' + title + '</td>' +
+                    +'</tr>';
             });
             //
-            console.log(text);
-            $(".data-calendar").html(text);
+            var monthNow = $('.month').html();
+            $('#monthNow').text(monthNow);
+
+            $(".data-calendar").html('<tbody>' + text +
+                '</tbody>');
         },
         clickEvents: {
             onMonthChange: function(month) {
+                var text = "";
+                //
                 this.eventsThisInterval.forEach(e => {
-                    var titleR = e.title;
-                    var date = e.date;
-                    $(".data-calendar").html(
-                        '<p>' + titleR + '</p>' +
-                        '<p>' + date + '</p>'
-                    );
+                    var title = e.title;
+                    var dayOfWeek = e._clndrEndDateObject._d.toString().split(' ')[0];
+                    var day = e.date.substr(8, 2);
+                    text += '<tr>' +
+                        '<td class="day--event">' +
+                        day +
+                        '<span>' + dayOfWeek + '</span>' +
+                        '</td>' +
+                        '<td class="title--event">' + title + '</td>' +
+                        +'</tr>';
                 });
+                //
+                var monthNow = $('.month').html();
+                $('#monthNow').text(monthNow);
+
+                $(".data-calendar").html('<tbody>' + text +
+                    '</tbody>');
             },
         },
         multiDayEvents: {
