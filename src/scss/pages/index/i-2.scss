@@ -1,14 +1,18 @@
 .index-2 {
-    .block-title--main {
-        padding-bottom: 200px;
-    }
+    .block-title--main {}
     .img-sticker {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        img {
-            max-width: 350px;
+        display: block;
+        margin-top: -160px;
+        position: relative;
+        text-align: center;
+        .img-sr {
+            text-align: center;
+            width: 100%;
+            display: block;
+            img {
+                display: inline-block;
+                max-width: 350px;
+            }
         }
     }
     @media (max-width: 767.98px) {
