@@ -244,13 +244,13 @@ const coreTabStyle_1 = () => {
 const libraryFancyApp = () => {
     $('[data-fancybox]').fancybox({
         buttons: [
-			'zoom',
-			'slideShow',
+            'zoom',
+            'slideShow',
             'download',
             'fullScreen',
             'share',
             'thumbs',
-			'close'
+            'close'
         ],
         thumbs: {
             autoStart: true,
@@ -278,6 +278,7 @@ const toggleSearch = () => {
         $(".b_header-input-search").removeClass("active-search");
     });
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -312,5 +313,4 @@ document.addEventListener('DOMContentLoaded', () => {
     libraryFancyApp();
     // TOÀN IntlTelInput
     initIntlTelInput();
-
 });

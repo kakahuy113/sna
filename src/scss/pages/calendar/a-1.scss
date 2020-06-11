@@ -1,3 +1,235 @@
-.ca-cdp25794 {
-    font-size: 40px !important;
-}
+    .clearfix {
+        &:after {
+            content: ".";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+        display: inline-block;
+    }
+    
+    .left-align {
+        text-align: left;
+    }
+    
+    .right-align {
+        text-align: right;
+    }
+    
+    .cal1 {
+        margin: 30px auto;
+        max-width: 600px;
+        font-family: 'Droid Sans Mono';
+        font-size: 14px;
+        .clndr {
+            .clndr-controls {
+                display: inline-block;
+                width: 100%;
+                position: relative;
+                margin-bottom: 10px;
+                .month {
+                    float: left;
+                    width: 33%;
+                    text-align: center;
+                }
+                .clndr-control-button {
+                    float: left;
+                    width: 33%;
+                    .clndr-next-button {
+                        cursor: pointer;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        &:hover {
+                            background: #ddd;
+                        }
+                    }
+                    .clndr-next-button.inactive {
+                        opacity: 0.5;
+                        &:hover {
+                            background: none;
+                            cursor: default;
+                        }
+                    }
+                    .clndr-previous-button {
+                        cursor: pointer;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        &:hover {
+                            background: #ddd;
+                        }
+                    }
+                    .clndr-previous-button.inactive {
+                        opacity: 0.5;
+                        &:hover {
+                            background: none;
+                            cursor: default;
+                        }
+                    }
+                }
+                .clndr-control-button.rightalign {
+                    text-align: right;
+                    width: 34%;
+                }
+            }
+            .clndr-table {
+                table-layout: fixed;
+                width: 100%;
+                .header-days {
+                    height: 30px;
+                    font-size: 10px;
+                    background: #0D70A6;
+                    .header-day {
+                        vertical-align: middle;
+                        text-align: center;
+                        color: #fff;
+                        &:last-child {
+                            border-right: 1px solid #000;
+                        }
+                    }
+                }
+                tr {
+                    height: 85px;
+                    td {
+                        vertical-align: top;
+                    }
+                    .day {
+                        &:first-child {
+                            border-left: 1px solid #000;
+                        }
+                        &:last-child {
+                            border-right: 1px solid #000;
+                        }
+                        .day-contents {
+                            box-sizing: border-box;
+                            display: inline-block;
+                            width: 40px;
+                            height: 40px;
+                            text-align: center;
+                            line-height: 40px;
+                            border-radius: 100%;
+                            color: map-get($mau, main);
+                            font-size: 15px;
+                        }
+                    }
+                    .day.today {
+                        background: #9AD6E3;
+                    }
+                    .day.my-today {
+                        background: #9AD6E3;
+                    }
+                    .day.today.event {
+                        background: #a7dbc1;
+                    }
+                    .day.my-today.event {
+                        background: #a7dbc1;
+                    }
+                    .day.event {
+                        background: #B4E09F;
+                    }
+                    .day.my-event {
+                        background: #B4E09F;
+                    }
+                    .day.inactive {
+                        background: #ddd;
+                    }
+                    .day.my-inactive {
+                        background: #ddd;
+                    }
+                    .empty {
+                        width: 100%;
+                        height: inherit;
+                        background: #eee;
+                        &:last-child {
+                            border-right: 1px solid #000;
+                        }
+                    }
+                    .adjacent-month {
+                        width: 100%;
+                        height: inherit;
+                        background: #eee;
+                        &:last-child {
+                            border-right: 1px solid #000;
+                        }
+                    }
+                    .my-empty {
+                        width: 100%;
+                        height: inherit;
+                        background: #eee;
+                        &:last-child {
+                            border-right: 1px solid #000;
+                        }
+                    }
+                    .my-adjacent-month {
+                        width: 100%;
+                        height: inherit;
+                        background: #eee;
+                        &:last-child {
+                            border-right: 1px solid #000;
+                        }
+                    }
+                    &:last-child {
+                        .day {
+                            border-bottom: 1px solid #000;
+                        }
+                        .my-day {
+                            border-bottom: 1px solid #000;
+                        }
+                        .empty {
+                            border-bottom: 1px solid #000;
+                        }
+                        .my-empty {
+                            border-bottom: 1px solid #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .clndr-next-button {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+    
+    .clndr-previous-button {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+    
+    .clndr-next-year-button {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+    
+    .clndr-previous-year-button {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+    }
+    
+    .clndr-next-button.inactive {
+        opacity: 0.5;
+        cursor: default;
+    }
+    
+    .clndr-previous-button.inactive {
+        opacity: 0.5;
+        cursor: default;
+    }
+    
+    .clndr-next-year-button.inactive {
+        opacity: 0.5;
+        cursor: default;
+    }
+    
+    .clndr-previous-year-button.inactive {
+        opacity: 0.5;
+        cursor: default;
+    }

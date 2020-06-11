@@ -20,7 +20,6 @@
         "node_modules/linearicons/dist/web-font/style.css",
         "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css",
         "node_modules/wowjs/css/libs/animate.css",
-        "node_modules/intl-tel-input/build/css/intlTelInput.css",
-        "node_modules/clndr/demo/css/clndr.css"
+        "node_modules/intl-tel-input/build/css/intlTelInput.css"
     ]
 }
