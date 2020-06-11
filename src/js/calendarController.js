@@ -7,10 +7,10 @@ $(document).ready(function() {
         title: 'Start of Summer School (6 Weeks)'
     }, {
         title: "School Holiday",
-        date: '2020-07-11'
+        date: '2020-06-12'
     }, {
         title: "Tet Holidays",
-        date: 1548504000000
+        date: '2020-06-25'
     }, {
         title: "G.12 - First Day of School (G.12 full-day school for VN Program)",
         date: 1563796800000
@@ -28,23 +28,24 @@ $(document).ready(function() {
     calendars.clndr1 = $('.cal1').clndr({
         events: eventArray,
         ready: function(e) {
+            var text = "";
+            //
             this.eventsThisInterval.forEach(e => {
-                var titleR = e.title;
+                var title = e.title;
                 var date = e.date;
-                $(".data-title").html(
-                    '<p>' + titleR + '</p>' +
-                    '<p>' + date + '</p>'
-                );
-                console.log(date);
+                text += "<p>" + title + "</p>" +
+                    "<p>" + date + "</p>";
             });
+            //
+            console.log(text);
+            $(".data-calendar").html(text);
         },
         clickEvents: {
             onMonthChange: function(month) {
-                console.log(this);
                 this.eventsThisInterval.forEach(e => {
                     var titleR = e.title;
                     var date = e.date;
-                    $(".data-title").html(
+                    $(".data-calendar").html(
                         '<p>' + titleR + '</p>' +
                         '<p>' + date + '</p>'
                     );
