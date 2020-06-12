@@ -17,11 +17,17 @@ header {
 // LOGO
 .block-logo {
     position: absolute;
-    left: -80px;
+    left: -90px;
     top: 50%;
     transform: translateY(-50%);
     .logo {
         img {
+            &:last-child {
+                margin-left: 5px;
+            }
+            &:first-child {
+                margin-right: 5px;
+            }
             max-width: 100px;
         }
         &::before {
@@ -30,7 +36,8 @@ header {
             top: 50%;
             right: 29%;
             width: 42%;
-            height: 1px;
+            height: 2px;
+            opacity: .1;
             transform: rotate(90deg);
             background: map-get($mau, main);
         }
