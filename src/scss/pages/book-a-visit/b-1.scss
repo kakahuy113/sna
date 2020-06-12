@@ -57,6 +57,9 @@
                 margin-bottom: 20px;
             }
             input[type="button"] {
+                display: block;
+                margin-left: auto;
+                width: 30%;
                 height: 50px;
                 background: map-get($mau, main-2);
                 border: none;
