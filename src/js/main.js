@@ -185,10 +185,17 @@ const quoteSlider = () => {
 };
 
 const activeMenu = () => {
-    var url = window.location.pathname.split('/').pop();
+    // var url = window.location.pathname.split('/').pop();
+    var link = "";
+    var url = window.location.pathname.split('/');
+    if (url[(url.length - 1)] == "") {
+        link = url[(url.length - 2)];
+    } else {
+        link = url[(url.length - 1)];
+    }
     $('.b_header--list-menu ul li').each(function() {
         var href = $(this).children('a').eq(0).attr('href');
-        if (href === url) {
+        if (href === link) {
             $(this).addClass('active');
             $(this).parent('ul').parent('li').addClass('active');
             $(this)
