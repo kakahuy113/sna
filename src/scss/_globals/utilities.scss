@@ -15,10 +15,9 @@
 	background-color: map-get($mau, main);
 }
 
-
 body {
-	// overflow-x: hidden;
 
+	// overflow-x: hidden;
 	&.disabled {
 		overflow: hidden;
 	}
@@ -321,7 +320,7 @@ textarea {
 	display: block;
 
 	.img {
-		max-height: 235px;
+		height: 235px;
 		background: #dfdfdf;
 
 		img {
@@ -518,7 +517,6 @@ textarea {
 	}
 
 	.desc {
-
 		p+p {
 			margin-top: 20px;
 		}
@@ -630,7 +628,6 @@ textarea {
 		}
 
 		.block-text {
-
 			&.height-810px {
 				min-height: unset;
 
@@ -1336,41 +1333,43 @@ textarea {
 	}
 }
 
-.max-950px{
+.max-950px {
 	max-width: 950px;
 }
 
 .fancybox-show-thumbs .fancybox-thumbs {
 	display: block;
 }
+
 .fancybox-thumbs__list {
-    font-size: 0;
-    height: 100%;
-    list-style: none;
-    margin: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding: 0;
-    position: relative;
-    white-space: nowrap;
-    width: 100%;
+	font-size: 0;
+	height: 100%;
+	list-style: none;
+	margin: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 0;
+	position: relative;
+	white-space: nowrap;
+	width: 100%;
 }
+
 .fancybox-thumbs__list a {
-    backface-visibility: hidden;
-    background-color: rgba(0,0,0,.1);
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    cursor: pointer;
-    float: left;
-    height: 75px;
-    margin: 2px;
-    max-height: calc(100% - 8px);
-    max-width: calc(50% - 4px);
-    outline: none;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-    -webkit-tap-highlight-color: transparent;
+	backface-visibility: hidden;
+	background-color: rgba(0, 0, 0, .1);
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
+	float: left;
+	height: 75px;
+	margin: 2px;
+	max-height: calc(100% - 8px);
+	max-width: calc(50% - 4px);
+	outline: none;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	-webkit-tap-highlight-color: transparent;
 	width: 100px;
 }
