@@ -194,7 +194,8 @@ const activeMenu = () => {
         link = url[(url.length - 1)];
     }
     $('.b_header--list-menu ul li').each(function() {
-        var href = $(this).children('a').eq(0).attr('href');
+        var getHref = $(this).children('a').eq(0).attr('href');
+        var href = getHref.split('/').pop();
         if (href === link) {
             $(this).addClass('active');
             $(this).parent('ul').parent('li').addClass('active');
