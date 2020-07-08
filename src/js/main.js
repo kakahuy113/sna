@@ -186,27 +186,33 @@ const quoteSlider = () => {
 
 const activeMenu = () => {
     // var url = window.location.pathname.split('/').pop();
+    // var furl = 'http://localhost:8000/admissions-policy.html';
     var link = "";
     var url = window.location.pathname.split('/');
-    if (url[(url.length - 1)] == "") {
-        link = url[(url.length - 2)];
-    } else {
-        link = url[(url.length - 1)];
-    }
-    $('.b_header--list-menu ul li').each(function() {
-        var getHref = $(this).children('a').eq(0).attr('href');
-        var href = getHref.split('/').pop();
-        if (href === link) {
-            $(this).addClass('active');
-            $(this).parent('ul').parent('li').addClass('active');
-            $(this)
-                .parent('ul')
-                .parent('li')
-                .parent('ul')
-                .parent('li')
-                .addClass('active');
+    // var url = furl.split("/");
+    if (url.length !== 4) {
+        if (url[(url.length - 1)] == "") {
+            link = url[(url.length - 2)];
+
+        } else {
+            link = url[(url.length - 1)];
         }
-    });
+        $('.b_header--list-menu ul li').each(function() {
+            var getHref = $(this).children('a').eq(0).attr('href');
+            var href = getHref.split('/').pop();
+            if (href === link) {
+                $(this).addClass('active');
+                $(this).parent('ul').parent('li').addClass('active');
+                $(this)
+                    .parent('ul')
+                    .parent('li')
+                    .parent('ul')
+                    .parent('li')
+                    .addClass('active');
+            }
+        });
+    }
+
 };
 
 const coreSliderStyle_1 = () => {

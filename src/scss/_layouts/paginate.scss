@@ -1,0 +1,46 @@
+section.Paginate {
+    ul {
+        list-style: none;
+        display: flex;
+        li {
+            a {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                font-weight: bold;
+                // padding: 20px;
+                line-height: 40px;
+                text-align: center;
+                background: map-get($mau, main);
+                color: white;
+                border: 1px solid white;
+                &.active {
+                    background: map-get($mau, main-2);
+                }
+                svg {
+                    margin-top: 10px;
+                    vertical-align: unset;
+                    width: 20px;
+                    height: 20px;
+                    polygon {
+                        fill: white;
+                    }
+                }
+                &:hover {
+                    background: white;
+                    color: map-get($mau, main);
+                    transition: .3s all ease-in-out;
+                    border: 1px solid map-get($mau, main-2);
+                    path {
+                        fill: map-get($mau, main);
+                    }
+                    svg {
+                        polygon {
+                            fill: map-get($mau, main);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
