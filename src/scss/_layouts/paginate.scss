@@ -1,4 +1,6 @@
 section.Paginate {
+    margin: auto;
+    width: fit-content;
     ul {
         list-style: none;
         display: flex;
@@ -8,7 +10,6 @@ section.Paginate {
                 width: 40px;
                 height: 40px;
                 font-weight: bold;
-                // padding: 20px;
                 line-height: 40px;
                 text-align: center;
                 background: map-get($mau, main);
