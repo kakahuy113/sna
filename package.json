@@ -87,6 +87,7 @@
 		"moment": "^2.26.0",
 		"perfect-scrollbar": "^1.5.0",
 		"pixi.js": "^5.2.1",
+		"rimraf": "^3.0.2",
 		"swiper": "^5.3.6",
 		"underscore": "^1.10.2",
 		"wowjs": "^1.1.3"
