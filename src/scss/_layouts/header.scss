@@ -440,7 +440,7 @@ header {
 		user-select: none;
 
 		>li {
-			text-align: center;
+			text-align: left;
 			font-weight: bold;
 			position: relative;
 
@@ -459,9 +459,9 @@ header {
 				}
 			}
 
-			&.current-menu-item  {
+			&.current-menu-item {
 				>li {
-					&.current-menu-item  {
+					&.current-menu-item {
 						>a {
 							color: map-get($mau, main-2);
 						}

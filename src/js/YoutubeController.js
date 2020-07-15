@@ -46,7 +46,7 @@ function onYouTubeIframeAPIReady() {
                 'autoplay': 0,
                 'rel': 0,
                 'showinfo': 0,
-                'controls': 0
+                'controls': 1
             },
         });
     }
