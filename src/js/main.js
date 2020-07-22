@@ -293,6 +293,14 @@ const toggleSearch = () => {
 	});
 }
 
+const checkLanguage = () => {
+	let lang = $("html").attr("lang");
+	console.log(lang);
+	if (lang == "vi") {
+		$(".b_header--list-menu").addClass("resize--vi");
+	}
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -323,6 +331,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	// activeMenu();
 	// TabStyle_1
 	coreTabStyle_1();
+	//
+	checkLanguage();
 	// THỊNH
 	libraryFancyApp();
 	// TOÀN IntlTelInput
