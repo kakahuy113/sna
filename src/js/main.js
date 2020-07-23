@@ -176,6 +176,7 @@ const quoteSlider = () => {
 		autoplay: {
 			delay: 10000,
 		},
+		loop: true,
 		autoHeight: true,
 		navigation: {
 			nextEl: '.quote__slider .swiper-button-next',
