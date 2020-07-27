@@ -484,6 +484,7 @@ header {
 			}
 
 			>a {
+				display: inline-flex;
 				position: relative;
 				font-size: 15px;
 				color: map-get($mau, main);

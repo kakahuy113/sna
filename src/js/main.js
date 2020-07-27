@@ -56,6 +56,21 @@ const mainBanner = () => {
 	});
 };
 
+const relatedJobsSlider = () => {
+	const relatedJobsSlider = new Swiper('.related-jobs .swiper-container', {
+		slidesPerView: 2,
+		spaceBetween: 10,
+		autoplay: {
+			delay: 3000,
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+			}
+		}
+	})
+}
+
 const checkLayout = () => {
 	const heightHeader = document.querySelector('header').offsetHeight;
 	const sliderBanner = document.querySelector('.main-banner__slider');
@@ -296,12 +311,17 @@ const toggleSearch = () => {
 
 const checkLanguage = () => {
 	let lang = $("html").attr("lang");
-	console.log(lang);
 	if (lang == "vi") {
 		$(".b_header--list-menu").addClass("resize--vi");
 	}
 }
 
+const BiFieldsTitleEdit = () => {
+	const list = document.querySelectorAll('.b_header--list-menu>ul>li>a');
+	list.forEach((item) => {
+		item.innerHTML = item.textContent.replace(',', '<br>&nbsp;&nbsp;&nbsp;&nbsp;');
+	})
+}
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -320,6 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// SLIDER
 	mainBanner();
 	quoteSlider();
+	relatedJobsSlider();
 	coreSliderStyle_1();
 	pdfSlider();
 	// FancyboxBooking
@@ -338,4 +359,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	libraryFancyApp();
 	// TOÀN IntlTelInput
 	initIntlTelInput();
+	BiFieldsTitleEdit();
 });
