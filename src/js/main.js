@@ -3,6 +3,7 @@ import {
 	Loading
 } from './util/utilities';
 import Cookie from './lib/Cookie';
+import Tab from './lib/Tab';
 
 const checkSubMenu = () => {
 	const itemsTopHeader = document.querySelectorAll(
@@ -324,7 +325,6 @@ const BiFieldsTitleEdit = () => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-
 	Cookie();
 	getSVGs();
 	Loading();
@@ -360,4 +360,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	// TOÀN IntlTelInput
 	initIntlTelInput();
 	BiFieldsTitleEdit();
+	const admissionProcedures = new Tab('.library-page.tab-container');
 });
