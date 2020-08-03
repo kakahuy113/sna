@@ -5,7 +5,7 @@ header {
 	left: 0;
 	z-index: 999;
 	background: #ffffff;
-	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
 }
 
 .row.no-gutters.ai-c {
@@ -41,7 +41,7 @@ header {
 			right: 29%;
 			width: 42%;
 			height: 2px;
-			opacity: .1;
+			opacity: 0.1;
 			transform: rotate(90deg);
 			background: map-get($mau, main);
 		}
@@ -82,12 +82,12 @@ header {
 	line-height: 42px;
 	font-size: 32px;
 	cursor: pointer;
-	color: #5F4B5B;
+	color: #5f4b5b;
 
 	span {
 		position: absolute;
 		height: 2px;
-		background-color: #5F4B5B;
+		background-color: #5f4b5b;
 		left: 5px;
 		right: 5px;
 		top: calc(50% - 1px);
@@ -96,10 +96,10 @@ header {
 
 	&::before,
 	&::after {
-		content: "";
+		content: '';
 		position: absolute;
 		height: 2px;
-		background-color: #5F4B5B;
+		background-color: #5f4b5b;
 		left: 5px;
 		right: 5px;
 		transition: all 0.2s ease-in-out;
@@ -139,7 +139,7 @@ header {
 
 		svg {
 			path {
-				transition: .3s all ease-in-out;
+				transition: 0.3s all ease-in-out;
 			}
 		}
 
@@ -156,7 +156,7 @@ header {
 
 	.text {
 		color: map-get($mau, main);
-		transition: .3s all ease-in-out;
+		transition: 0.3s all ease-in-out;
 	}
 
 	ul {
@@ -187,14 +187,14 @@ header {
 	ul {
 		display: flex;
 
-		li+li {
+		li + li {
 			margin-left: 15px;
 		}
 
 		li {
 			color: map-get($mau, main);
 
-			>a {
+			> a {
 				display: flex;
 				align-items: center;
 
@@ -217,7 +217,7 @@ header {
 		height: 100%;
 		align-items: center;
 
-		li+li {
+		li + li {
 			margin-left: 10px;
 		}
 	}
@@ -238,11 +238,11 @@ header {
 	margin-left: auto;
 	line-height: 50px;
 
-	>ul {
+	> ul {
 		display: flex;
 		user-select: none;
 
-		li+li {
+		li + li {
 			border-top: 1px solid #dedede;
 		}
 
@@ -261,13 +261,13 @@ header {
 					border-top: 5px solid map-get($mau, main);
 					border-right: 5px solid transparent;
 					border-left: 5px solid transparent;
-					transition: .3s all ease-in-out;
+					transition: 0.3s all ease-in-out;
 				}
 			}
 
 			@media (min-width: 1200px) {
 				&:hover {
-					>a {
+					> a {
 						color: map-get($mau, main-2);
 					}
 
@@ -280,12 +280,12 @@ header {
 			}
 		}
 
-		>li+li {
+		> li + li {
 			margin-left: 15px;
 		}
 
-		>li {
-			>ul {
+		> li {
+			> ul {
 				position: absolute;
 				transition: all 0.3s ease-in-out;
 				opacity: 0;
@@ -295,8 +295,8 @@ header {
 				width: 220px;
 				z-index: 10;
 
-				>li {
-					>a {
+				> li {
+					> a {
 						display: block;
 						line-height: normal;
 						padding: 10px 20px;
@@ -306,7 +306,7 @@ header {
 
 			@media (min-width: 1200px) {
 				&:hover {
-					>ul {
+					> ul {
 						opacity: 1;
 						visibility: visible;
 					}
@@ -317,7 +317,7 @@ header {
 
 	a {
 		color: map-get($mau, main);
-		transition: .3s all ease-in-out;
+		transition: 0.3s all ease-in-out;
 	}
 }
 
@@ -388,14 +388,14 @@ header {
 		position: relative;
 		width: 85%;
 
-		input[name="search"] {
+		input[name='search'] {
 			width: 100%;
 			height: 50px;
 			padding-left: 30px;
 			padding-right: 150px;
 		}
 
-		input[name="btn-search"] {
+		input[name='btn-search'] {
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -428,6 +428,7 @@ header {
 		li {
 			a {
 				font-size: 12px !important;
+				white-space: nowrap;
 			}
 		}
 	}
@@ -449,12 +450,12 @@ header {
 		list-style-type: none;
 		user-select: none;
 
-		>li {
+		> li {
 			text-align: center;
 			font-weight: bold;
 			position: relative;
 
-			+li {
+			+ li {
 				padding-left: 10px;
 			}
 
@@ -470,20 +471,20 @@ header {
 			}
 
 			&.current-menu-item {
-				>li {
+				> li {
 					&.current-menu-item {
-						>a {
+						> a {
 							color: map-get($mau, main-2);
 						}
 					}
 				}
 
-				>a {
+				> a {
 					color: map-get($mau, main-2);
 				}
 			}
 
-			>a {
+			> a {
 				display: inline-flex;
 				position: relative;
 				font-size: 15px;
@@ -499,12 +500,12 @@ header {
 					bottom: 0;
 					left: 0;
 					background: map-get($mau, main);
-					transition: .3s all ease-in-out;
+					transition: 0.3s all ease-in-out;
 				}
 			}
 
 			// SUBMENU
-			>ul {
+			> ul {
 				top: 52px;
 				transform: none;
 				left: 0;
@@ -513,18 +514,18 @@ header {
 				background: #ffffff;
 				opacity: 0;
 				visibility: hidden;
-				transition: .3s all ease-in-out;
+				transition: 0.3s all ease-in-out;
 				z-index: 50;
 
 				@media (min-width: 1200px) {
-					box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+					box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
 				}
 
-				>li+li {
+				> li + li {
 					border-top: 1px solid #dedede;
 				}
 
-				>li {
+				> li {
 					font-weight: 400;
 					padding: 10px 5px 10px 20px;
 					text-align: left;
@@ -545,16 +546,16 @@ header {
 							border-top: 5px solid map-get($mau, main);
 							border-right: 5px solid transparent;
 							border-left: 5px solid transparent;
-							transition: .3s all ease-in-out;
+							transition: 0.3s all ease-in-out;
 						}
 					}
 
-					>ul {
+					> ul {
 						left: 100%;
 						top: 0;
 					}
 
-					>a {
+					> a {
 						display: block;
 						text-transform: unset;
 						width: 100%;
@@ -569,12 +570,12 @@ header {
 
 			@media (min-width: 1200px) {
 				&:hover {
-					>ul {
+					> ul {
 						opacity: 1;
 						visibility: visible;
 					}
 
-					>a {
+					> a {
 						color: map-get($mau, main-2);
 
 						&:after {
@@ -619,7 +620,7 @@ header {
 		background: #ffffff;
 		padding: 10px 15px !important;
 		border-top: 1px solid #f1f1f1;
-		transition: .5s all ease-in-out;
+		transition: 0.5s all ease-in-out;
 
 		&.active {
 			left: 0;
@@ -663,7 +664,7 @@ header {
 	}
 
 	.t_header--language {
-		margin-left: auto
+		margin-left: auto;
 	}
 
 	.t_header--search {
@@ -682,7 +683,7 @@ header {
 	.b_header-input-search {
 		height: 60px;
 
-		input[name="btn-search"] {
+		input[name='btn-search'] {
 			font-size: 9px;
 		}
 	}
@@ -697,8 +698,8 @@ header {
 		height: calc(88vh - 70px);
 		align-items: unset;
 		background: #ffffff;
-		transition: .5s all ease-in-out;
-		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+		transition: 0.5s all ease-in-out;
+		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
 		z-index: 1000;
 		overflow-y: auto;
 
@@ -727,11 +728,11 @@ header {
 			transform: unset;
 			height: 100%;
 
-			>li+li {
+			> li + li {
 				border-top: 1px solid #dedede;
 			}
 
-			>li {
+			> li {
 				line-height: 50px;
 
 				&:last-child {
@@ -752,18 +753,18 @@ header {
 						border-top: 5px solid #0a1f44;
 						border-right: 5px solid transparent;
 						border-left: 5px solid transparent;
-						transition: .3s all ease-in-out;
+						transition: 0.3s all ease-in-out;
 					}
 				}
 
-				>a {
+				> a {
 					display: block;
 					padding-left: 20px;
 					padding-right: 5px;
 					padding-bottom: 0;
 				}
 
-				>ul {
+				> ul {
 					position: fixed;
 					top: 70px;
 					height: calc(80vh - 70px);
@@ -773,10 +774,10 @@ header {
 					z-index: 10;
 					visibility: visible;
 					opacity: 1;
-					transition: .5s all ease-in-out;
+					transition: 0.5s all ease-in-out;
 
-					>li {
-						>ul {
+					> li {
+						> ul {
 							left: -100%;
 							top: 70px;
 						}
@@ -813,16 +814,16 @@ header {
 
 	.b_header--list-menu {
 		ul {
-			>li {
-				>ul {
-					>li {
+			> li {
+				> ul {
+					> li {
 						&:first-child {
 							padding: 0;
 						}
 					}
 				}
 
-				>a {
+				> a {
 					font-size: 13px;
 				}
 			}

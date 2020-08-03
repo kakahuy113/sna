@@ -320,7 +320,7 @@ const checkLanguage = () => {
 const BiFieldsTitleEdit = () => {
 	const list = document.querySelectorAll('.b_header--list-menu>ul>li>a');
 	list.forEach((item) => {
-		item.innerHTML = item.textContent.replace(',', '<br>&nbsp;&nbsp;&nbsp;&nbsp;');
+		item.innerHTML = item.textContent.replace(',', '<br>');
 	})
 }
 
