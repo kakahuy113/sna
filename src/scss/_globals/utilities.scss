@@ -16,7 +16,6 @@
 }
 
 body {
-
 	// overflow-x: hidden;
 	&.disabled {
 		overflow: hidden;
@@ -27,14 +26,14 @@ body {
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
-	background-color: rgba(0, 0, 0, .8);
+	background-color: rgba(0, 0, 0, 0.8);
 	width: 100%;
 	height: 100%;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 150;
-	transition: .3s all ease-in-out;
+	transition: 0.3s all ease-in-out;
 
 	&.active {
 		opacity: 1;
@@ -43,7 +42,7 @@ body {
 	}
 }
 
-.ps>.ps__scrollbar-y-rail {
+.ps > .ps__scrollbar-y-rail {
 	margin-right: 10px;
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -56,7 +55,7 @@ textarea {
 	&.input-validation-error {
 		color: red !important;
 		border: 1px solid red !important;
-		transition: .3s all ease-in-out;
+		transition: 0.3s all ease-in-out;
 
 		&::placeholder {
 			color: red !important;
@@ -68,7 +67,7 @@ textarea {
 	list-style-type: none;
 	padding-left: 0;
 
-	li+li {
+	li + li {
 		margin-top: 35px;
 	}
 
@@ -103,7 +102,7 @@ textarea {
 	}
 
 	@media (max-width: 575.98px) {
-		li+li {
+		li + li {
 			margin-top: 20px;
 		}
 
@@ -127,7 +126,7 @@ textarea {
 
 .field-validation-error {
 	display: inline-block;
-	margin: .5rem 0;
+	margin: 0.5rem 0;
 	font-size: 12px;
 	color: red;
 }
@@ -147,7 +146,7 @@ textarea {
 		.content {
 			display: none;
 			opacity: 0;
-			transition: all .3s cubic-bezier(.2, .5, .5, .8);
+			transition: all 0.3s cubic-bezier(0.2, 0.5, 0.5, 0.8);
 
 			&.show {
 				opacity: 1;
@@ -241,10 +240,10 @@ textarea {
 	}
 
 	h2 {
-		color: #0A1F44;
+		color: #0a1f44;
 		font-size: 45px;
 		text-align: center;
-		font-family: "lora", sans-serif;
+		font-family: 'lora', sans-serif;
 		line-height: 60px;
 	}
 
@@ -279,7 +278,7 @@ textarea {
 
 		&[data-title] {
 			&:after {
-				content: none
+				content: none;
 			}
 		}
 	}
@@ -332,7 +331,7 @@ textarea {
 
 	.content {
 		padding: 20px;
-		transition: .35s all linear;
+		transition: 0.35s all linear;
 		background: map-get($mau, main-2);
 	}
 
@@ -367,7 +366,7 @@ textarea {
 	text-align: center;
 	padding: 20px 10px;
 	border-radius: 5px;
-	transition: .3s all ease-in-out;
+	transition: 0.3s all ease-in-out;
 
 	.icon {
 		margin: 0 auto;
@@ -378,7 +377,7 @@ textarea {
 		img {
 			width: 100%;
 			height: 100%;
-			transition: .3s all ease-in-out;
+			transition: 0.3s all ease-in-out;
 		}
 	}
 
@@ -388,10 +387,9 @@ textarea {
 
 	@media (min-width: 1025px) {
 		&:hover {
-			box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .3);
+			box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.3);
 
 			.icon {
-
 				svg,
 				img {
 					transform: scale(1.1);
@@ -414,7 +412,7 @@ textarea {
 		background: #ffffff;
 
 		img {
-			transition: .3s all ease-in-out;
+			transition: 0.3s all ease-in-out;
 			transform: scale(1);
 		}
 	}
@@ -425,10 +423,14 @@ textarea {
 		color: #ffffff;
 		text-align: center;
 		line-height: 100px;
-		background: linear-gradient(to right, map-get($mau, main-2) 50%, map-get($mau, main) 50%);
+		background: linear-gradient(
+			to right,
+			map-get($mau, main-2) 50%,
+			map-get($mau, main) 50%
+		);
 		background-size: 200% 100%;
 		background-position: right bottom;
-		transition: all .5s ease-in-out;
+		transition: all 0.5s ease-in-out;
 	}
 
 	@media (min-width: 1025px) {
@@ -462,7 +464,7 @@ textarea {
 
 	&.bg-50-gray {
 		&:after {
-			content: "";
+			content: '';
 			top: 70px;
 			bottom: 0;
 			right: 0;
@@ -505,7 +507,7 @@ textarea {
 			right: 0;
 			width: 100%;
 			background-color: #f3f4f5;
-			content: "";
+			content: '';
 			z-index: -1;
 		}
 	}
@@ -517,7 +519,7 @@ textarea {
 	}
 
 	.desc {
-		p+p {
+		p + p {
 			margin-top: 20px;
 		}
 	}
@@ -531,7 +533,7 @@ textarea {
 			color: map-get($mau, main);
 		}
 
-		p+p {
+		p + p {
 			margin-top: 10px;
 		}
 
@@ -579,7 +581,7 @@ textarea {
 			margin-bottom: 20px;
 		}
 
-		p+p {
+		p + p {
 			margin-top: 20px;
 		}
 
@@ -664,7 +666,7 @@ textarea {
 				margin-bottom: 10px;
 			}
 
-			p+p {
+			p + p {
 				margin-top: 10px;
 			}
 
@@ -676,7 +678,6 @@ textarea {
 
 	@media (max-width: 767.98px) {
 		.img {
-
 			&.height-810px,
 			&.height-550px {
 				height: auto;
@@ -684,7 +685,6 @@ textarea {
 		}
 
 		.block-text {
-
 			&.height-810px,
 			&.height-550px {
 				min-height: unset;
@@ -750,7 +750,7 @@ textarea {
 				font-size: 14px;
 			}
 
-			p+p {
+			p + p {
 				margin-top: 5px;
 			}
 
@@ -764,7 +764,7 @@ textarea {
 				font-size: 14px;
 			}
 
-			p+p {
+			p + p {
 				margin-top: 10px;
 			}
 		}
@@ -788,7 +788,7 @@ textarea {
 		padding: 15px 25px;
 	}
 
-	.item+.item {
+	.item + .item {
 		margin-top: 15px;
 	}
 
@@ -806,7 +806,7 @@ textarea {
 		max-width: 100%;
 		padding-left: 15px;
 
-		p+p {
+		p + p {
 			margin-top: 10px;
 		}
 	}
@@ -837,7 +837,7 @@ textarea {
 			padding: 10px;
 		}
 
-		.item+.item {
+		.item + .item {
 			margin-top: 10px;
 		}
 
@@ -857,7 +857,7 @@ textarea {
 		color: map-get($mau, main);
 	}
 
-	p+p {
+	p + p {
 		margin-top: 10px;
 	}
 
@@ -880,7 +880,7 @@ textarea {
 				margin-left: -40px;
 			}
 
-			div[class*="col-"] {
+			div[class*='col-'] {
 				padding-right: 40px;
 				padding-left: 40px;
 			}
@@ -897,7 +897,7 @@ textarea {
 		}
 	}
 
-	.item+.item {
+	.item + .item {
 		margin-top: 50px;
 	}
 
@@ -907,12 +907,12 @@ textarea {
 
 		h2 {
 			font-size: 45px;
-			font-family: "lora", sans-serif;
+			font-family: 'lora', sans-serif;
 			color: map-get($mau, main);
 			margin-bottom: 20px;
 		}
 
-		p+p {
+		p + p {
 			margin-top: 10px;
 		}
 	}
@@ -943,7 +943,7 @@ textarea {
 			}
 		}
 
-		.item+.item {
+		.item + .item {
 			margin-top: 25px;
 		}
 
@@ -974,14 +974,14 @@ textarea {
 .dormitory-2 {
 	padding: 100px 0;
 
-	.item-school-leadership-team+.item-school-leadership-team {
+	.item-school-leadership-team + .item-school-leadership-team {
 		margin-top: 100px;
 	}
 
 	@media (max-width: 1024.98px) {
 		padding: 50px 0;
 
-		.item-school-leadership-team+.item-school-leadership-team {
+		.item-school-leadership-team + .item-school-leadership-team {
 			margin-top: 50px;
 		}
 	}
@@ -989,21 +989,21 @@ textarea {
 	@media (max-width: 767.98px) {
 		padding: 25px 0;
 
-		.item-school-leadership-team+.item-school-leadership-team {
+		.item-school-leadership-team + .item-school-leadership-team {
 			margin-top: 25px;
 		}
 
-		.item-community+.item-community {
+		.item-community + .item-community {
 			margin-top: 25px;
 		}
 	}
 
 	@media (max-width: 575.98px) {
-		.item-school-leadership-team+.item-school-leadership-team {
+		.item-school-leadership-team + .item-school-leadership-team {
 			margin-top: 10px;
 		}
 
-		.item-community+.item-community {
+		.item-community + .item-community {
 			margin-top: 10px;
 		}
 	}
@@ -1016,7 +1016,7 @@ textarea {
 	.block-content {
 		margin-bottom: 50px;
 
-		.content+.content {
+		.content + .content {
 			margin-top: 35px;
 		}
 
@@ -1024,7 +1024,7 @@ textarea {
 			font-size: 45px;
 			position: relative;
 			text-align: center;
-			color: #0A1F44;
+			color: #0a1f44;
 			margin-bottom: 30px;
 		}
 
@@ -1073,7 +1073,7 @@ textarea {
 		}
 
 		.block-content {
-			.content+.content {
+			.content + .content {
 				margin-top: 25px;
 			}
 
@@ -1081,7 +1081,7 @@ textarea {
 				font-size: 24px;
 				position: relative;
 				text-align: center;
-				color: #0A1F44;
+				color: #0a1f44;
 				margin-bottom: 30px;
 			}
 
@@ -1105,11 +1105,11 @@ textarea {
 .related-jobs {
 	.item_related_job {
 		display: block;
-		border: 1px solid #0A1F44;
-		color: #0A1F44;
+		border: 1px solid #0a1f44;
+		color: #0a1f44;
 		text-align: center;
 		padding: 20px 5px;
-		transition: .3s all ease-in-out;
+		transition: 0.3s all ease-in-out;
 
 		h3 {
 			font-size: 18px;
@@ -1118,7 +1118,7 @@ textarea {
 
 		@media (min-width: 1025px) {
 			&:hover {
-				background-color: #0A1F44;
+				background-color: #0a1f44;
 				color: #fff;
 			}
 		}
@@ -1148,10 +1148,10 @@ textarea {
 		h5 {
 			position: relative;
 			display: inline-block;
-			color: #0A1F44;
+			color: #0a1f44;
 			font-size: 18px;
 			padding-left: 50px;
-			transition: .5s all ease-in-out;
+			transition: 0.5s all ease-in-out;
 
 			&:after {
 				content: '';
@@ -1163,7 +1163,7 @@ textarea {
 				top: 50%;
 				left: 0;
 				transform: translateY(-50%);
-				transition: .5s all ease-in-out;
+				transition: 0.5s all ease-in-out;
 			}
 
 			&:before {
@@ -1175,7 +1175,7 @@ textarea {
 				top: 50%;
 				left: 7px;
 				transform: translateY(-50%);
-				transition: .5s all ease-in-out;
+				transition: 0.5s all ease-in-out;
 				z-index: 1;
 			}
 		}
@@ -1279,32 +1279,32 @@ textarea {
 		flex: 0 0 30%;
 		max-width: 30%;
 		padding: 20px 5px;
-
+		text-align: center;
 		&:after {
-			content: "";
+			content: '';
 			position: absolute;
 			left: 0;
 			right: 0;
 			bottom: 0;
 			height: 3px;
-			background: #C5C5C5;
+			background: #c5c5c5;
 		}
 
 		&.active {
 			&:after {
-				background: #1E1E1E;
+				background: #1e1e1e;
 			}
 		}
 
-		>a {
+		> a {
 			text-align: center;
 			line-height: 25px;
 			text-align: center;
-			font-family: "lora", sans-serif;
-			color: #1E1E1E;
+			font-family: 'lora', sans-serif;
+			color: #1e1e1e;
 			font-size: 30px;
 			font-weight: 700;
-			transition: .3s all ease-in-out;
+			transition: 0.3s all ease-in-out;
 			line-height: 1.3;
 
 			@media (min-width: 1025px) {
@@ -1327,7 +1327,7 @@ textarea {
 			flex: 0 0 50%;
 			max-width: 50%;
 
-			>a {
+			> a {
 				font-size: 24px;
 			}
 		}
@@ -1337,7 +1337,7 @@ textarea {
 		li {
 			padding: 10px 5px;
 
-			>a {
+			> a {
 				font-size: 18px;
 			}
 		}
@@ -1379,7 +1379,7 @@ textarea {
 			font-weight: 700;
 			transform: translateY(-50%);
 			color: map-get($mau, main);
-			transition: .3s all ease-in-out;
+			transition: 0.3s all ease-in-out;
 		}
 	}
 
@@ -1387,14 +1387,14 @@ textarea {
 		display: none;
 		margin-top: 20px;
 
-		p+p {
+		p + p {
 			margin-top: 20px;
 		}
 
 		ul {
 			margin-top: 10px;
 
-			li+li {
+			li + li {
 				margin-top: 10px;
 			}
 		}
@@ -1403,7 +1403,7 @@ textarea {
 			margin-top: 10px;
 
 			table {
-				p+p {
+				p + p {
 					margin-top: 5px;
 				}
 			}
@@ -1422,7 +1422,7 @@ textarea {
 				font-size: 14px;
 			}
 
-			p+p {
+			p + p {
 				margin-top: 10px;
 			}
 
@@ -1444,7 +1444,7 @@ textarea {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	background-color: #0A1F44;
+	background-color: #0a1f44;
 
 	p {
 		font-size: 14px;
@@ -1477,7 +1477,7 @@ textarea {
 
 .fancybox-thumbs__list a {
 	backface-visibility: hidden;
-	background-color: rgba(0, 0, 0, .1);
+	background-color: rgba(0, 0, 0, 0.1);
 	background-position: 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -1515,7 +1515,7 @@ textarea {
 		margin-bottom: 15px;
 	}
 
-	.working__text+.working__text {
+	.working__text + .working__text {
 		margin-top: 20px;
 	}
 
@@ -1529,10 +1529,10 @@ textarea {
 		h5 {
 			position: relative;
 			display: inline-block;
-			color: #0A1F44;
+			color: #0a1f44;
 			font-size: 18px;
 			padding-left: 50px;
-			transition: .5s all ease-in-out;
+			transition: 0.5s all ease-in-out;
 
 			&:after {
 				content: '';
@@ -1544,7 +1544,7 @@ textarea {
 				top: 50%;
 				left: 0;
 				transform: translateY(-50%);
-				transition: .5s all ease-in-out;
+				transition: 0.5s all ease-in-out;
 			}
 
 			&:before {
@@ -1556,7 +1556,7 @@ textarea {
 				top: 50%;
 				left: 7px;
 				transform: translateY(-50%);
-				transition: .5s all ease-in-out;
+				transition: 0.5s all ease-in-out;
 				z-index: 1;
 			}
 		}
