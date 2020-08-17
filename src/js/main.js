@@ -36,7 +36,7 @@ const customScrollBar = () => {
 		myCustomScrollbar.onscroll = function () {
 			scrollbarY.style.cssText = `top: ${
 				this.scrollTop
-			}px!important; height: 400px; right: ${-this.scrollLeft}px`;
+				}px!important; height: 400px; right: ${-this.scrollLeft}px`;
 		};
 		ps.update();
 	}
@@ -46,14 +46,17 @@ const mainBanner = () => {
 	const mainBanner = new Swiper('.main-banner__slider .swiper-container', {
 		speed: 700,
 		effect: 'fade',
+
 		pagination: {
-			el: '.swiper-pagination',
+			el: '.main-banner__slider .swiper-pagination',
 			type: 'bullets',
+			clickable: true,
 		},
 		autoplay: {
-			delay: 3000,
+			delay: 10000,
 		},
 	});
+	console.log(mainBanner);
 };
 
 const checkLayout = () => {
@@ -219,15 +222,15 @@ const activeMenu = () => {
 const coreSliderStyle_1 = () => {
 	const coreSliderStyle_1 = new Swiper(
 		'.core_slider-style--1 .swiper-container', {
-			centeredSlides: true,
-			slidesPerView: 1,
-			loopAdditionalSlides: 1,
-			loop: true,
-			navigation: {
-				nextEl: '.core_slider-style--1 .swiper-button-next',
-				prevEl: '.core_slider-style--1 .swiper-button-prev',
-			},
-		}
+		centeredSlides: true,
+		slidesPerView: 1,
+		loopAdditionalSlides: 1,
+		loop: true,
+		navigation: {
+			nextEl: '.core_slider-style--1 .swiper-button-next',
+			prevEl: '.core_slider-style--1 .swiper-button-prev',
+		},
+	}
 	);
 };
 
@@ -296,7 +299,6 @@ const toggleSearch = () => {
 
 const checkLanguage = () => {
 	let lang = $("html").attr("lang");
-	console.log(lang);
 	if (lang == "vi") {
 		$(".b_header--list-menu").addClass("resize--vi");
 	}

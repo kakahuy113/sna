@@ -1,9 +1,12 @@
 .main-banner__slider {
 	.img {
-		max-height: 485px;
+		height: 485px;
 		background: #dfdfdf;
+		overflow: hidden;
+		img {
+			pointer-events: none;
+		}
 	}
-
 	.btn-read-more {
 		z-index: 5;
 		position: absolute;
@@ -33,15 +36,20 @@
 			}
 		}
 	}
-
+	.swiper-slide {
+		> a {
+			display: block;
+		}
+	}
 	.swiper-pagination {
 		.swiper-pagination-bullet {
+			cursor: pointer;
 			width: 15px;
 			height: 15px;
 			opacity: 1;
 			border-radius: 50%;
-			background-color: #D3D3D3;
-			transition: all .2s ease-in-out;
+			background-color: #d3d3d3;
+			transition: all 0.2s ease-in-out;
 			margin: 0 6px;
 
 			&.swiper-pagination-bullet-active {
