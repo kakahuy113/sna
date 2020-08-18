@@ -52,6 +52,7 @@ const mainBanner = () => {
 			type: 'bullets',
 			clickable: true,
 		},
+		autoHeight: true,
 		autoplay: {
 			delay: 10000,
 		},
