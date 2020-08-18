@@ -7,6 +7,12 @@
 		img {
 			pointer-events: none;
 		}
+		@media (max-width: 1024.98px) {
+			height: 350px;
+		}
+		@media (max-width: 575.98px) {
+			height: 250px;
+		}
 	}
 	.video-responsive {
 		overflow: hidden;
