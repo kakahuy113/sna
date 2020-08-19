@@ -8,6 +8,7 @@
 			overflow: hidden;
 			min-width: 100%;
 			min-height: 100%;
+			object-fit: cover;
 			@media (max-width: 1024.98px) {
 				width: 100%;
 				height: auto;
@@ -16,6 +17,8 @@
 			}
 		}
 		&.video {
+			display: flex;
+			align-content: center;
 			@media (max-width: 1024.98px) {
 				height: auto;
 				.btn-read-more {
