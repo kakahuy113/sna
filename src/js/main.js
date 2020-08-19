@@ -46,7 +46,6 @@ const mainBanner = () => {
 	(function () {
 		const heightHeader = document.querySelector('header').clientHeight;
 		const itemsFullScreenBanner = document.querySelectorAll('.main-banner__slider .item-banner-fullscreen');
-
 		itemsFullScreenBanner.forEach((item) => {
 			if (window.innerWidth > 1024) {
 				item.setAttribute('style', `height: calc(100vh - ${heightHeader}px)`)
