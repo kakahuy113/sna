@@ -1,9 +1,47 @@
 .main-banner__slider {
-	.img {
-		max-height: 485px;
-		background: #dfdfdf;
+	.item-banner-fullscreen {
+		position: relative;
+		img {
+			pointer-events: none;
+		}
+		video {
+			overflow: hidden;
+			min-width: 100%;
+			min-height: 100%;
+			@media (max-width: 1024.98px) {
+				width: 100%;
+				height: auto;
+				min-width: unset;
+				min-height: unset;
+			}
+		}
+		&.video {
+			@media (max-width: 1024.98px) {
+				height: auto;
+				.btn-read-more {
+					bottom: 15%;
+				}
+			}
+		}
+		&.img {
+			@media (max-width: 1024px) {
+				height: auto;
+			}
+		}
 	}
 
+	.youtube-responsive {
+		padding-bottom: 56.25%;
+		position: relative;
+		height: 0;
+		iframe {
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+		}
+	}
 	.btn-read-more {
 		z-index: 5;
 		position: absolute;
@@ -11,7 +49,7 @@
 		left: 0;
 		right: 0;
 		text-align: right;
-
+		transition: 0.3s all ease-in-out;
 		.btn {
 			position: relative;
 			vertical-align: middle;
@@ -33,15 +71,24 @@
 			}
 		}
 	}
-
+	.swiper-slide {
+		opacity: 0 !important;
+		> a {
+			display: block;
+		}
+		&.swiper-slide-active {
+			opacity: 1 !important;
+		}
+	}
 	.swiper-pagination {
 		.swiper-pagination-bullet {
+			cursor: pointer;
 			width: 15px;
 			height: 15px;
 			opacity: 1;
 			border-radius: 50%;
-			background-color: #D3D3D3;
-			transition: all .2s ease-in-out;
+			background-color: #d3d3d3;
+			transition: all 0.2s ease-in-out;
 			margin: 0 6px;
 
 			&.swiper-pagination-bullet-active {

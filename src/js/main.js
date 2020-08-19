@@ -36,21 +36,34 @@ const customScrollBar = () => {
         myCustomScrollbar.onscroll = function() {
             scrollbarY.style.cssText = `top: ${
 				this.scrollTop
-			}px!important; height: 400px; right: ${-this.scrollLeft}px`;
+				}px!important; height: 400px; right: ${-this.scrollLeft}px`;
         };
         ps.update();
     }
 };
 
 const mainBanner = () => {
+    (function() {
+        const heightHeader = document.querySelector('header').clientHeight;
+        const itemsFullScreenBanner = document.querySelectorAll('.main-banner__slider .item-banner-fullscreen');
+        itemsFullScreenBanner.forEach((item) => {
+            if (window.innerWidth > 1024) {
+                item.setAttribute('style', `height: calc(100vh - ${heightHeader}px)`)
+            }
+        })
+    })()
+
     const mainBanner = new Swiper('.main-banner__slider .swiper-container', {
         speed: 700,
+        effect: 'fade',
         pagination: {
-            el: '.swiper-pagination',
+            el: '.main-banner__slider .swiper-pagination',
             type: 'bullets',
+            clickable: true,
         },
+        autoHeight: true,
         autoplay: {
-            delay: 3000,
+            delay: 10000,
         },
     });
 };
@@ -301,7 +314,6 @@ const checkLanguage = () => {
         $(".index-1 .block-title--main").addClass("active");
     }
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
 
