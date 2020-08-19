@@ -1,0 +1,33 @@
+section.contact-home.customer.container
+    .row
+        .col-lg-5.col-first
+            .text-home-first
+                h3 Register to visit the school and get advice immediately
+                img(src="./assets/images/summer-video/s1.jpg", alt="")
+        .col-lg-7.col-second
+            .form-box
+                form(action="#", method="post")
+                    input(type="text",placeholder="Your name",name="name")
+                    .form-group
+                        .input-phone
+                            input#phone(type="tel", value="+84",name="phone")
+                        .input-age
+                           select(name="age")
+                                option(value="0") - Select -
+                                option(value="1") Under 6 years old
+                                option(value="2") Form 6 to 10 years old
+                                option(value="3") Form 10 to 14 years old
+                    input(type="text",placeholder="Email",name="email")
+                    label I would like to enquire about
+                    .option-login
+                        .login-sna
+                            input(type="radio", name="login",id="sna")
+                            label(for="sna") Sign up for SNA information
+                        .login-school
+                            input(type="radio", name="login",id="school")
+                            label(for="school") Sign up for school tour
+                    input(type="button", value="Submit",name="submit")
+
+
+
+
