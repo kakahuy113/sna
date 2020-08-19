@@ -75,12 +75,8 @@
 		}
 	}
 	.swiper-slide {
-		opacity: 0 !important;
 		> a {
 			display: block;
-		}
-		&.swiper-slide-active {
-			opacity: 1 !important;
 		}
 	}
 	.swiper-pagination {
