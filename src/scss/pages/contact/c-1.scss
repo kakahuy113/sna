@@ -1,4 +1,8 @@
 section.contact-home {
+    &.customer {
+        margin-top: 0;
+        margin-bottom: 100px;
+    }
     .col-first,
     .col-second {
         padding-right: 0;
@@ -6,10 +10,19 @@ section.contact-home {
     }
     margin-top: 100px;
     .text-home-first {
+        position: relative;
         color: white;
         h2 {
             font-size: 45px;
             margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 26px;
+        }
+        img {
+            position: absolute;
+            bottom: 10%;
+            left: 15px;
         }
         padding: 42px;
         position: relative;
