@@ -43,10 +43,20 @@ const customScrollBar = () => {
 };
 
 const mainBanner = () => {
+	(function () {
+		const heightHeader = document.querySelector('header').clientHeight;
+		const itemsFullScreenBanner = document.querySelectorAll('.main-banner__slider .item-banner-fullscreen');
+
+		itemsFullScreenBanner.forEach((item) => {
+			if (window.innerWidth > 1440) {
+				item.setAttribute('style', `height: calc(100vh - ${heightHeader}px)`)
+			}
+		})
+	})()
+
 	const mainBanner = new Swiper('.main-banner__slider .swiper-container', {
 		speed: 700,
 		effect: 'fade',
-
 		pagination: {
 			el: '.main-banner__slider .swiper-pagination',
 			type: 'bullets',
@@ -55,9 +65,8 @@ const mainBanner = () => {
 		autoHeight: true,
 		autoplay: {
 			delay: 10000,
-		},
+		}
 	});
-	console.log(mainBanner);
 };
 
 const checkLayout = () => {
@@ -304,7 +313,6 @@ const checkLanguage = () => {
 		$(".b_header--list-menu").addClass("resize--vi");
 	}
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
 

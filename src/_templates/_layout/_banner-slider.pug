@@ -3,12 +3,17 @@
 		.swiper-wrapper
 			.swiper-slide
 				a(href="#")
-					.youtube-responsive
-						.banner-youtube-api(data-url="https://www.youtube.com/watch?v=Z4HivEWoXGE")
+					.item-banner-fullscreen.video
+						video(autoplay muted loop)
+							source(src="./assets/videos/banner.mp4")
+			//- .swiper-slide
+			//- 	a(href="#")
+			//- 		.youtube-responsive
+			//- 			.banner-youtube-api(data-url="https://www.youtube.com/watch?v=Z4HivEWoXGE")
 			-for(i=1;i<4;i++)
 				.swiper-slide
 					a(href="#")
-						.img
+						.item-banner-fullscreen.img
 							img.ofcv(src="./assets/images/main-banner/"+i+".jpg", alt="")
 						.btn-read-more.container
 							.btn.wow.slideInRight(data-wow-duration="1.3s" data-wow-delay=".3s") FIND OUT MORE
