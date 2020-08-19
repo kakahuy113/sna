@@ -48,7 +48,7 @@ const mainBanner = () => {
 		const itemsFullScreenBanner = document.querySelectorAll('.main-banner__slider .item-banner-fullscreen');
 
 		itemsFullScreenBanner.forEach((item) => {
-			if (window.innerWidth > 1440) {
+			if (window.innerWidth > 1024) {
 				item.setAttribute('style', `height: calc(100vh - ${heightHeader}px)`)
 			}
 		})
@@ -65,7 +65,7 @@ const mainBanner = () => {
 		autoHeight: true,
 		autoplay: {
 			delay: 10000,
-		}
+		},
 	});
 };
 
