@@ -1,5 +1,9 @@
 .ib-program {
     padding: 100px 0;
+    &.customer {
+        padding: unset;
+        padding-top: 100px;
+    }
     h4 {
         font-size: 22px;
     }

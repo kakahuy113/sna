@@ -1,0 +1,17 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Our Team | SNA';
+	- let bodyClass = 'team-page';
+	- let linkBanner = './assets/images/banner/faculty.jpg';
+	- let titleBanner = 'Our Team';
+
+block banner,breadcrumb
+	include _templates/_layout/_banner
+block discover
+	include _templates/_layout/_discover
+block main
+	include _templates/team/t
+	include _templates/_layout/_core-slider-style-1
+	include _templates/faculty/f-1
+block scripts

@@ -1,0 +1,42 @@
+section.ib-program.bg-section(position-top-right)
+	.container
+		.nav-menu.customer
+			ul
+				li
+					a(href="team.html") Our Team
+				li.active
+					a(href="overview.html") Overview
+				li
+					a(href="homeroom.html") Homeroom teachers
+				li
+					a(href="subject.html") Subject Teachers
+				li
+					a(href="assistant.html") Teaching Assistants
+		.team__wrapper
+			.team__row.row
+				-for(var i =0; i<9;i++)
+					.team__item.fancybox__getTeam.col-4(data-fancybox, data-src="",data-modal="true", href="javascript:;")
+						.item__img.ov-h
+							img(src="./assets/who-are-we.jpg", alt="team")
+						.item__content
+							h3 SNA
+							h4 Headmaster
+							h5 Email: 
+								|
+								a(href="mailto:sna@gmail.com") sna@gmail.com
+					.team__popup#id1(style="display:none")
+						.popup__body
+							.popBody__nameImg
+								.img
+									img(src="./assets/who-are-we.jpg", alt="team")
+								.txt
+									h3 SNA
+							.popBody__info
+								p Nationality: 
+									span British
+								p Teaching Experience: 
+									span 35 years
+								p Qualifications: 
+									span BA Economics, MA Educational Management, PGCE Economics and Mathematics, Certificate of International School Leadership.
+								p Mr. Manditsch, a British national, has thirty-five years of experience in education, twenty-nine of which internationally. For the last twenty years, he has worked as a Principal or Head of School. This has presented him with the opportunities to work with students and families from a wide range of cultural backgrounds. Bryan has been working with both International Baccalaureate (IB) and Cambridge programmes. As an education pioneer, he has led many schools through the process of establishment, accreditation, training and development successfully. In a career of 35 years, Bryan has worked in England, Kenya, Kuwait, Qatar and China.
+						.popup__close(data-fancybox-close)
