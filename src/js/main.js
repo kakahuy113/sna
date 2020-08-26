@@ -244,6 +244,14 @@ const activeMenu = () => {
 
 };
 
+const setWidth = () => {
+    const itemLi = $(".nav-menu.customer li");
+    const widthLi = 100 / (itemLi.length);
+    if (itemLi.length <= 5) {
+        itemLi.css("width", widthLi + "%");
+    }
+}
+
 const coreSliderStyle_1 = () => {
     const coreSliderStyle_1 = new Swiper(
         '.core_slider-style--1 .swiper-container', {
@@ -403,6 +411,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initIntlTelInput();
     BiFieldsTitleEdit();
     getTeamFancyBox();
+    setWidth();
     randomCodeTeam();
     const admissionProcedures = new Tab('.library-page.tab-container');
 });
