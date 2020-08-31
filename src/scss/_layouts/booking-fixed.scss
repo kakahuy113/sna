@@ -6,6 +6,9 @@
 	margin-top: -90px;
 	float: none;
 	z-index: 200;
+	@media (max-width: 1024.98px) {
+		margin-top: 0;
+	}
 }
 
 .fancybox-slide--iframe {
@@ -33,7 +36,7 @@
 	background: linear-gradient(to bottom, #c5cdcf 50%, #e5edf0 50%);
 	background-size: 100% 200%;
 	background-position: bottom left;
-	transition: all .5s ease-out;
+	transition: all 0.5s ease-out;
 	color: #757575;
 
 	@media (min-width: 1025px) {
