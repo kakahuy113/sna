@@ -1,132 +1,113 @@
+.core_slider-style--1 .swiper-slide.swiper-slide-active {
+    width: 1125px;
+}
+
+.core_slider-style--1 .swiper-slide.swiper-slide-next {
+    width: 99%;
+}
+
 .core_slider-style--1 {
-	padding: 100px 0;
-	overflow-x: hidden;
-
-	.img {
-		height: 550px;
-		background: #dfdfdf;
-	}
-
-	.content {
-		margin-top: 30px;
-
-		.block-title--main {
-			margin-bottom: 10px;
-		}
-	}
-
-	.swiper-container {
-		overflow: visible;
-	}
-
-	.swiper-slide {
-		opacity: .3;
-		transition: .3s all ease-in-out;
-		transform: scaleY(.9);
-
-		.content {
-			opacity: 0;
-
-			p+p {
-				margin-top: 10px;
-			}
-		}
-
-		&.swiper-slide-active {
-			opacity: 1;
-			padding: 0 75px;
-			transform: scaleY(1);
-
-			.content {
-				opacity: 1;
-			}
-		}
-	}
-
-	.swiper-button-next,
-	.swiper-button-prev {
-		color: map-get($mau, main);
-		top: calc(550px / 2);
-		transition: .3s all ease-in-out;
-
-		&:after {
-			font-size: 32px;
-			font-weight: 700;
-		}
-
-		@media (min-width: 1025px) {
-			&:hover {
-				color: map-get($mau, main-2);
-			}
-		}
-	}
-
-	.swiper-button-prev {
-		left: 30px;
-	}
-
-	.swiper-button-next {
-		right: 30px;
-	}
-
-	@media (max-width: 1024.98px) {
-		padding: 50px 0;
-
-		.img {
-			height: 500px;
-		}
-
-		.swiper-button-next,
-		.swiper-button-prev {
-			color: map-get($mau, main);
-			top: calc(500px / 2);
-		}
-
-		.swiper-container {
-			overflow: hidden;
-		}
-
-		.swiper-slide {
-			opacity: 1;
-			transform: scaleY(1);
-
-			&.swiper-slide-active {
-				padding: 0;
-			}
-		}
-	}
-
-	@media (max-width: 767.98px) {
-		.img {
-			height: 400px;
-		}
-
-		.swiper-button-next,
-		.swiper-button-prev {
-			color: map-get($mau, main);
-			top: calc(400px / 2);
-		}
-	}
-
-	@media (max-width: 575.98px) {
-		padding: 25px 0;
-
-		.swiper-button-prev {
-			left: 10px;
-		}
-
-		.swiper-button-next {
-			right: 10px;
-		}
-
-		.img {
-			height: 300px;
-		}
-
-		.swiper-button-next,
-		.swiper-button-prev {
-			color: map-get($mau, main);
-			top: calc(300px / 2);
-		}
-	}
+    padding: 100px 0;
+    overflow-x: hidden;
+    .img {
+        height: 550px;
+        background: #dfdfdf;
+    }
+    .content {
+        margin-top: 30px;
+        .block-title--main {
+            margin-bottom: 10px;
+        }
+    }
+    .swiper-container {
+        overflow: visible;
+    }
+    .swiper-slide {
+        opacity: .3;
+        transition: .3s all ease-in-out;
+        transform: scaleY(.9);
+        .content {
+            opacity: 0;
+            p+p {
+                margin-top: 10px;
+            }
+        }
+        &.swiper-slide-active {
+            opacity: 1;
+            padding: 0 75px;
+            transform: scaleY(1);
+            .content {
+                opacity: 1;
+            }
+        }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: map-get($mau, main);
+        top: calc(550px / 2);
+        transition: .3s all ease-in-out;
+        &:after {
+            font-size: 32px;
+            font-weight: 700;
+        }
+        @media (min-width: 1025px) {
+            &:hover {
+                color: map-get($mau, main-2);
+            }
+        }
+    }
+    .swiper-button-prev {
+        left: 30px;
+    }
+    .swiper-button-next {
+        right: 30px;
+    }
+    @media (max-width: 1024.98px) {
+        padding: 50px 0;
+        .img {
+            height: 500px;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: map-get($mau, main);
+            top: calc(500px / 2);
+        }
+        .swiper-container {
+            overflow: hidden;
+        }
+        .swiper-slide {
+            opacity: 1;
+            transform: scaleY(1);
+            &.swiper-slide-active {
+                padding: 0;
+            }
+        }
+    }
+    @media (max-width: 767.98px) {
+        .img {
+            height: 400px;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: map-get($mau, main);
+            top: calc(400px / 2);
+        }
+    }
+    @media (max-width: 575.98px) {
+        padding: 25px 0;
+        .swiper-button-prev {
+            left: 10px;
+        }
+        .swiper-button-next {
+            right: 10px;
+        }
+        .img {
+            height: 300px;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: map-get($mau, main);
+            top: calc(300px / 2);
+        }
+    }
 }
