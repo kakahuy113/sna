@@ -369,7 +369,7 @@ const randomCodeTeam = () => {
     var i,
         code = [];
     for (i = 0; i < $(".team__popup").length; i++) {
-        code[i] = (new Date().getTime()).toString(32).substring(4);
+        code[i] = '_' + Math.random().toString(36).substr(2, 9);
         $(".team__popup").eq(i).attr("id", code[i]);
         $(".fancybox__getTeam").eq(i).attr('data-src', '#' + code[i]);
     }

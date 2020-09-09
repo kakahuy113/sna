@@ -1486,7 +1486,7 @@ textarea {
         .item__img {
             height: 300px;
             img {
-                height: 100%;
+                height: auto;
                 width: 100%;
                 object-fit: cover;
                 transition: .5s all ease-in-out;

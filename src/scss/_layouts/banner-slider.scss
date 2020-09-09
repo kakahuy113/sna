@@ -1,115 +1,125 @@
 .main-banner__slider {
-	.item-banner-fullscreen {
-		position: relative;
-		img {
-			pointer-events: none;
-		}
-		video {
-			overflow: hidden;
-			min-width: 100%;
-			min-height: 100%;
-			object-fit: cover;
-			@media (max-width: 1024.98px) {
-				width: 100%;
-				height: auto;
-				min-width: unset;
-				min-height: unset;
-			}
-		}
-		&.video {
-			display: flex;
-			align-content: center;
-			@media (max-width: 1024.98px) {
-				height: auto;
-				.btn-read-more {
-					bottom: 15%;
-				}
-			}
-		}
-		&.img {
-			@media (max-width: 1024px) {
-				height: auto;
-			}
-		}
-	}
-
-	.youtube-responsive {
-		padding-bottom: 56.25%;
-		position: relative;
-		height: 0;
-		iframe {
-			left: 0;
-			top: 0;
-			height: 100%;
-			width: 100%;
-			position: absolute;
-		}
-	}
-	.btn-read-more {
-		z-index: 5;
-		position: absolute;
-		bottom: 50px;
-		left: 0;
-		right: 0;
-		text-align: right;
-		transition: 0.3s all ease-in-out;
-		.btn {
-			position: relative;
-			vertical-align: middle;
-			display: inline-block;
-			text-align: center;
-			cursor: pointer;
-			transition: all 0.2s ease-in-out;
-			color: #fff;
-			background-color: map-get($mau, main-2);
-			line-height: 50px;
-			height: 50px;
-			padding: 0 25px;
-			text-transform: uppercase;
-
-			@media (min-width: 1025px) {
-				&:hover {
-					background: map-get($mau, main);
-				}
-			}
-		}
-	}
-	.swiper-slide {
-		> a {
-			display: block;
-		}
-	}
-	.swiper-pagination {
-		.swiper-pagination-bullet {
-			cursor: pointer;
-			width: 15px;
-			height: 15px;
-			opacity: 1;
-			border-radius: 50%;
-			background-color: #d3d3d3;
-			transition: all 0.2s ease-in-out;
-			margin: 0 6px;
-
-			&.swiper-pagination-bullet-active {
-				background-color: map-get($mau, main-2);
-			}
-		}
-	}
-
-	@media (max-width: 767.98px) {
-		.btn-read-more {
-			bottom: 15px;
-
-			.btn {
-				font-size: 10px;
-				line-height: 25px;
-				height: 25px;
-				padding: 0 15px;
-			}
-		}
-
-		.swiper-pagination {
-			display: none;
-		}
-	}
+    .item-banner-fullscreen {
+        position: relative;
+        img {
+            pointer-events: none;
+        }
+        video {
+            position: absolute;
+            overflow: hidden;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            @media (max-width: 1024.98px) {
+                width: 100%;
+                height: auto;
+                min-width: unset;
+                min-height: unset;
+            }
+        }
+        &.video {
+            position: relative;
+            display: flex;
+            align-content: center;
+            @media (max-width: 1024.98px) {
+                height: 40vh;
+                .btn-read-more {
+                    bottom: 15%;
+                }
+            }
+            @media (max-width: 575.98px) {
+                height: 30vh;
+            }
+        }
+        &.img {
+            @media (max-width: 1024px) {
+                height: auto;
+            }
+        }
+    }
+    .youtube-responsive {
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+        iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    }
+    .btn-read-more {
+        z-index: 5;
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        text-align: right;
+        transition: 0.3s all ease-in-out;
+        .btn {
+            position: relative;
+            vertical-align: middle;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            color: #fff;
+            background-color: map-get($mau, main-2);
+            line-height: 50px;
+            height: 50px;
+            padding: 0 25px;
+            text-transform: uppercase;
+            @media (min-width: 1025px) {
+                &:hover {
+                    background: map-get($mau, main);
+                }
+            }
+        }
+    }
+    .swiper-slide {
+        @media (max-width: 1024.98px) {
+            height: 40vh;
+        }
+        @media (max-width: 575.98px) {
+            height: 30vh;
+        }
+        >a {
+            display: block;
+        }
+    }
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            cursor: pointer;
+            width: 15px;
+            height: 15px;
+            opacity: 1;
+            border-radius: 50%;
+            background-color: #d3d3d3;
+            transition: all 0.2s ease-in-out;
+            margin: 0 6px;
+            &.swiper-pagination-bullet-active {
+                background-color: map-get($mau, main-2);
+            }
+        }
+    }
+    @media (max-width: 767.98px) {
+        .btn-read-more {
+            bottom: 15px;
+            .btn {
+                font-size: 10px;
+                line-height: 25px;
+                height: 25px;
+                padding: 0 15px;
+            }
+        }
+        .swiper-pagination {
+            display: none;
+        }
+    }
 }
