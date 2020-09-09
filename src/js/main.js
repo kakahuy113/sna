@@ -340,9 +340,16 @@ const checkLanguage = () => {
 
 const BiFieldsTitleEdit = () => {
     const list = document.querySelectorAll('.b_header--list-menu>ul>li>a');
-    list.forEach((item) => {
-        item.innerHTML = item.textContent.replace(',', '<br>');
-    })
+    console.log();
+    if (window.innerWidth > 1025) {
+        list.forEach((item) => {
+            item.innerHTML = item.textContent.replace(',', '<br>');
+        })
+    } else {
+        list.forEach((item) => {
+            item.innerHTML = item.textContent.replace(',', '');
+        })
+    }
 }
 
 const getTeamFancyBox = () => {
@@ -411,7 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initIntlTelInput();
     BiFieldsTitleEdit();
     getTeamFancyBox();
-    setWidth();
     randomCodeTeam();
+    setWidth();
     const admissionProcedures = new Tab('.library-page.tab-container');
 });
