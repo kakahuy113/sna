@@ -27,13 +27,13 @@
             display: flex;
             align-content: center;
             @media (max-width: 1024.98px) {
-                height: 40vh;
+                height: 30vh;
                 .btn-read-more {
                     bottom: 15%;
                 }
             }
             @media (max-width: 575.98px) {
-                height: 30vh;
+                height: 25vh;
             }
         }
         &.img {
@@ -84,10 +84,10 @@
     }
     .swiper-slide {
         @media (max-width: 1024.98px) {
-            height: 40vh;
+            height: 30vh;
         }
         @media (max-width: 575.98px) {
-            height: 30vh;
+            height: 25vh;
         }
         >a {
             display: block;
