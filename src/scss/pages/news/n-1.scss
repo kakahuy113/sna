@@ -41,7 +41,6 @@
         }
         .img {
             width: 100%;
-            height: 329.29px;
             margin-bottom: 15px;
         }
         img {
@@ -133,6 +132,21 @@
                     }
                 }
             }
+        }
+        &:last-child {
+          @media (max-width: 1024.98px) {
+            .item {
+                padding: 0 100px;
+                .related-img {
+                    height: 320px;
+                }
+            }
+          }
+          @media (max-width: 767.98px) {
+              .item {
+                  padding: 0 10px;
+              }
+          }
         }
     }
 }
