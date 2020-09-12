@@ -147,6 +147,13 @@
                   padding: 0 10px;
               }
           }
+          @media (max-width: 400px) {
+            .item {
+                .related-img {
+                    height: unset;
+                }
+            }
+          }
         }
     }
 }

@@ -1,4 +1,11 @@
 .main-banner__slider {
+    @media (max-width: 1024.98px) {
+        .swiper-container-autoheight, 
+        .swiper-container-autoheight 
+        .swiper-slide {
+            height: 45vh;
+        }
+    }
     .item-banner-fullscreen {
         position: relative;
         img {
