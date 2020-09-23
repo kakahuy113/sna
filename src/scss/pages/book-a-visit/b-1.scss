@@ -99,12 +99,18 @@
                 h4 {
                     font-size: 24px;
                     margin-bottom: 20px;
+                    @media (max-width: 575.98px) {
+                        margin-bottom: 0;
+                    }
                 }
                 .text-contact {
                     .item-BAV {
                         display: flex;
                         padding: 5px 0;
                         margin-bottom: 20px;
+                        @media (max-width: 575.98px) {
+                            margin-bottom: 0;
+                        }
                         .icon {
                             width: 30px;
                             margin-right: 10px;
@@ -148,7 +154,7 @@
 @media (max-width: 575.98px) {
     section.book-a-visit {
         .content-book-visit {
-            top: 35% !important;
+            top: 43% !important;
             width: 100% !important;
             height: 428px !important;
             .col-7,

@@ -48,7 +48,7 @@ const mainBanner = () => {
         const heightHeader = document.querySelector('header').clientHeight;
         const itemsFullScreenBanner = document.querySelectorAll('.main-banner__slider .item-banner-fullscreen');
         itemsFullScreenBanner.forEach((item) => {
-            if (window.innerWidth > 1024) {
+            if (window.innerWidth > 1350) {
                 item.setAttribute('style', `height: calc(100vh - ${heightHeader}px)`)
             }
         })
@@ -168,7 +168,7 @@ const subMenuMobile = () => {
 };
 
 const subMenuFooter = () => {
-    if ($(window).width() <= 1024) {
+    if ($(window).width() <= 1023.98) {
         $('.item-link-footer h5').click(function(e) {
             e.preventDefault();
             $(this).toggleClass('active');
@@ -340,7 +340,7 @@ const checkLanguage = () => {
 const BiFieldsTitleEdit = () => {
     const list = document.querySelectorAll('.b_header--list-menu>ul>li>a');
     console.log();
-    if (window.innerWidth > 1025) {
+    if (window.innerWidth > 1024.98) {
         list.forEach((item) => {
             item.innerHTML = item.textContent.replace(',', '<br>');
         })
@@ -389,7 +389,7 @@ const changeHeighVideoBanner = () => {
     const widthBrowser =document.documentElement.clientWidth;
     const swiperslide = document.querySelectorAll(".main-banner__slider .swiper-slide")
     const swipercontainer = document.querySelector(".main-banner__slider .swiper-container")
-    if(widthBrowser < 1025) {
+    if(widthBrowser < 1349.98) {
         swiperslide.forEach(item => {
             item.style.height = `${image}px`
         });
