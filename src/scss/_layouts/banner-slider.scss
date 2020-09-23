@@ -1,28 +1,21 @@
 .main-banner__slider {
-    @media (max-width: 1024.98px) {
-        .swiper-container-autoheight, 
-        .swiper-container-autoheight 
-        .swiper-slide {
-            height: 45vh;
-        }
-    }
+    
     .item-banner-fullscreen {
         position: relative;
         img {
             pointer-events: none;
         }
         video {
-            position: absolute;
+            // position: absolute;
             overflow: hidden;
             min-width: 100%;
-            min-height: 100%;
             object-fit: cover;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
+            // top: 50%;
+            // left: 50%;
             min-height: 100%;
-            transform: translate(-50%, -50%);
+            // transform: translate(-50%, -50%);
             @media (max-width: 1024.98px) {
+            
                 width: 100%;
                 height: auto;
                 min-width: unset;
@@ -34,20 +27,17 @@
             display: flex;
             align-content: center;
             @media (max-width: 1024.98px) {
-                height: 30vh;
-                .btn-read-more {
-                    bottom: 15%;
-                }
+				height: 45vh;
             }
-            @media (max-width: 575.98px) {
-                height: 25vh;
-            }
+            // @media (max-width: 575.98px) {
+            //     height: 25vh;
+            // }
         }
-        &.img {
-            @media (max-width: 1024px) {
-                height: auto;
-            }
-        }
+        // &.img {
+        //     @media (max-width: 1024px) {
+        //         max-height: 45vh;
+        //     }
+        // }
     }
     .youtube-responsive {
         padding-bottom: 56.25%;
@@ -90,12 +80,12 @@
         }
     }
     .swiper-slide {
-        @media (max-width: 1024.98px) {
-            height: 30vh;
-        }
-        @media (max-width: 575.98px) {
-            height: 25vh;
-        }
+        // @media (max-width: 1024.98px) {
+        //     height: 30vh;
+        // }
+        // @media (max-width: 575.98px) {
+        //     height: 25vh;
+        // }
         >a {
             display: block;
         }
@@ -113,6 +103,14 @@
             &.swiper-pagination-bullet-active {
                 background-color: map-get($mau, main-2);
             }
+        }
+	}
+	@media (max-width: 1024.98px) {
+        .swiper-container-autoheight, 
+        .swiper-container-autoheight 
+        .swiper-slide {
+			height: 45vh;
+			overflow: hidden;
         }
     }
     @media (max-width: 767.98px) {

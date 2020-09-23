@@ -147,7 +147,7 @@
                   padding: 0 10px;
               }
           }
-          @media (max-width: 400px) {
+          @media (max-width: 500px) {
             .item {
                 .related-img {
                     height: unset;
@@ -179,9 +179,9 @@
             }
         }
         h2 {
+            font-size: 25px !important;
             span {
                 font-size: 15px !important;
-                top: 80% !important;
                 &::after {
                     font-size: 14px !important;
                 }

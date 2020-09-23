@@ -62,7 +62,6 @@ const mainBanner = () => {
             type: 'bullets',
             clickable: true,
         },
-        autoHeight: true,
         autoplay: {
             delay: 10000,
         },
@@ -381,6 +380,26 @@ const randomCodeTeam = () => {
         $(".fancybox__getTeam").eq(i).attr('data-src', '#' + code[i]);
     }
 }
+
+const changeHeighVideoBanner = () => {
+   if(document.querySelector(".index-page")) {
+    const banner = document.querySelector(".main-banner__slider");
+    const video = banner.querySelectorAll(".video");
+    const image = document.querySelector(".item-banner-fullscreen.img").offsetHeight;
+    const widthBrowser =document.documentElement.clientWidth;
+    const swiperslide = document.querySelectorAll(".main-banner__slider .swiper-slide")
+    const swipercontainer = document.querySelector(".main-banner__slider .swiper-container")
+    if(widthBrowser < 1025) {
+        swiperslide.forEach(item => {
+            item.style.height = `${image}px`
+        });
+        swipercontainer.style.height = `${image}px`
+        video.forEach(item => {
+            item.style.height = `${image}px`
+        })
+    }
+   }
+}
 document.addEventListener('DOMContentLoaded', () => {
     Cookie();
     getSVGs();
@@ -396,6 +415,7 @@ document.addEventListener('DOMContentLoaded', () => {
     customScrollBar();
     // SLIDER
     mainBanner();
+    changeHeighVideoBanner();
     quoteSlider();
     relatedJobsSlider();
     coreSliderStyle_1();
