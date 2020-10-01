@@ -12,6 +12,9 @@ header {
 	@media (min-width: 1200px) {
 		padding-left: 145px;
 	}
+	@media all and (max-width: 1350px) and (min-width: 1199.98px){
+		padding-left: 160px;
+	}
 }
 
 // LOGO
@@ -43,7 +46,7 @@ header {
 		}
 	}
 	@media all and (max-width: 1350px) and (min-width: 1199.98px){
-		left: -36px;
+		left: -40px;
 		.logo {
 			img {
 				margin-left: 0 !important;

@@ -14,20 +14,23 @@
             min-height: 100%;
             // transform: translate(-50%, -50%);
             @media (max-width: 1024.98px) {
-            
                 width: 100%;
                 height: auto;
+                max-height: 400px;
                 min-width: unset;
                 min-height: unset;
+            }
+            @media (max-width: 767.98px) {
+                height: 100%;
             }
         }
         &.video {
             position: relative;
             display: flex;
             align-content: center;
-            @media (max-width: 1024.98px) {
-				height: 45vh;
-            }
+            // @media (max-width: 1024.98px) {
+			// 	height: 45vh;
+            // }
             // @media (max-width: 575.98px) {
             //     height: 25vh;
             // }
@@ -104,15 +107,47 @@
             }
         }
 	}
-	@media (max-width: 1350.98px) {
-        .swiper-container-autoheight, 
-        .swiper-container-autoheight 
-        .swiper-slide {
-			height: 45vh;
-			overflow: hidden;
-        }
-    }
+	// @media (max-width: 1350.98px) {
+    //     .swiper-container-autoheight, 
+    //     .swiper-container-autoheight 
+    //     .swiper-slide {
+	// 		height: 45vh;
+	// 		overflow: hidden;
+    //     }
+    // }
+    
+    // @media (max-width: 1024.98px) {
+    //     .swiper-container {
+    //         height: 100vh;
+    //         .swiper-wrapper {
+    //             height: 100vh;
+    //             .swiper-slide {
+    //                 height: 100vh;
+    //                 video {
+    //                     height: 100vh;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
     @media (max-width: 767.98px) {
+
+        .swiper-container {
+            max-height: 400px;
+            height: 100%;
+            .swiper-wrapper {
+                max-height: 400px;
+                height: 100%;
+                .swiper-slide {
+                    max-height: 400px;
+                    height: 100%
+                    video {
+                        max-height: 400px;
+                        height: 100%;
+                    }
+                }
+            }
+        }
         .btn-read-more {
             bottom: 15px;
             .btn {
@@ -124,6 +159,24 @@
         }
         .swiper-pagination {
             display: none;
+        }
+    }
+    @media (max-width: 575.98px) {
+        .swiper-container {
+                max-height: 200px;
+                height: 100%;
+            .swiper-wrapper {
+                max-height: 200px;
+                height: 100%;
+                .swiper-slide {
+                    max-height: 200px;
+                    height: 100%;
+                    video {
+                        max-height: 200px;
+                        height: 100%;
+                    }
+                }
+            }
         }
     }
 }

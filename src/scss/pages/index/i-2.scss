@@ -14,25 +14,16 @@
                     width: 350px;
                 }
             }
-        }
-        @media (max-width: 767.98px) {
-            .block-title--main {
-                padding-bottom: 350px;
-            }
-            .img-sticker {
-                top: 60%;
+            @media (max-width: 1024.98px) {
+                margin-top: 0;
             }
         }
-        @media (max-width: 575.98px) {
-            .block-title--main {
-                padding-bottom: 250px;
-            }
-            .img-sticker {
-                top: 70%;
-                img {
-                    max-width: 250px;
-                }
+     @media (max-width: 767.98px) {
+        .block-title--main {
+            &::after {
+                content: none;
             }
         }
+     }
     }
 }

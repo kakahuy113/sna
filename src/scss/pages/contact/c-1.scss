@@ -32,7 +32,7 @@ section.contact-home {
         height: 425px;
         background: #0A1F44;
         .item {
-            color: white;
+            color: white !important;
             position: relative;
             display: flex;
             padding: 5px 0;
@@ -47,6 +47,7 @@ section.contact-home {
                 width: 70px !important;
                 ~ .text-icon {
                     text-align: justify;
+                    color: #fff !important;
                 }
             }
         }
@@ -116,7 +117,8 @@ section.contact-home {
             display: block;
         }
     }
-    input[name='submit'] {
+    input[name='submit'],
+    input[id="submit"] {
         position: relative;
         display: inline-block;
         outline: none;
@@ -132,6 +134,7 @@ section.contact-home {
             transition: .5s all ease-in-out;
         }
     }
+  
 }
 
 .col-12 {
