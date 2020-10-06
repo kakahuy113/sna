@@ -2,8 +2,9 @@
 	position: relative;
 
 	.block-img {
-		height: 645px;
+		max-height: 645px;
 		background: #dfdfdf;
+		height: 100%;
 	}
 
 	.title-page {
