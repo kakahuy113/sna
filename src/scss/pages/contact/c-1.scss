@@ -12,6 +12,8 @@ section.contact-home {
     .text-home-first {
         position: relative;
         color: white;
+        text-align: center;
+        overflow: hidden;
         h2 {
             font-size: 45px;
             margin-bottom: 20px;
@@ -30,7 +32,7 @@ section.contact-home {
         height: 425px;
         background: #0A1F44;
         .item {
-            color: white;
+            color: white !important;
             position: relative;
             display: flex;
             padding: 5px 0;
@@ -41,7 +43,23 @@ section.contact-home {
                 margin-right: 10px;
             }
             .location {
+                align-self: center;
                 width: 70px !important;
+                ~ .text-icon {
+                    text-align: justify;
+                    color: #fff !important;
+                }
+            }
+        }
+        img {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @media (max-width: 1024.98px) {
+                margin: 0 auto;
+                position: unset;
+                left: unset;
+                transform: unset;
             }
         }
     }
@@ -99,11 +117,12 @@ section.contact-home {
             display: block;
         }
     }
-    input[name='submit'] {
+    input[name='submit'],
+    input[id="submit"] {
         position: relative;
         display: inline-block;
         outline: none;
-        width: 20%;
+        width: fit-content;
         height: 50px;
         color: #fff;
         background-color: map-get($mau, main-2);
@@ -115,6 +134,7 @@ section.contact-home {
             transition: .5s all ease-in-out;
         }
     }
+  
 }
 
 .col-12 {

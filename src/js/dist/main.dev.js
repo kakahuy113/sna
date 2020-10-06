@@ -48,7 +48,7 @@ var mainBanner = function mainBanner() {
     var itemsFullScreenBanner = document.querySelectorAll('.main-banner__slider .item-banner-fullscreen');
     itemsFullScreenBanner.forEach(function (item) {
       if (window.innerWidth > 1024) {
-        item.setAttribute('style', "height: calc(100vh - ".concat(heightHeader, "px)"));
+        item.setAttribute('style', "height: calc(100% - ".concat(heightHeader, "px)"));
       }
     });
   })();

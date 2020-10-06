@@ -4,7 +4,7 @@ import {
 } from './util/utilities';
 import Cookie from './lib/Cookie';
 import Tab from './lib/Tab';
-
+var mainBanners;
 const checkSubMenu = () => {
     const itemsTopHeader = document.querySelectorAll(
         '.t_header--list-link ul li'
@@ -48,24 +48,31 @@ const mainBanner = () => {
         const heightHeader = document.querySelector('header').clientHeight;
         const itemsFullScreenBanner = document.querySelectorAll('.main-banner__slider .item-banner-fullscreen');
         itemsFullScreenBanner.forEach((item) => {
-            if (window.innerWidth > 1024) {
-                item.setAttribute('style', `height: calc(100vh - ${heightHeader}px)`)
+            if (window.innerWidth > 1350) {
+                item.setAttribute('style', `height: calc(100% - ${heightHeader}px)`)
             }
         })
     })()
 
-    const mainBanner = new Swiper('.main-banner__slider .swiper-container', {
+    mainBanners = new Swiper('.main-banner__slider .swiper-container', {
         speed: 700,
         loop: true,
+        updateOnWindowResize: true,
         pagination: {
             el: '.main-banner__slider .swiper-pagination',
             type: 'bullets',
             clickable: true,
         },
-        autoHeight: true,
         autoplay: {
             delay: 10000,
         },
+        breakpoints: {
+            1024: {
+                autoHeight: true,
+            },
+            768: {
+            }
+        }
     });
 };
 
@@ -169,7 +176,7 @@ const subMenuMobile = () => {
 };
 
 const subMenuFooter = () => {
-    if ($(window).width() <= 1024) {
+    if ($(window).width() <= 1023.98) {
         $('.item-link-footer h5').click(function(e) {
             e.preventDefault();
             $(this).toggleClass('active');
@@ -180,22 +187,22 @@ const subMenuFooter = () => {
     }
 };
 
-const fancyboxBookingFixed = () => {
-    $('.iframeBooking').fancybox({
-        overlayShow: true,
-        autoScale: true,
-        autoDimensions: false,
-        modal: true,
-        type: 'iframe',
-        autoSize: false,
-        showCloseButton: true,
-        afterShow: function() {
-            $('.fancybox-content').append(
-                '<a title="Close" class="fancybox-item fancybox-close custom-close-fancybox-booking" href="javascript:jQuery.fancybox.close();">CLOSE</a>'
-            );
-        },
-    });
-};
+// const fancyboxBookingFixed = () => {
+//     $('.iframeBooking').fancybox({
+//         overlayShow: true,
+//         autoScale: true,
+//         autoDimensions: false,
+//         modal: true,
+//         type: 'iframe',
+//         autoSize: false,
+//         showCloseButton: true,
+//         afterShow: function() {
+//             $('.fancybox-content').append(
+//                 '<a title="Close" class="fancybox-item fancybox-close custom-close-fancybox-booking" href="javascript:jQuery.fancybox.close();">CLOSE</a>'
+//             );
+//         },
+//     });
+// };
 
 const quoteSlider = () => {
     const quoteSlider = new Swiper('.quote__slider .swiper-container', {
@@ -341,7 +348,7 @@ const checkLanguage = () => {
 const BiFieldsTitleEdit = () => {
     const list = document.querySelectorAll('.b_header--list-menu>ul>li>a');
     console.log();
-    if (window.innerWidth > 1025) {
+    if (window.innerWidth > 1024.98) {
         list.forEach((item) => {
             item.innerHTML = item.textContent.replace(',', '<br>');
         })
@@ -381,6 +388,94 @@ const randomCodeTeam = () => {
         $(".fancybox__getTeam").eq(i).attr('data-src', '#' + code[i]);
     }
 }
+
+// const changeHeighVideoBanner = () => {
+//    if(document.querySelector(".index-page")) {
+//     const banner = document.querySelector(".main-banner__slider");
+//     const video = banner.querySelectorAll(".video");
+//     const image = document.querySelector(".item-banner-fullscreen.img").offsetHeight;
+//     const widthBrowser =document.documentElement.clientWidth;
+//     const swiperslide = document.querySelectorAll(".main-banner__slider .swiper-slide")
+//     const swipercontainer = document.querySelector(".main-banner__slider .swiper-container")
+//     if(widthBrowser < 767.98) {
+//         swiperslide.forEach(item => {
+//             item.style.height = `${image}px`
+//         });
+//         swipercontainer.style.height = `${image}px`
+//         video.forEach(item => {
+//             item.style.height = `${image}px`
+//         })
+//     }
+//    }
+// }
+
+function debounce(fn, delay, immediate) {
+	let timeout;
+
+	// Đây là function sẽ được thực thi khi debouncedKeyUp được thực thi ở ví dụ trên
+	return function executedFn() {
+		// Mình save lại this vào biến context
+		let context = this; // "this" context của executedFn
+
+		// Save lại arguments vào args. Trong JS, arguments giữ giá trị của tất cả tham số được truyền vào cho một function.
+		// Cho dù bạn không khai báo tham số cho một hàm, thì khi truyền tham số vào cho hàm đó, các bạn vẫn có thể truy xuất
+		// đến các tham số bằng biến arguments này. Theo ví dụ trên, thì arguments ở đây sẽ chứa "event" 
+		let args = arguments; // "arguments" của fn
+
+		// Function later này sẽ được gọi sau khi delay được chạy xong. 
+		// Nghĩa là mình return executedFn, khi executedFn được thực thi thì sau khoản delay, later sẽ được thực thi.
+		let later = function() {
+			// Gán null cho timeout => cho thấy delay đã chạy xong
+			timeout = null;
+
+			// Gọi hàm fn với apply
+			if (!immediate) fn.apply(context, args);
+		};
+
+		// Xác định xem nên gọi fn dựa vào tham số immediate
+		let callNow = immediate && !timeout;
+
+		// Dòng clearTimeout sẽ reset timeout đang hiện hữu (**existed**). Đây là điều cần thiết, 
+		// vì mình cần hủy timeout và tạo 1 timeout mới nếu như debounce được thực thi khi 
+		// delay chưa chạy xong.
+		clearTimeout(timeout);
+
+		// Khởi tạo (lại) timeout mới và gán vào biến timeout để có thể clear/check.
+		timeout = setTimeout(later, delay);
+
+		// Nếu như immediate là true, thì mình sẽ gọi fn lần đầu tiên ở đây.
+		if (callNow) fn.apply(context, args);
+	}
+}
+
+const resize = () => {
+    const updateSwiper = () => { 
+        mainBanners.destroy()
+        mainBanners = new Swiper('.main-banner__slider .swiper-container', {
+            speed: 700,
+            loop: true,
+            updateOnWindowResize: true,
+            pagination: {
+                el: '.main-banner__slider .swiper-pagination',
+                type: 'bullets',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 10000,
+            },
+            breakpoints: {
+                1024: {
+                    autoHeight: true,
+                },
+                768: {
+                }
+            }
+        });
+    }
+    const debounceResize = debounce(updateSwiper, 500);
+    window.addEventListener('resize', debounceResize);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     Cookie();
     getSVGs();
@@ -390,18 +485,18 @@ document.addEventListener('DOMContentLoaded', () => {
     checkLayout();
     // Check Sub Menu
     checkSubMenu();
+    // SLIDER
+    mainBanner();
     // Sub Menu Footer
     subMenuFooter();
     // Cumstom Scroll Bar
     customScrollBar();
-    // SLIDER
-    mainBanner();
     quoteSlider();
     relatedJobsSlider();
     coreSliderStyle_1();
     pdfSlider();
     // FancyboxBooking
-    fancyboxBookingFixed();
+    // fancyboxBookingFixed();
     //search
     toggleSearch();
     // Toggle Menu
@@ -420,5 +515,7 @@ document.addEventListener('DOMContentLoaded', () => {
     getTeamFancyBox();
     randomCodeTeam();
     setWidth();
+    // changeHeighVideoBanner();
+    resize();
     const admissionProcedures = new Tab('.library-page.tab-container');
 });

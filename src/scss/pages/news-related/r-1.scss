@@ -2,6 +2,7 @@ section.related {
     .related-news {
         .block-title--main {
             &::after {
+                pointer-events: none;
                 display: block;
                 margin-top: -80px;
                 font-size: 7rem;
@@ -22,8 +23,9 @@ section.related {
                 font-size: 18px;
                 color: map-get($mau, main);
                 font-weight: normal;
-                top: 0;
+                top: 50%;
                 right: 0;
+                transform: translateY(-50%);
                 &::after {
                     z-index: 1;
                     position: absolute;
@@ -47,6 +49,14 @@ section.related {
                     background: #0a1f44;
                     content: '';
                     transition: .5s all ease-in-out;
+                }
+                @media (min-width: 1025px) {
+                    &:hover {
+                        color: #ad132a;
+                        &::before {
+                            background: #ad132a;
+                        }
+                    }
                 }
             }
         }
@@ -161,10 +171,9 @@ section.related {
             }
         }
         h2 {
-            font-size: 32px !important;
+            font-size: 25px !important;
             span {
                 font-size: 15px !important;
-                top: 80% !important;
                 &::after {
                     font-size: 14px !important;
                 }
