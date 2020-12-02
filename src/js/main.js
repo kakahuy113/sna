@@ -89,6 +89,33 @@ const relatedJobsSlider = () => {
             }
         }
     })
+    const partner = new Swiper('.partner-section .swiper-container', {
+        slidesPerView: 5,
+        spaceBetween: 10,
+        loop: true,
+        simulateTouch: false,
+        speed: 800,
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false
+        },
+        breakpoints: {
+             320: { 
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 5,
+            spaceBetween: 40
+          }
+        }
+    })
 }
 
 const checkLayout = () => {
