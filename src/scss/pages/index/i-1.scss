@@ -6,6 +6,19 @@
         .col-md-4 {
             padding-right: 15px;
             padding-left: 15px;
+            height: auto;
+            .block-content--style_1 {
+                background: #ad132a;
+                height: 100%;
+                @media (min-width: 1025px) {
+                    &:hover {
+                        background: #0a1f44;
+                    }
+                }
+                .content {
+                    background: none !important;
+                }
+            }
         }
     }
     .list-item-index-1 {
