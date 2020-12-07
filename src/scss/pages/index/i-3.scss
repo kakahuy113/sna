@@ -35,8 +35,11 @@
 		width: 100%;
 		height: auto;
 		border : none ;
-		margin-bottom: -1px;
 		padding : 50px 0 ;
+		.img {
+			display: block;
+		
+		}
 		p {
 			margin-bottom: 20px;
 			text-align: center;
