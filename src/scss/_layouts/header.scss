@@ -668,6 +668,9 @@ header {
 				&:last-child {
 					border-bottom: 1px solid #dedede;
 				}
+				@media (max-width: 575.98px) {
+					line-height: 40px;
+				}
 				&.hasSub {
 					&:before {
 						content: none;

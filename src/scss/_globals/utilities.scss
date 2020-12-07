@@ -1552,6 +1552,7 @@ textarea {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                object-position: top;
             }
         }
         .txt {
@@ -1592,5 +1593,10 @@ textarea {
             left: 50%;
             transform: translate(-50%, -50%);
         }
+    }
+}
+.fb_dialog_content {
+    iframe {
+        bottom: 80px !important;
     }
 }
