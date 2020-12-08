@@ -45,6 +45,9 @@
 			text-align: center;
 			color: #ad132a;
 			font-weight: bold;
-			font-size: 17px;
+			font-size: 30px;
+			@media (max-width: 767.98px) {
+			font-size: 16px;
+			}
 		}
 }
