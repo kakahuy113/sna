@@ -93,7 +93,6 @@ const relatedJobsSlider = () => {
         slidesPerView: 5,
         spaceBetween: 10,
         loop: true,
-        simulateTouch: false,
         speed: 800,
         autoplay: {
             delay: 1500,
