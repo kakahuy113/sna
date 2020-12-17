@@ -90,6 +90,16 @@
 		text-align: justify;
 		word-break: break-all;
 	}
+	.graduates-student__wrapper {
+		.item__img {
+			max-width: 260px;
+			margin: 0 auto;
+			img {
+				height: 100%;
+				object-position: top;
+			}
+		}
+	}
 }
 
 .news--page {
